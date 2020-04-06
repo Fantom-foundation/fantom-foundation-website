@@ -12,22 +12,10 @@
     }
 }
 @media screen and (max-width: 1680px){
-    .easy-to-use-img {
-        left: 230px;
-    }
-    .earn-crypto-img {
-        right: 282px;
-    }
 }
 @media screen and (max-width: 1440px){
     .wallet-section-wrapper {
         padding-left: 200px;
-    }
-    .easy-to-use-img {
-        left: 100px;
-    }
-    .earn-crypto-img {
-        right: 153px;
     }
 }
 @media screen and (max-width: 1366px){
@@ -41,17 +29,6 @@
     }   
     .wallet-section-wrapper {
         padding-left: 130px;
-    }
-    .easy-to-use-img {
-        left: 60px;
-    }
-    img.desktop-image {
-        position: relative;
-        height: 465px;
-        width: auto;
-    }
-    .earn-crypto-img {
-        right: 75px;
     }
 }
 @media screen and (max-width: 1199px){

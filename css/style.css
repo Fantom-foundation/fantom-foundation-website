@@ -1774,10 +1774,32 @@ a.showSingle.active {
 }
 .sec-mobile-section {
     padding: 80px 0;
+    position: relative;
+}
+.col-sm-6.first-col-image-wrapper {
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+.first-col-content-sec {
+    max-width: 80%;
+}
+.col-sm-6.first-col-content {
+    position: absolute;
+    right: 0;
+}
+.col-sm-6.secondary-col-image-wrapper {
+    position: absolute;
+    right: 0;
+    padding: 0;
+}
+.desktop-wallet-first-section .row {
+    padding: 290px 0;
 }
 .fantom-wallet-app-section {
     text-align: center;
     padding: 64px 0;
+    background-color: #f2f7ff;
 }
 .fantom-wallet-app-section h2 {
     margin: 0;
@@ -1851,6 +1873,7 @@ a.wallet-link.download-wallet-btn {
 .safe-and-secure-section {
     text-align: center;
     padding: 80px 0;
+    margin-bottom: 100px;
 }
 .safe-and-secure-section p {
     max-width: 972px;
@@ -1864,6 +1887,8 @@ a.wallet-link.download-wallet-btn {
 }
 .first-mobile-section.desktop-wallet-first-section {
     background-color: unset;
+    position: relative;
+    padding-top: 105px;
 }
 .create-wallet-link {
     display: flex;
@@ -1899,6 +1924,9 @@ a.desktop-web-wallet-link {
 .fantom-wallet-app-section a.desktop-wallets.showSingle {
     margin: auto;
     color: #1969ff;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 /*.page-template-fantom-wallet li.navSection.logo {
     position: relative;
@@ -2059,14 +2087,16 @@ a.api-reference {
     right: 179px;
     margin: auto;
 }
-img.desktop-image {
-    position: relative;
-    height: 500px;
-    width: auto;
+
+img.banner-desktop-image {
+    height: 570px;
 }
-.earn-crypto-img {
-    right: 405px;
+
+img.desktop-image.earn-crypto-img {
+    max-width: 600px;
+    float: left;
 }
-.easy-to-use-img {
-    left: 352px;
+img.desktop-image.easy-to-use-img {
+    max-width: 600px;
+    float: right;
 }

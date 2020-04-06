@@ -13,7 +13,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             <div class="wallet-section-wrapper">
                 <div class="wallet-section">
                     <a  class="showSingle" id="showall" target="1">Mobile</a>
-                    <a  class="showSingle active" target="2">Desktop</a>
+                    <a  class="showSingle active" id="showall" target="2">Desktop</a>
                 </div>
             </div>
 
@@ -132,11 +132,13 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                   <div class="first-mobile-section desktop-wallet-first-section">
                                       <div class="container">
                                           <div class="row row-background-wrapper"  id="sec<?php echo $i ?>">
-                                              <div class="col-sm-6">
+                                              <div class="col-sm-6 first-col-image-wrapper">
                                                   <img src="<?php the_sub_field('image'); ?>"  class="desktop-image earn-crypto-img" alt="Mobile Image"/>                                               
                                               </div>
-                                              <div class="col-sm-6">
-                                                  <?php the_sub_field('content'); ?>
+                                              <div class="col-sm-6 first-col-content">
+                                                  <div class="first-col-content-sec">
+                                                      <?php the_sub_field('content'); ?>
+                                                  </div>                                        
                                               </div>
                                           </div>
                                       </div>
@@ -149,7 +151,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                               <div class="col-sm-6">
                                                   <?php the_sub_field('content'); ?>
                                               </div>
-                                              <div class="col-sm-6">                                                  
+                                              <div class="col-sm-6  secondary-col-image-wrapper">                                                  
                                                   <img src="<?php the_sub_field('image'); ?>"  class="desktop-image easy-to-use-img" alt="Mobile Image"/>
                                               </div>
                                           </div>
