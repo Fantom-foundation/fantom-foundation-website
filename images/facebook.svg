@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="20px" viewBox="0 0 10 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 64 (101010) - https://sketch.com -->
+    <title>52E6F463-C866-4340-A180-2DCA9FA8EBA2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M13.821283,22 L13.821283,13 L16.553693,13 L17,9 L13.82128,9 L13.82128,7.052 C13.82128,6.022 13.847591,5 15.28688,5 L16.74469,5 L16.74469,2.14 C16.74469,2.097 15.4925,2 14.22569,2 C11.58001,2 9.92341,3.657 9.92341,6.7 L9.92341,9 L7,9 L7,13 L9.92341,13 L9.92341,22 L13.82128,22 L13.821283,22 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blog-page" transform="translate(-74.000000, -758.000000)">
+            <g id="Icon/--Brand/Facebook" transform="translate(67.000000, 756.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Fill" fill="#E6E6E6" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
