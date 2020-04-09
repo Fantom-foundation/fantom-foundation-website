@@ -32,7 +32,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                       the_content();
                     endwhile;
                     ?>
-<!--                    <img src="<?php //the_field('home_banner_image')                                  ?>"/>                                 -->
+<!--                    <img src="<?php //the_field('home_banner_image')                                    ?>"/>                                 -->
                 </div>
                 <div class="three-col-section">
                     <div class="row">
@@ -153,7 +153,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">  <section>
                                         <div class="containers">
                                             <div class="code-container">
-                                                <textarea id="code">
+                                                <textarea id="code1">
                                                     <?php the_field('developer_friendly_code') ?>
                                                 </textarea>
                                             </div>
@@ -161,8 +161,8 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                     </section></div>
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">  <section>
                                         <div class="containers">
-                                            <div class="code-container" id="code-wrapper">
-                                                <textarea id="code1">
+                                            <div class="code-container">
+                                                <textarea id="code">
                                                     <?php the_field('developer_friendly_code') ?>
                                                 </textarea>
                                             </div>
@@ -311,7 +311,9 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
         </div>
     </div>
 
-
+    <div class="test">
+      
+    </div>
 
 </main>
 <?php get_footer(); ?>

@@ -79,7 +79,9 @@ ul {
     padding-inline-start: 0px;
     font-family: WorkSans !important;
 }
-
+body a {
+    color: #1969ff;
+}
 a {
     transition: all ease-in-out 0.4s;
 }
@@ -489,7 +491,7 @@ a.stake-now-btn:hover {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 56px;
-/*    padding: 0 12px;*/
+    /*    padding: 0 12px;*/
 }
 .medium-blog-col {
     width: 100%;
@@ -1794,7 +1796,9 @@ a.showSingle.active {
     padding: 0;
 }
 .desktop-wallet-first-section .row {
-    padding: 290px 0;
+    /*    padding: 290px 0;*/
+    padding-top: 214px;
+    padding-bottom: 244px;
 }
 .fantom-wallet-app-section {
     text-align: center;
@@ -1834,7 +1838,8 @@ a.desktop-wallets {
     color: #1969ff;
 }
 .page-template-fantom-wallet a.rootLink.item-support.colorize.fantom-wallte-btn.get-start-btn {
-    display: none;
+    color: #1969ff;
+    background: #fff;
 }
 .page-template-fantom-wallet li.navSection.primary a:hover {
     color: rgba(255,255,255,0.5) !important;
@@ -1991,6 +1996,11 @@ textarea#code {
     width: 100%;
     height: 500px;
 }
+textarea#code1 {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
 
 
 /* ----------
@@ -2072,6 +2082,7 @@ a.api-reference {
 /*ttttttttttttttttttttttttttttttt*/
 .fantom-wallet-section .sub-menu-banner-content h1 {
     padding-top: 30px;
+    font-size: 64px;
 }
 .fantom-wallet-section .sub-menu-banner-content h1:after {
     content: "";
@@ -2239,3 +2250,37 @@ span.category-name-sec a {
     padding-top: 24px;
     padding-bottom: 100px;
 }
+.page-template-faq .banner-wrapper-section {
+    padding-top: 100px;
+    background-color: transparent;
+}
+.page-template-faq header.globalNav {
+    background-color: #fff;
+}
+a.linkContainer-wrapper p:hover {
+    color: #1969ff;
+}
+pre.pre-wrapper {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    color: #2b3954;
+    font-size: 16px;
+    margin: 25px 0;
+}
+span.private-key-wrapper {
+    font-size: 21px;
+    line-height: 44px;
+    padding: 10px 0;
+}
+a.link-sec-wrapper {
+    font-size: 16px;
+    color: #1969ff;
+}
+span.pre-url {
+    text-decoration: underline;
+}
+
+
+/*tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
+
+
