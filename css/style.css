@@ -1293,8 +1293,10 @@ ul#accordions , ul#accordions ul {
 }
 
 .roadmap-banner-content{
-    max-width: 670px;
-    margin: auto;
+    /*    max-width: 670px;
+        margin: auto;*/
+    max-width: 66.666667%;
+    margin-left: auto;
 }
 .page-template-roadmap .page-section ul {
     padding-inline-start: 40px;
@@ -1660,7 +1662,7 @@ h5.total-staked {
     font-size: 14px;
 }
 .get-col-wrapper {
-    max-width: 75%;
+    max-width: 80%;
     margin-left: auto;
 }
 .get-started-content p {
@@ -1879,6 +1881,7 @@ a.wallet-link.download-wallet-btn {
     text-align: center;
     padding: 80px 0;
     margin-bottom: 100px;
+    padding-top: 100px;
 }
 .safe-and-secure-section p {
     max-width: 972px;
@@ -2101,6 +2104,8 @@ a.api-reference {
 
 img.banner-desktop-image {
     height: 570px;
+    object-fit: cover;
+    object-position: top left;
 }
 
 img.desktop-image.earn-crypto-img {
@@ -2279,8 +2284,53 @@ a.link-sec-wrapper {
 span.pre-url {
     text-decoration: underline;
 }
+ul#tabs-nav {
+    text-align: left;
+    list-style-type: none;
+}
+ul#tabs-nav li {
+    margin: 20px 0;
+}
+ul#tabs-nav li.active a {
+    position: relative;
+    color: #fff;
+}
+ul#tabs-nav li.active a:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    background: #8cb4ff;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+ul#tabs-nav li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    padding: .5rem 1rem;
+}
+a.api-reference:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
 
 
-/*tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt*/
+/*ttttt*/
 
-
+.fantom-wallet-section:before {
+    content: "";
+    position: absolute;
+    background: #1969ff;
+    width: 100%;
+    height: 539px;
+    z-index: -1;
+}
+.fantom-wallet-section {
+    position: relative;
+}
+.page-id-494 div#container-wrapper img {
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+}

@@ -12,13 +12,15 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             <div class="row banner-row">
                 <div class="col-sm-6">
                     <div class="banner-content">
-                        <h1>Ready, set, build</h1>
-                        <p>A blockchain ecosystem designed to help you focus on real-world solutions to real-world problems, with no compromise.  </p>
-                        <a class="get-started-btn" href="#">Get Started</a> 
+                        <?php
+                        while (have_posts()) : the_post();
+                          the_content();
+                        endwhile;
+                        ?>                     
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/fantom-file .svg"  class="image-wrapper" alt="Header Image"/>
+                    <img src="<?php the_field('home_banner_image') ?>"  class="image-wrapper" alt="Header Image"/>
                 </div>
             </div>
         </div>
@@ -27,12 +29,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
         <div class="container">         
             <div class="home-section">
                 <div class="home-banner">
-                    <?php
-                    while (have_posts()) : the_post();
-                      the_content();
-                    endwhile;
-                    ?>
-<!--                    <img src="<?php //the_field('home_banner_image')                                    ?>"/>                                 -->
+                    <?php the_field('speed_security_scalability_content') ?>
                 </div>
                 <div class="three-col-section">
                     <div class="row">
@@ -136,41 +133,29 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             <div class="developer-friendly-wrapper">
                 <?php the_field('developer_friendly_section') ?>                      
                 <div class="code-section-wrapper">
-                    <div class="row">
+                    <div class="tabs row">
                         <div class="col-sm-2">
-                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Request</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Response</a>
-                                </li>
-                            </ul>
+                            <ul id="tabs-nav">
+                                <li class="active"><a href="#tab1">Request</a></li>
+                                <li><a href="#tab2">Response</a></li>
+                            </ul> <!-- END tabs-nav -->
                             <a class="api-reference" href="#" target="_blank">Full API reference</a>
                         </div>
-                        <div class="col-sm-10">
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">  <section>
-                                        <div class="containers">
-                                            <div class="code-container">
-                                                <textarea id="code1">
-                                                    <?php the_field('developer_friendly_code') ?>
-                                                </textarea>
-                                            </div>
-                                        </div>
-                                    </section></div>
-                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">  <section>
-                                        <div class="containers">
-                                            <div class="code-container">
-                                                <textarea id="code">
-                                                    <?php the_field('developer_friendly_code') ?>
-                                                </textarea>
-                                            </div>
-                                        </div>
-                                    </section></div>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="col-sm-10">                  
+                            <div id="tabs-content">
+                                <div id="tab1" class="tab-content">
+                                    <div class="code-container">
+                                        <textarea id="code"><?php the_field('developer_friendly_code') ?></textarea>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab-content">
+                                    <div class="code-container">
+                                        <textarea id="code1"><?php the_field('developer_friendly_code') ?></textarea>
+                                    </div>
+                                </div>
+                            </div> <!-- END tabs-content -->
+                        </div>   
+                    </div> <!-- END tabs -->
                 </div>
             </div> 
         </div>                    
@@ -312,7 +297,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
     </div>
 
     <div class="test">
-      
+
     </div>
 
 </main>

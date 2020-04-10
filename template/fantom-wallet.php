@@ -11,7 +11,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
         <div class="fantom-wallet-container">
 
             <div class="wallet-section-wrapper">
-                <div class="wallet-section">
+                <div class="wallet-section" id="wallet-section">
                     <a  class="showSingle" id="showall" target="1">Mobile</a>
                     <a  class="showSingle active" id="showall" target="2">Desktop</a>
                 </div>

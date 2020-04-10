@@ -1,7 +1,6 @@
 jQuery(document).ready(function ($) {
 
-// I've added annotations to make this easier to follow along at home. Good luck learning and check out my other pens if you found this useful
-
+// Range-slider
 
 // First let's set the colors of our sliders
     const settings = {
@@ -179,8 +178,8 @@ jQuery(document).ready(function ($) {
 //TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 //
 //mobile menu
- 
-  $('.menu-toggle').click(function () {
+
+    $('.menu-toggle').click(function () {
         if ($('body').hasClass('menu-open')) {
             $('body').removeClass('active');
             setTimeout(function () {
@@ -259,8 +258,8 @@ jQuery(document).ready(function ($) {
     }
 
     var accordion = new Accordion($('#accordion'), false);
-    
-    
+
+
 //    tttttttest
     //accordion
     $(window).scroll();//ensure if you're in current position when page is refreshed  
@@ -291,17 +290,8 @@ jQuery(document).ready(function ($) {
     }
 
     var accordion = new Accordion($('#accordions'), false);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
 //ttttt
 //tab active section
     var sections = $('section')
@@ -335,7 +325,6 @@ jQuery(document).ready(function ($) {
 
         return false;
     });
-
 
 //add class
     $(window).scroll(function (event) {
@@ -378,7 +367,7 @@ jQuery(document).ready(function ($) {
             loop: true,
             items: 1,
             margin: 5,
-           // nav: false,
+            // nav: false,
             //dots: true,
             autoplay: false,
             smartSpeed: 900,
@@ -397,8 +386,31 @@ jQuery(document).ready(function ($) {
             }
         })
     });
-//tttttttt
 
+//Developer friendly Tab section
+// Show the first tab and hide the rest
+    $('#tabs-nav li:first-child').addClass('active');
+    $('.tab-content').hide();
+    $('.tab-content:first').show();
+
+// Click function
+    $('#tabs-nav li').click(function () {
+        $('#tabs-nav li').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-content').hide();
+
+        var activeTab = $(this).find('a').attr('href');
+        $(activeTab).fadeIn();
+        return false;
+    });
+    
+    
+    
+    
+//  ttttt
+
+    
+    
 }); //main.js
 
 
@@ -673,19 +685,20 @@ Strut.isRetina = window.devicePixelRatio > 1.3, Strut.mobileViewportWidth = 670,
 //tttttttttttttttttttttttttttttttttttttt
 
 var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
-    lineNumbers: true,
-    //mode: 'htmlmixed',
+   lineNumbers: true,
+    mode: 'htmlmixed',
     // theme: 'default',
     tabMode: 'indent',
     lineWrapping: true,
     autoCloseTags: true,
     styleActiveLine: true,
     matchBrackets: true,
-    readOnly: 'nocursor'
+    readOnly: 'nocursor',
+    
 });
 var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code1"), {
     lineNumbers: true,
-    //mode: 'htmlmixed',
+    mode: 'htmlmixed',
     // theme: 'default',
     tabMode: 'indent',
     lineWrapping: true,
