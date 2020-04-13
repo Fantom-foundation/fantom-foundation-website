@@ -96,13 +96,20 @@
                                                             <p class="linkSub">Earn rewards by securing the network.</p>
                                                         </div>
                                                     </a></li>
-                                                <!--                                                <li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                    ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
-                                                                                                        <div class="productLinkContent">
-                                                                                                            <h3 class="linkTitle">Fantom DeFi</h3>
-                                                                                                            <p class="linkSub">Buy, sell, lend, and borrow synthetic assets on Fantom.</p>
-                                                                                                        </div>
-                                                                                                    </a></li>-->
+                                                <li><a class="linkContainer item-atlas" href="/ftm-token/">
+                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FTM token.svg" alt="Sub menu"> 
+                                                        <div class="productLinkContent">
+                                                            <h3 class="linkTitle">FTM token</h3>
+                                                            <p class="linkSub">FTM is the primary token of the Fantom ecosystem.</p>
+                                                        </div>
+                                                    </a></li>
+                                                <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
+                                                    <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                            ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                    <div class="productLinkContent">
+                                                    <h3 class="linkTitle">Fantom DeFi</h3>
+                                                    <p class="linkSub">Buy, sell, lend, and borrow synthetic assets on Fantom.</p>
+                                                    </div>
+                                                  </a></li>-->
                                             </ul>
                                         </li> 
                                         <li class="sec-fold-group">
@@ -172,8 +179,9 @@
 
                                     <li class="sec-fold-group">
                                         <h4>GUIDES</h4>
-                                        <p>How to use Fantom Wallet</p>
-                                        <p>Swap FTM with the Bridge</p>
+                                        <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
+                                        <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
+                                        <a class="linkContainer-wrapper" href="/how-to-set-up-a-validator-node-on-fantom/"><p>How to set up a validator node on Fantom</p></a>
                                     </li>
                                 </ul>                      
                             </div>
@@ -204,7 +212,7 @@
                                                 <p class="linkSub">Learn about Fantom through our general and tech articles.</p>
                                             </div></a>
                                     </li>
-                                    <li><a class="linkContainer item-radar" href="#">
+                                    <li><a class="linkContainer item-radar" href="/frequently-asked-questions/">
                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FAQ.svg" alt="Sub menu"> 
                                             <div class="productLinkContent">
                                                 <h3 class="linkTitle">FAQ</h3>
@@ -226,14 +234,14 @@
                             <div class="dropdownContent">
 
                                 <ul class="linkGroup linkList companyGroup">                               
-                                    <li><a class="linkContainer item-radar" href="#">
+                                    <li><a class="linkContainer item-radar" href="https://github.com/Fantom-foundation/go-lachesis/wiki" target="_blank" >
                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Documentation.svg" alt="Sub menu"> 
                                             <div class="productLinkContent">
                                                 <h3 class="linkTitle">Documentation</h3>
                                                 <p class="linkSub">Our extensive documentation will guide you when building on Fantom.</p>
                                             </div></a>
                                     </li>
-                                    <li><a class="linkContainer item-radar" href="#">
+                                    <li><a class="linkContainer item-radar" href="https://github.com/Fantom-foundation/go-lachesis/wiki/Technical-Papers" target="_blank" >
                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Technical papers.svg" alt="Sub menu"> 
                                             <div class="productLinkContent">
                                                 <h3 class="linkTitle">Technical papers</h3>
@@ -301,12 +309,18 @@
                                                                                 <h3 class="linkTitle">Stake on Fantom</h3>
                                                                             </div>
                                                                         </a></li>
-                                                                    <!--                                                <li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                                                                                            <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                    ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
-                                                                                                                            <div class="productLinkContent">
-                                                                                                                                <h3 class="linkTitle">Fantom DeFi</h3>
-                                                                                                                            </div>
-                                                                                                                        </a></li>-->
+                                                                    <li><a class="linkContainer item-atlas" href="/ftm-token/">
+                                                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FTM token.svg" alt="Sub menu"> 
+                                                                            <div class="productLinkContent">
+                                                                                <h3 class="linkTitle">FTM token</h3>
+                                                                            </div>
+                                                                        </a></li>
+                                                                    <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
+                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                            ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                                         <div class="productLinkContent">
+                                                                         <h3 class="linkTitle">Fantom DeFi</h3>
+                                                                          </div>
+                                                                      </a></li>-->
                                                                 </ul>
                                                             </li> 
                                                             <li class="sec-fold-group">
@@ -368,8 +382,9 @@
 
                                                             <li class="sec-fold-group">
                                                                 <h4>GUIDES</h4>
-                                                                <p>How to use Fantom Wallet</p>
-                                                                <p>Swap FTM with the Bridge</p>
+                                                                <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
+                                                                <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
+                                                                <a class="linkContainer-wrapper" href="/how-to-set-up-a-validator-node-on-fantom/"><p>How to set up a validator node on Fantom</p></a>
                                                             </li>
                                                         </ul></li>
                                                 </ul>
@@ -397,7 +412,7 @@
                                                                         <h3 class="linkTitle">Blog</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="#">
+                                                            <li><a class="linkContainer item-radar" href="/frequently-asked-questions/">
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FAQ.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">FAQ</h3>
@@ -417,13 +432,13 @@
                                                 <div class="link">  <a class="menu-page-link" href="#">Developers</a><i class="fa fa-chevron-down"></i></div>
                                                 <ul class="accordion-content">
                                                     <li><ul class="linkGroup linkList companyGroup">                               
-                                                            <li><a class="linkContainer item-radar" href="#">
+                                                            <li><a class="linkContainer item-radar" href="https://github.com/Fantom-foundation/go-lachesis/wiki" target="_blank" >
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Documentation.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Documentation</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="#">
+                                                            <li><a class="linkContainer item-radar" href="https://github.com/Fantom-foundation/go-lachesis/wiki/Technical-Papers" target="_blank" >
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Technical papers.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Technical papers</h3>

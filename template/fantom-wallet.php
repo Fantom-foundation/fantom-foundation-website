@@ -11,7 +11,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
         <div class="fantom-wallet-container">
 
             <div class="wallet-section-wrapper">
-                <div class="wallet-section">
+                <div class="wallet-section" id="wallet-section">
                     <a  class="showSingle" id="showall" target="1">Mobile</a>
                     <a  class="showSingle active" id="showall" target="2">Desktop</a>
                 </div>
@@ -25,7 +25,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     <div class="fantom-mobile-wallet-section">
                         <div class="container">
                             <div class="row mobile-row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 mobile-banner-col-content">
                                     <div class="sub-menu-banner-content">
                                         <?php
                                         while (have_posts()) : the_post();
@@ -34,7 +34,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                         ?> 
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 mobile-banner-col-image">
                                     <img src="<?php the_field('mobile_image') ?>"  class="mobile-image" alt="Mobile Image"/>
                                 </div>
                             </div>
@@ -51,10 +51,10 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                   <div class="first-mobile-section">
                                       <div class="container">
                                           <div class="row row-background-wrapper"  id="sec<?php echo $i ?>">
-                                              <div class="col-sm-6">
+                                              <div class="col-sm-6 mobile-wrapper-content">
                                                   <?php the_sub_field('content'); ?>
                                               </div>
-                                              <div class="col-sm-6">
+                                              <div class="col-sm-6 mobile-wrapper-image">
                                                   <img src="<?php the_sub_field('image'); ?>"  class="mobile-image" alt="Mobile Image"/>
                                               </div>
                                           </div>
@@ -65,10 +65,10 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                   <div class="sec-mobile-section">
                                       <div class="container">
                                           <div class="row mobile-sec-row"  id="sec<?php echo $i ?>">
-                                              <div class="col-sm-6">
+                                              <div class="col-sm-6 mobile-wrapper-image">
                                                   <img src="<?php the_sub_field('image'); ?>"  class="mobile-image" alt="Mobile Image"/>
                                               </div>
-                                              <div class="col-sm-6">
+                                              <div class="col-sm-6 mobile-wrapper-content">
                                                   <?php the_sub_field('content'); ?>
                                               </div>
                                           </div>
@@ -104,7 +104,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     <div class="fantom-mobile-wallet-section">
                         <div class="container">
                             <div class="row mobile-row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 desktop-banner-content">
                                     <div class="sub-menu-banner-content">
                                         <?php the_field('desktop_wallet_banne_content') ?>
                                     </div>

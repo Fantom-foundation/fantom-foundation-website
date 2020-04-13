@@ -12,7 +12,11 @@
     }
 }
 @media screen and (max-width: 1680px){
+    .wallet-section-wrapper {
+        padding-left: 245px;
+    } 
 }
+
 @media screen and (max-width: 1440px){
     .wallet-section-wrapper {
         padding-left: 200px;
@@ -38,6 +42,10 @@
         margin-top: 1px;
         top: unset;
         left: unset;
+    }
+    .ftm-col-wrapper {
+        padding-left: 200px;
+        padding-right: 110px;
     }
 }
 
@@ -916,7 +924,7 @@ li.navSection.primary a:focus {
     z-index: 1000;
     left: 0;
     right: 0;
-    top: 100px;
+    top: 85px;
     pointer-events: none;
     -webkit-transform: rotateX(-15deg);
     transform: rotateX(-15deg);
@@ -2327,6 +2335,138 @@ ul.navRoot {
     .page-template-get-started .col-sm-3 {
         display: none;
     }
+    img.banner-desktop-image {
+        height: 578px;
+        object-fit: cover;
+        object-position: left;
+    }
+    .safe-and-secure-section img {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+    .col-sm-6.desktop-banner-image {
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
+    .col-sm-6.desktop-banner-content {
+        flex: 0 0 58%;
+        max-width: 58%;
+    }
+    .mobile-col-section .row .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-sm-6.secondary-col-image-wrapper {
+        position: unset;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    img.desktop-image.easy-to-use-img {
+        max-width: 100%;
+        float: unset;
+    }
+    img.desktop-image.earn-crypto-img {
+        max-width: 100%;
+        float: unset;
+    }
+    .col-sm-6.first-col-image-wrapper {
+        position: unset;
+        padding-right: 15px;
+        padding-left: 15px;
+        order: 2;
+    }
+    .col-sm-6.first-col-content {
+        position: unset;
+        right: 0;
+        order: 1;
+    }
+    .desktop-wallet-first-section .row {
+        padding: 0;
+    }
+    .mobile-col-section {
+        padding-bottom: 50px;
+    }
+    .first-col-content-sec {
+        max-width: 80%;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+    .mobile-col-section .row .col-sm-6:first-child {
+        max-width: 80%;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+    .desktop-wallet-first-section .row .col-sm-6:first-child {
+        max-width: 100%;
+    }
+    .safe-and-secure-section {
+        margin-bottom: 0;
+    }
+    .first-mobile-section.desktop-wallet-first-section {
+        padding-top: 0;
+    }
+    .col-sm-6.mobile-wrapper-image {
+        order: 2;
+    }
+    .col-sm-6.mobile-wrapper-content {
+        order: 1;
+    }
+    .col-sm-6.mobile-wrapper-content {
+        max-width: 515px !important;
+        margin: auto;
+    }
+    .first-mobile-section {
+        padding: 30px 0;
+        padding-top: 50px;
+    }
+    .col-sm-6.mobile-banner-col-content {
+        flex: 0 0 63%;
+        max-width: 63%;
+    }
+    .col-sm-6.mobile-banner-col-image {
+        flex: 0 0 37%;
+        max-width: 37%;
+        position: absolute;
+        right: 0;
+        padding: 0;
+    }
+    .fantom-mobile-wallet-section .mobile-image {
+        position: relative;
+        bottom: 102px;
+        height: 522px;
+        object-fit: cover;
+        object-position: left;
+        width: 100%;
+    }
+    /*    .app-link-wrapper {
+            justify-content: space-between;
+        }*/
+    .app-link-wrapper img {
+        margin-right: 0;
+    }
+    .get-col-wrapper {
+        max-width: 100%;
+    }
+    .roadmap-banner-content {
+        max-width: 100%;
+        margin-left: auto;
+    }
+    .page-id-494 div#container-wrapper img {
+        width: 100%;
+    }
+    .fantom-community-section {
+        margin-left: 0;
+    }
+    .col-sm-6.ftm-col {
+        padding-bottom: 40px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .ftm-col-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 @media screen and (max-width: 991px){
     ul.copyright-page-link-wrapper li {
@@ -2334,6 +2474,26 @@ ul.navRoot {
     }
     ul.social-icon-section {
         left: 112px;
+    }
+    .col-sm-6.desktop-banner-content {
+        flex: 0 0 63%;
+        max-width: 63%;
+    }
+    .col-sm-6.desktop-banner-image {
+        flex: 0 0 37%;
+        max-width: 37%;
+    }
+    img.image-wrapper {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 898px){
+    .wallet-section-wrapper {
+        padding-left: 50px;
+    }
+    .page-template-fantom-wallet li.navSection.logo:before {
+        top: 10px;
     }
 }
 @media screen and (max-width: 768px){
@@ -2433,7 +2593,7 @@ ul.navRoot {
     }
     .theme-menus {
         position: fixed;
-        background: #ffff;
+        background: #fff;
         height: 100%;
         width: 100%;
         z-index: 999;
@@ -2890,8 +3050,123 @@ ul.navRoot {
         grid-template-columns: repeat(1,1fr);
         grid-gap: 30px;
     }
-
-
+    .col-sm-6.desktop-banner-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-sm-6.desktop-banner-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .fantom-mobile-wallet-section {
+        height: 590px;
+        margin-bottom: 223px;
+        position: relative;
+    }
+    img.banner-desktop-image {
+        height: 450px;
+        padding-left: 132px;
+    }
+    .col-sm-6.desktop-banner-image {
+        position: absolute;
+        top: 350px;
+    }
+    a.wallet-link {
+        position: relative;
+        top: 15px;
+        margin: 0;
+    }
+    .wallet-link-wrapper {
+        display: block;
+        padding-bottom: 82px;
+    }
+    a.wallet-link.download-wallet-btn {
+        top: 57px;
+    }
+    .wallet-section-wrapper {
+        padding-left: 100px;
+    }
+    .fantom-wallet-section .sub-menu-banner-content h1 {
+        font-size: 36px;
+    }
+    .col-sm-6.mobile-banner-col-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-sm-6.mobile-banner-col-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        position: unset;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .fantom-mobile-wallet-section .mobile-image {
+        position: relative;
+        bottom: 0px;
+        height: 440px;
+        width: auto;
+        top: 55px;
+        margin: auto;
+        display: flex;
+        float: unset;
+    }
+    .page-template-fantom-wallet header.mobile-row-sec-wrapper {
+        background-color: #1969ff;
+    }
+    .page-template-fantom-wallet .menu-toggle span {
+        background: #fff;
+    }
+    .page-template-fantom-wallet a.item-home.colorize {
+        position: relative;
+    }
+    .page-template-fantom-wallet a.item-home.colorize:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-image: url(../images/fantom_logo_white_new.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 110px;
+        height: 35px;
+        top: -15px;
+        left: 15px;
+        margin-left: 110px;
+    }
+    .page-template-fantom-wallet img.mobile-header-logo {
+        visibility: hidden;
+    }
+    .ftm-token-wrapper-section h2 {
+        font-size: 28px;
+    }
+    .ftm-col h3 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 600px){
+    .home-section {
+        padding-top: 77px;
+    }
+    img.mobile-header-logo {
+        margin-left: 45px;
+    }
+    .menu-toggle {
+        right: 42px;
+    }
+    .home-banner {
+        text-align: center;
+        max-width: 100%;
+        margin: auto;
+        padding-top: 45px;
+    }
+    .wallet-section-wrapper {
+        padding-left: 45px;
+    }
+    .wallet-section {
+        left: 0;
+    }
+    .page-template-fantom-wallet a.item-home.colorize:before {
+        margin-left: 33px;
+    }
 }
 @media screen and (max-width: 480px){
     .menu-toggle {
@@ -2904,7 +3179,7 @@ ul.navRoot {
     img.image-wrapper {
         width: 100%;
         right: 0;
-        top: 30px;
+        /*        top: 30px;*/
         position: relative;
     }
     img.mobile-header-logo {
@@ -2916,15 +3191,84 @@ ul.navRoot {
     .accordions li i.fa-chevron-down {
         right: -45px;
     }
+    .wallet-section-wrapper {
+        padding-left: 0px;
+    }
+    img.banner-desktop-image {
+        height: 350px;
+        padding-left: 15px;
+    }
+    .fantom-mobile-wallet-section {
+        height: 530px;
+        margin-bottom: 223px;
+        position: relative;
+    }
+    .col-sm-6.desktop-banner-image {
+        position: absolute;
+        top: 375px;
+    }
+    .fantom-wallet-section .sub-menu-banner-content h1 {
+        padding-top: 30px;
+        margin-bottom: 10px;
+    }
+    .safe-and-secure-section {
+        padding: 40px 0;
+    }
+    img.device-icon {
+        width: 64px;
+    }
+    .create-wallet-link-wrapper.mac-web-wallet {
+        margin-right: 15px;
+    }
+    .create-wallet-section a#showall {
+        width: 100%;
+    }
+    .fantom-mobile-wallet-section .mobile-image {
+        height: 100%;
+        width: 100%;
+        top: 30px;
+    }
+    .app-link-wrapper img {
+        width: 100%;
+    }
+    .page-template-fantom-wallet a.item-home.colorize:before {
+        margin-left: 15px;
+        left: 0;
+    }
+    .wallet-section {
+        left: 15px;
+    }
+    .page-id-494 section#create-your-validator p {
+        word-break: break-word;
+    }
+    .home-section {
+        padding-top: 0;
+    }
+    .banner-wrapper-section {
+        padding-bottom: 0;
+    }
+    .banner-wrapper-section.ftm-token-wrapper-section {
+        padding-bottom: 50px;
+    }
 }
 @media screen and (max-width: 375px){
     .menu-open .theme-menus {
         overflow-y: scroll;
     } 
+    .home-section {
+        padding-top: 45px;
+    }
+}
+@media screen and (max-width: 896px) and (orientation: landscape) {
+    img.image-wrapper {
+        width: 100%;
+        right: 0;
+        top: 9px;
+    }  
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
     img.mobile-header-logo {
-        margin-left: 110px;
+        margin-left: 108px;
     }
     .menu-toggle {
         right: 100px;
@@ -2934,6 +3278,15 @@ ul.navRoot {
     }
     .menu-open .theme-menus {
         overflow-y: scroll;
+    }
+    .create-wallet-section a#showall {
+        width: 100%;
+    }
+    .home-banner {
+        text-align: center;
+        max-width: 100%;
+        margin: auto;
+        padding-top: 75px;
     }
 }
 @media screen and (max-width: 667px) and (orientation: landscape) {  
@@ -2948,4 +3301,55 @@ ul.navRoot {
     img.mobile-header-logo {
         margin-left: 65px;
     }
+    .page-template-fantom-wallet a.item-home.colorize:before {
+        margin-left: 45px;
+    }
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .medium-blog-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .medium-blog-col {
+        width: 100%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding: 0 15px;
+        padding-bottom: 40px;
+    }
+    .card-section {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .card-wrapper {
+        width: 100%;
+        flex: 0 0 30.333333%;
+        max-width: 30.333333%;
+        margin: 10px;
+        padding: 20px;
+    }
+    .globalNav .productsGroup .linkContainer{
+        width: 100%;
+    }
+    .globalNav .productsGroup .linkContainer, .globalNav .productsGroup > li{
+        width: 50%;
+    }
+    .globalNav .productsGroup > li{
+        -webkit-flex: 100%;
+            -ms-flex: 100%;
+        flex: 100%;
+    }
+    
+    
+    
+    
 }

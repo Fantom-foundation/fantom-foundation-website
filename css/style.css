@@ -79,7 +79,9 @@ ul {
     padding-inline-start: 0px;
     font-family: WorkSans !important;
 }
-
+body a {
+    color: #1969ff;
+}
 a {
     transition: all ease-in-out 0.4s;
 }
@@ -489,7 +491,7 @@ a.stake-now-btn:hover {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 56px;
-/*    padding: 0 12px;*/
+    /*    padding: 0 12px;*/
 }
 .medium-blog-col {
     width: 100%;
@@ -1291,8 +1293,10 @@ ul#accordions , ul#accordions ul {
 }
 
 .roadmap-banner-content{
-    max-width: 670px;
-    margin: auto;
+    /*    max-width: 670px;
+        margin: auto;*/
+    max-width: 66.666667%;
+    margin-left: auto;
 }
 .page-template-roadmap .page-section ul {
     padding-inline-start: 40px;
@@ -1657,9 +1661,17 @@ h5.you-stake-wrapper {
 h5.total-staked {
     font-size: 14px;
 }
+.page-id-232 .banner-wrapper-section {
+    padding-top: 180px;
+    padding-bottom: 47px;
+    background-color: transparent;
+}
+.page-id-232 header.globalNav {
+    background-color: #fff;
+}
 .get-col-wrapper {
-    max-width: 75%;
     margin-left: auto;
+    max-width: 75%;
 }
 .get-started-content p {
     margin-right: 170px;
@@ -1794,7 +1806,9 @@ a.showSingle.active {
     padding: 0;
 }
 .desktop-wallet-first-section .row {
-    padding: 290px 0;
+    /*    padding: 290px 0;*/
+    padding-top: 214px;
+    padding-bottom: 244px;
 }
 .fantom-wallet-app-section {
     text-align: center;
@@ -1834,7 +1848,8 @@ a.desktop-wallets {
     color: #1969ff;
 }
 .page-template-fantom-wallet a.rootLink.item-support.colorize.fantom-wallte-btn.get-start-btn {
-    display: none;
+    color: #1969ff;
+    background: #fff;
 }
 .page-template-fantom-wallet li.navSection.primary a:hover {
     color: rgba(255,255,255,0.5) !important;
@@ -1874,6 +1889,7 @@ a.wallet-link.download-wallet-btn {
     text-align: center;
     padding: 80px 0;
     margin-bottom: 100px;
+    padding-top: 100px;
 }
 .safe-and-secure-section p {
     max-width: 972px;
@@ -1991,6 +2007,11 @@ textarea#code {
     width: 100%;
     height: 500px;
 }
+textarea#code1 {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
 
 
 /* ----------
@@ -2072,6 +2093,7 @@ a.api-reference {
 /*ttttttttttttttttttttttttttttttt*/
 .fantom-wallet-section .sub-menu-banner-content h1 {
     padding-top: 30px;
+    font-size: 64px;
 }
 .fantom-wallet-section .sub-menu-banner-content h1:after {
     content: "";
@@ -2090,6 +2112,8 @@ a.api-reference {
 
 img.banner-desktop-image {
     height: 570px;
+    object-fit: cover;
+    object-position: top left;
 }
 
 img.desktop-image.earn-crypto-img {
@@ -2238,4 +2262,123 @@ span.category-name-sec a {
 .category-col-wrapper.blog-col {
     padding-top: 24px;
     padding-bottom: 100px;
+}
+.page-template-faq .banner-wrapper-section {
+    padding-top: 100px;
+    background-color: transparent;
+}
+.page-template-faq header.globalNav {
+    background-color: #fff;
+}
+a.linkContainer-wrapper p:hover {
+    color: #1969ff;
+}
+pre.pre-wrapper {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    color: #2b3954;
+    font-size: 16px;
+    margin: 25px 0;
+}
+span.private-key-wrapper {
+    font-size: 21px;
+    line-height: 44px;
+    padding: 10px 0;
+}
+a.link-sec-wrapper {
+    font-size: 16px;
+    color: #1969ff;
+}
+span.pre-url {
+    text-decoration: underline;
+}
+ul#tabs-nav {
+    text-align: left;
+    list-style-type: none;
+}
+ul#tabs-nav li {
+    margin: 20px 0;
+}
+ul#tabs-nav li.active a {
+    position: relative;
+    color: #fff;
+}
+ul#tabs-nav li.active a:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    background: #8cb4ff;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+ul#tabs-nav li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    padding: .5rem 1rem;
+}
+a.api-reference:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/*ttttt*/
+
+.fantom-wallet-section:before {
+    content: "";
+    position: absolute;
+    background: #1969ff;
+    width: 100%;
+    height: 539px;
+    z-index: -1;
+}
+.fantom-wallet-section {
+    position: relative;
+}
+.page-id-494 div#container-wrapper img {
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+/*FTM page style*/
+.banner-wrapper-section.ftm-token-wrapper-section {
+    background-color: transparent;
+}
+.page-template-ftm-token header.globalNav {
+    background-color: #fff;
+}
+img.ftm-icon-wrapper {
+    height: 47px;
+    width: 47px;
+}
+.col-sm-6.ftm-col {
+    padding-bottom: 40px;
+}
+.ftm-token-wrapper-section .sub-menu-banner-content {
+    max-width: 570px;
+    padding-bottom: 48px;
+}
+.ftm-token-wrapper-section h2 {
+    font-size: 37px;
+}
+.ftm-used-for-sec h2 {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.ftm-col h3 {
+    font-size: 21px;
+    padding-top: 17px;
+}
+.ftm-used-for-sec {
+    background-color: #fbfcff;
+    padding: 50px 0 80px 0;
+}
+.the-ftm-supply {
+    padding-top: 48px;
+}
+.ftm-col-wrapper {
+    padding-left: 270px;
+    padding-right: 187px;
 }
