@@ -96,20 +96,13 @@
                                                             <p class="linkSub">Earn rewards by securing the network.</p>
                                                         </div>
                                                     </a></li>
-                                                <li><a class="linkContainer item-atlas" href="/ftm-token/">
-                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FTM token.svg" alt="Sub menu"> 
-                                                        <div class="productLinkContent">
-                                                            <h3 class="linkTitle">FTM token</h3>
-                                                            <p class="linkSub">FTM is the primary token of the Fantom ecosystem.</p>
-                                                        </div>
-                                                    </a></li>
-                                                <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                    <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                            ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
-                                                    <div class="productLinkContent">
-                                                    <h3 class="linkTitle">Fantom DeFi</h3>
-                                                    <p class="linkSub">Buy, sell, lend, and borrow synthetic assets on Fantom.</p>
-                                                    </div>
-                                                  </a></li>-->
+                                                <!--                                                <li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
+                                                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                     ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                                                                        <div class="productLinkContent">
+                                                                                                            <h3 class="linkTitle">Fantom DeFi</h3>
+                                                                                                            <p class="linkSub">Buy, sell, lend, and borrow synthetic assets on Fantom.</p>
+                                                                                                        </div>
+                                                                                                    </a></li>-->
                                             </ul>
                                         </li> 
                                         <li class="sec-fold-group">
@@ -309,18 +302,12 @@
                                                                                 <h3 class="linkTitle">Stake on Fantom</h3>
                                                                             </div>
                                                                         </a></li>
-                                                                    <li><a class="linkContainer item-atlas" href="/ftm-token/">
-                                                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FTM token.svg" alt="Sub menu"> 
-                                                                            <div class="productLinkContent">
-                                                                                <h3 class="linkTitle">FTM token</h3>
-                                                                            </div>
-                                                                        </a></li>
-                                                                    <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                            ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
-                                                                         <div class="productLinkContent">
-                                                                         <h3 class="linkTitle">Fantom DeFi</h3>
-                                                                          </div>
-                                                                      </a></li>-->
+                                                                    <!--                                                <li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
+                                                                                                                            <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                     ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                                                                                            <div class="productLinkContent">
+                                                                                                                                <h3 class="linkTitle">Fantom DeFi</h3>
+                                                                                                                            </div>
+                                                                                                                        </a></li>-->
                                                                 </ul>
                                                             </li> 
                                                             <li class="sec-fold-group">

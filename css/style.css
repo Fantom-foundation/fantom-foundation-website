@@ -1670,6 +1670,7 @@ h5.total-staked {
     background-color: #fff;
 }
 .get-col-wrapper {
+    max-width: 80%;
     margin-left: auto;
     max-width: 75%;
 }
@@ -2341,44 +2342,4 @@ a.api-reference:hover {
     width: 600px;
     height: auto;
     object-fit: contain;
-}
-/*FTM page style*/
-.banner-wrapper-section.ftm-token-wrapper-section {
-    background-color: transparent;
-}
-.page-template-ftm-token header.globalNav {
-    background-color: #fff;
-}
-img.ftm-icon-wrapper {
-    height: 47px;
-    width: 47px;
-}
-.col-sm-6.ftm-col {
-    padding-bottom: 40px;
-}
-.ftm-token-wrapper-section .sub-menu-banner-content {
-    max-width: 570px;
-    padding-bottom: 48px;
-}
-.ftm-token-wrapper-section h2 {
-    font-size: 37px;
-}
-.ftm-used-for-sec h2 {
-    text-align: center;
-    margin-bottom: 48px;
-}
-.ftm-col h3 {
-    font-size: 21px;
-    padding-top: 17px;
-}
-.ftm-used-for-sec {
-    background-color: #fbfcff;
-    padding: 50px 0 80px 0;
-}
-.the-ftm-supply {
-    padding-top: 48px;
-}
-.ftm-col-wrapper {
-    padding-left: 270px;
-    padding-right: 187px;
 }
