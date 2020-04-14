@@ -2458,6 +2458,30 @@ ul.navRoot {
     .fantom-community-section {
         margin-left: 0;
     }
+    .col-sm-6.ftm-col {
+        padding-bottom: 40px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .ftm-col-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .team-container {
+        max-width: 100%;
+        margin: auto;
+    }
+    .blog-detail-section .col-sm-10 {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .col-sm-6.content-sec {
+        padding: 0;
+    }
+    .two-col-section .row {
+        padding: 40px 0;
+    }
 }
 @media screen and (max-width: 991px){
     ul.copyright-page-link-wrapper li {
@@ -2476,6 +2500,9 @@ ul.navRoot {
     }
     img.image-wrapper {
         width: 100%;
+    }
+    ul#tabs-nav li a {
+        padding: 10px 10px;
     }
 
 }
@@ -2518,6 +2545,17 @@ ul.navRoot {
     }
     .get-started-content p {
         margin-right: 0;
+    }
+    a.rootLink.item-support.colorize.fantom-wallte-btn {
+        width: 130px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .page-template-home a.rootLink.item-support.colorize.fantom-wallte-btn {
+        padding: 0;
+    }
+    li.navSection.primary a {
+        font-size: 14px;
     }
 }
 
@@ -3126,6 +3164,24 @@ ul.navRoot {
     .page-template-fantom-wallet img.mobile-header-logo {
         visibility: hidden;
     }
+    .ftm-token-wrapper-section h2 {
+        font-size: 28px;
+    }
+    .ftm-col h3 {
+        font-size: 18px;
+    }
+    .mobile-ftm-image {
+        display: block;
+    }
+    .desktop-ftm-image {
+        display: none;
+    }
+    .medium-blog-row.wrapper-blog-sec {
+        display: none;
+    }
+    .mobile-blog-carousel {
+        display: block !important;
+    }
 }
 @media screen and (max-width: 600px){
     .home-section {
@@ -3229,6 +3285,12 @@ ul.navRoot {
     .home-section {
         padding-top: 0;
     }
+    .banner-wrapper-section {
+        padding-bottom: 0;
+    }
+    .banner-wrapper-section.ftm-token-wrapper-section {
+        padding-bottom: 50px;
+    }
 }
 @media screen and (max-width: 375px){
     .menu-open .theme-menus {
@@ -3283,4 +3345,55 @@ ul.navRoot {
     .page-template-fantom-wallet a.item-home.colorize:before {
         margin-left: 45px;
     }
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .medium-blog-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .medium-blog-col {
+        width: 100%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding: 0 15px;
+        padding-bottom: 40px;
+    }
+    .card-section {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .card-wrapper {
+        width: 100%;
+        flex: 0 0 30.333333%;
+        max-width: 30.333333%;
+        margin: 10px;
+        padding: 20px;
+    }
+    .team-member-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .team-member-col {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 40px;
+    }
+
+
+
+
 }

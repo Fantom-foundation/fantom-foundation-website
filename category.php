@@ -10,21 +10,19 @@ $current_category = single_cat_title("", false);
 <main class="sub-menu-page blog-page-sec-wrapper">
     <div class="banner-wrapper-section">
         <div class="container">
-
             <div class="category-row-wrapper">          
                 <?php
                 $args = array(
                     'post_type' => 'post',
-                    'category' => '<?php the_category(', '); ?>',
                     'post_status' => 'publish',
                     'posts_per_page' => 1
                 );
-                $testimonials = new WP_Query($args);
-                if ($testimonials->have_posts()) :
+                $category = new WP_Query($args);
+                if ($category->have_posts()) :
                   ?>
                   <?php
-                  while ($testimonials->have_posts()) :
-                    $testimonials->the_post();
+                  while ($category->have_posts()) :
+                    $category->the_post();
                     ?>
                     <div class="category-col-wrapper blog-col">
                         <div class="blog-col-wrapper row">                            
@@ -53,11 +51,10 @@ $current_category = single_cat_title("", false);
                   ?>
                   <?php
                 else :
-                  esc_html_e('No testimonials in the diving taxonomy!', 'text-domain');
+                  esc_html_e('No category in the diving taxonomy!', 'text-domain');
                 endif;
                 ?>
             </div>
-
             <div class="category-row-wrapper medium-blog-row">
                 <?php
                 if (have_posts()) {
@@ -90,11 +87,9 @@ $current_category = single_cat_title("", false);
 
                 wp_reset_postdata();
                 ?>
-
             </div>
         </div>
     </div>
 </main>
-
 <?php
 get_footer();

@@ -27,21 +27,24 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
     </div>
     <div class="team-member-section">
         <div class="container">
-            <div class="team-member-row">
-                <?php
-                if (have_rows('team_member')):
-                  while (have_rows('team_member')) : the_row();
-                    ?> 
-                    <div class="team-member-col">
-                        <img src="<?php the_sub_field('image'); ?>"  class="wrapper-image" alt="Team Member"/>
-                        <h3><?php the_sub_field('name'); ?></h3>
-                        <h4><?php the_sub_field('post'); ?></h4>
-                    </div>
+            <div class="team-container">
+                <h2><?php the_field('team_heading_wrapper') ?></h2>
+                <div class="team-member-row">
                     <?php
-                  endwhile;
-                else :
-                endif;
-                ?> 
+                    if (have_rows('team_member')):
+                      while (have_rows('team_member')) : the_row();
+                        ?> 
+                        <div class="team-member-col">
+                            <img src="<?php the_sub_field('image'); ?>"  class="wrapper-image" alt="Team Member"/>
+                            <h3><?php the_sub_field('name'); ?></h3>
+                            <h4><?php the_sub_field('post'); ?></h4>
+                        </div>
+                        <?php
+                      endwhile;
+                    else :
+                    endif;
+                    ?> 
+                </div>
             </div>
         </div>
     </div>

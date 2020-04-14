@@ -16,10 +16,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     <a  class="showSingle active" id="showall" target="2">Desktop</a>
                 </div>
             </div>
-
-
-
-
             <section class="cnt">
                 <div id="div1"  class="targetDiv targetDiv1">
                     <div class="fantom-mobile-wallet-section">
@@ -83,8 +79,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                             ?>
                         </div>
                     </div>
-
-
                     <div class="fantom-wallet-app-section">
                         <div class="container">
                             <?php the_field('mobile_get_the_wallet_app') ?>
@@ -92,14 +86,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     </div>
 
                 </div>
-
-
-
-
-
-
-
-
                 <div id="div2" class="targetDiv">
                     <div class="fantom-mobile-wallet-section">
                         <div class="container">
@@ -143,7 +129,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                           </div>
                                       </div>
                                   </div>
-
                                 <?php } else { ?>
                                   <div class="sec-mobile-section">
                                       <div class="container">
@@ -166,8 +151,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                             ?>
                         </div>
                     </div>
-
-
                     <div class="fantom-wallet-app-section create-wallet-section">
                         <div class="container">
                             <?php the_field('create_your_wallet_section') ?>

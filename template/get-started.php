@@ -19,9 +19,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         ?> 
                     </div>
                 </div>
-<!--                <div class="col-sm-6">
-                    <img src="<?php //the_field('banner_image') ?>"  class="wrapper-image banner-image" alt="Header Image"/>
-                </div>-->
             </div>               
         </div>
     </div>
