@@ -22,56 +22,7 @@
         <!--animation header-->
 
         <header class="globalNav noDropdownTransition">
-<<<<<<< HEAD
           <?php  get_template_part( 'sub-menu/header', 'submenu' ); ?>
-=======
-            <div class="header-sec">
-                <div class="container">
-                    <ul class="navRoot">
-                        <li class="navSection logo">
-                            <a class="item-home colorize" href="/">
-                                <?php
-                                if ('page' == get_option('show_on_front') && is_front_page()) {
-                                  ?><img src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
-                                } else {
-                                  echo '<img class="banner" src="' . get_template_directory_uri() . '/images/Fantom Logo.svg" alt="Banner 1">';
-                                }
-                                ?>
-                            </a>                          
-                        </li>
-                        <li class="navSection primary">
-                            <a class="rootLink item-products hasDropdown colorize" href="#" data-dropdown="technology">
-                                Technology
-                            </a>
-                            <a class="rootLink item-developers hasDropdown colorize" href="#" data-dropdown="tools">
-                                Tools
-                            </a>
-                            <a class="rootLink item-company hasDropdown colorize" href="#" data-dropdown="ecosystem">
-                                Ecosystem
-                            </a>
-                            <a class="rootLink item-company hasDropdown colorize" href="#" data-dropdown="developers">
-                                Developers
-                            </a>
-                        </li>
-                        <li class="navSection secondary">
-                            <?php
-                            if ('page' == get_option('show_on_front') && is_front_page()) {
-                              ?> <a class="rootLink item-support colorize fantom-wallte-btn" href="/fantom-wallet/">FantomWallet</a> <?php
-                            } else {
-                              echo '  <a class="rootLink item-support colorize fantom-wallte-btn get-start-btn" href="/get-started/">Get Started</a>';
-                            }
-                            ?>
-                        </li>                      
-                    </ul>
-                </div>
-                
-                <!--ttttttttttt-->
-                
-                
-                <?php dynamic_sidebar('header-menu'); ?>
-                
-            </div>
->>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
         </header>
 
         <!--mobile header-->

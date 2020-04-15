@@ -61,7 +61,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                   esc_html_e('No blogpost in the diving taxonomy!', 'text-domain');
                 endif;
                 ?>
-<<<<<<< HEAD
             </div>  
             </div>
     </div>
@@ -69,11 +68,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             
             <div class="blog-post-section">
                 <div class="category-col-sec container">
-=======
-            </div>   
-            <div class="blog-post-section">
-                <div class="category-col-sec">
->>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
                     <div class="medium-blog-row">          
                         <?php
                         $args = array(
@@ -114,12 +108,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
         
-=======
-        </div>
-    </div>
->>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
 </main>
 <?php get_footer(); ?>
 

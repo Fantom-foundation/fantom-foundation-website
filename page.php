@@ -2,11 +2,7 @@
 /*
  *  Template Name: New page
  */
-<<<<<<< HEAD
 get_header();
-=======
-get_header('delivero');
->>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
 ?>
 <main> 
     <div class="banner-wrap-section banner-wrapper-section">
