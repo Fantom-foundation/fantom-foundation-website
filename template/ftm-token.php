@@ -41,7 +41,8 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         endif;
                         ?>
                     </div>
-                    <img src="<?php the_field('ftm_used_for_image') ?>"  class="ftm-wrapper-image" alt="FTM Image"/>
+                    <img src="<?php the_field('ftm_used_for_image') ?>"  class="ftm-wrapper-image desktop-ftm-image" alt="FTM Image"/>
+                    <img src="<?php the_field('ftm_used_for_mobile_image') ?>"  class="ftm-wrapper-image mobile-ftm-image" alt="FTM Image"/>
                 </div>
             </div>
         </div>
@@ -65,8 +66,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             </div>
         </div>
     </div>
-
-
 </main>
 <?php get_footer(); ?>
 

@@ -2,11 +2,10 @@
 /*
  * Template Name: Home Page
  */
-
 get_header();
 $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
 ?>
-<main class="about-sec-page">
+<main class="home-sec-page">
     <div class="home-banner-sec-wrapper">
         <div class="container">
             <div class="row banner-row">
@@ -57,33 +56,37 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                             <?php the_field('stake_on_fantom_section') ?>                     
                         </div>
                     </div>
+                    <!-- Rangeslider Section-->
                     <div class="col-sm-6">
-                        <div class="rangeslider-sec">
-                            <h4>Staking calculator</h4>
-                            <p>Find out what's your ataking rewards</p>
-                            <h5 class="you-stake-wrapper">You stake <span class="text-blue">156,000 FTM</span></h5>
+                        <div class="rangeslider-sec"> 
+                            <?php the_field('staking_calculator_heading_wrapper') ?>
+                            <h5 class="you-stake-wrapper"><?php the_field('ftm_number') ?></h5>
                             <div class="budget-wrap">
                                 <div class="budget">                         
                                     <div class="content">
-                                        <input type="range" min="10" max="100"  step="0.1" value="58.62" data-rangeslider>                                       
+                                        <input type="range" min="<?php the_field('range_minimum_number') ?>" max="<?php the_field('range_maximum_number') ?>"  step="<?php the_field('range_step') ?>" value="<?php the_field('range_valu') ?>" data-rangeslider>                                       
                                         <ul class="range-number">
-                                            <li>0</li>
-                                            <li>100k</li>
-                                            <li>1m</li>
-                                            <li>10m</li>
-                                            <li>100m</li>
+                                            <?php
+                                            if (have_rows('range_number')):
+                                              while (have_rows('range_number')) : the_row();
+                                                ?> 
+                                                <li><?php the_sub_field('number'); ?></li>
+                                                <?php
+                                              endwhile;
+                                            else :
+                                            endif;
+                                            ?>    
                                         </ul>         
                                     </div>                                
                                 </div>
                             </div>
                             <div class="rewards-section">
                                 <div class="rewards-wrapper">
-                                    <h5>Your yearly rewards</h5>
-                                    <span class="text-blue">65,434 FTM</span>
+                                    <h5><?php the_field('yearly_rewards_heading_wrapper') ?></h5>
+                                    <span class="text-blue"><?php the_field('yearly_rewards_ftm_number') ?></span>
                                 </div>
                                 <div class="rewards-wrapper">
-                                    <h5>Current APR</h5>
-<!--                                    <span class="text-blue float-right">58.62%</span>-->
+                                    <h5><?php the_field('current_apr_heading_wrapper') ?></h5>
                                     <div class="header">
                                         <div class="title clearfix"><span class="pull-right text-blue float-right"></span></div>
                                     </div>
@@ -128,6 +131,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             </div>
         </div>
     </div>
+    <!-- Developer Friendly Section-->
     <div class="developer-friendly-section">
         <div class="container">
             <div class="developer-friendly-wrapper">
@@ -136,30 +140,31 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     <div class="tabs row">
                         <div class="col-sm-2">
                             <ul id="tabs-nav">
-                                <li class="active"><a href="#tab1">Request</a></li>
-                                <li><a href="#tab2">Response</a></li>
-                            </ul> <!-- END tabs-nav -->
-                            <a class="api-reference" href="#" target="_blank">Full API reference</a>
+                                <li class="active"><a href="#tab1"><?php the_field('request_title') ?></a></li>
+                                <li><a href="#tab2"><?php the_field('response_title') ?></a></li>
+                            </ul>
+                            <a class="api-reference" href="#" target="_blank"><?php the_field('full_api_reference_title') ?></a>
                         </div>
                         <div class="col-sm-10">                  
                             <div id="tabs-content">
                                 <div id="tab1" class="tab-content">
                                     <div class="code-container">
-                                        <textarea id="code"><?php the_field('developer_friendly_code') ?></textarea>
+                                        <textarea id="code"><?php the_field('response_code_section') ?></textarea>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-content">
                                     <div class="code-container">
-                                        <textarea id="code1"><?php the_field('developer_friendly_code') ?></textarea>
+                                        <textarea id="code1"><?php the_field('request_code_section') ?></textarea>
                                     </div>
                                 </div>
-                            </div> <!-- END tabs-content -->
+                            </div> 
                         </div>   
-                    </div> <!-- END tabs -->
+                    </div>
                 </div>
             </div> 
         </div>                    
     </div>
+    <!--  Two col section-->
     <div class="powered-by-fantom-section">
         <div class="container">
             <div class="powered-by-fantom-content">
@@ -201,10 +206,11 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             </div> 
         </div>            
     </div>
+    <!--See our integrations section-->
     <div class="customer-logo-wrapper">
         <div class="container">
             <a href="#" class="customer_logo-container">
-                <span class="see-our-customers-btn">See our integrations</span>
+                <span class="see-our-customers-btn"><?php the_field('see_our_integrations_title') ?></span>
                 <ul>
                     <?php
                     if (have_rows('customer_logo_section')):
@@ -221,9 +227,10 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             </a>
         </div>
     </div>
+    <!-- Medium Blog Section-->
     <div class="medium-blog-section desktop-medium-blog-sec">
         <div class="container">
-            <h2>What’s new at Fantom</h2>
+            <h2><?php the_field('what’s_new_at_fantom_title') ?></h2>
             <div class="medium-blog-row">
                 <?php
                 $url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fantomfoundation';
@@ -240,7 +247,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $item['title'] ?></h5>
                                     <div class="read-story-btn-wrapper">
-                <!-- 											<a href="<?php echo $item['link'] ?>" target="_blank" class="read-story-btn"><span>READ STORY</span></a> -->
                                         <span>READ STORY</span>
                                     </div>                                       
                                 </div>							
@@ -248,7 +254,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         </a>
                     </div>
                     <?php
-                    //echo '<pre>' . print_r($item) . '</pre>';
                   }
                   $i++;
                 }
@@ -256,13 +261,12 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             </div>
         </div>
     </div>
-    <!--mobile-->
+    <!--Mobile Medium Blog Carousel-->
     <div class="medium-blog-section mobile-medium-blog-sec">
         <div class="container">
-            <h2>What’s new at Fantom</h2>
+            <h2><?php the_field('what’s_new_at_fantom_title') ?></h2>
             <div class="medium-blog-row"> 
                 <div class="owl-carousel owl-theme" id="medium-blog-carousel">
-
                     <?php
                     $url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fantomfoundation';
                     $str = file_get_contents($url);
@@ -285,7 +289,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                 </div>
                             </a>
                         </div>
-
                         <?php
                       }
                       $i++;
@@ -295,11 +298,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             </div>
         </div>
     </div>
-
-    <div class="test">
-
-    </div>
-
 </main>
 <?php get_footer(); ?>
 
