@@ -101,6 +101,7 @@ add_action('widgets_init', 'ourWidgetsInit');
 function extra_user_profile_fields($user) {
   $meta = get_user_meta($user->ID, 'meta_key_name', false);
 }
+<<<<<<< HEAD
 
 
 /**
@@ -118,3 +119,5 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
+=======
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e

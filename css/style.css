@@ -2090,6 +2090,11 @@ ul#tabs-nav li a {
 a.api-reference:hover {
     color: rgba(255, 255, 255, 0.7);
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
 .fantom-wallet-section:before {
     content: "";
     position: absolute;
@@ -2152,6 +2157,10 @@ img.ftm-icon-wrapper {
 .mobile-blog-carousel {
     display: none !important;
 }
+<<<<<<< HEAD
 .home .rewards-section {
+=======
+.page-template-home .rewards-section {
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
     padding-top: 10px;
 }

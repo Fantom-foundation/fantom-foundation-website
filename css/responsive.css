@@ -2531,6 +2531,7 @@ ul.navRoot {
     .two-col-section .row {
         padding: 40px 0;
     }
+<<<<<<< HEAD
     img.desktop-image {
         display: none;
     }
@@ -2544,6 +2545,8 @@ ul.navRoot {
     .sec-mobile-section {
         padding-top: 0;
     }
+=======
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
 }
 @media screen and (max-width: 991px){
     ul.copyright-page-link-wrapper li {
@@ -2566,6 +2569,7 @@ ul.navRoot {
     ul#tabs-nav li a {
         padding: 10px 10px;
     }
+<<<<<<< HEAD
     .home a.rootLink.item-support.colorize.fantom-wallte-btn {
         padding: 0;
     }
@@ -2577,6 +2581,9 @@ ul.navRoot {
     li.navSection.primary a {
         font-size: 14px;
     }
+=======
+
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
 }
 @media screen and (max-width: 898px){
     .wallet-section-wrapper {
@@ -2623,7 +2630,11 @@ ul.navRoot {
         height: 40px;
         font-size: 14px;
     }
+<<<<<<< HEAD
     .home a.rootLink.item-support.colorize.fantom-wallte-btn {
+=======
+    .page-template-home a.rootLink.item-support.colorize.fantom-wallte-btn {
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
         padding: 0;
     }
     li.navSection.primary a {
@@ -3248,6 +3259,7 @@ ul.navRoot {
     .mobile-blog-carousel {
         display: block !important;
     }
+<<<<<<< HEAD
     main.blog-page-sec-wrapper {
         padding-top: 70px;
     }
@@ -3278,6 +3290,8 @@ ul.navRoot {
     .single-post header.mobile-row-sec-wrapper {
         background-color: #fff;
     }
+=======
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
 }
 @media screen and (max-width: 600px){
     .home-section {
@@ -3387,6 +3401,7 @@ ul.navRoot {
     .banner-wrapper-section.ftm-token-wrapper-section {
         padding-bottom: 50px;
     }
+<<<<<<< HEAD
     .first-col-content-sec, .sec-col-content-sec {
         padding-left: 0;
     }
@@ -3399,6 +3414,8 @@ ul.navRoot {
         object-position: left;
         padding-left: 15px;
     }
+=======
+>>>>>>> 90ce16e4fb0a7aaca940e4c6be04428acc8a243e
 }
 @media screen and (max-width: 375px){
     .menu-open .theme-menus {
