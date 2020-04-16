@@ -13,7 +13,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             <div class="wallet-section-wrapper">
                 <div class="wallet-section" id="wallet-section">
                     <a  class="showSingle" id="showall" target="1">Mobile</a>
-                    <a  class="showSingle active" id="showall" target="2">Desktop</a>
+                    <a  class="showSingle active" id="showall2" target="2">Desktop</a>
                 </div>
             </div>
             <section class="cnt">
@@ -116,13 +116,14 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                 if ($i % 2 == 0) {
                                   ?>
                                   <div class="first-mobile-section desktop-wallet-first-section">
-                                      <div class="container">
+                                      <div class="wallet-container">
                                           <div class="row row-background-wrapper"  id="sec<?php echo $i ?>">
                                               <div class="col-sm-6 first-col-image-wrapper">
-                                                  <img src="<?php the_sub_field('image'); ?>"  class="desktop-image earn-crypto-img" alt="Mobile Image"/>                                               
+                                                  <img src="<?php the_sub_field('image'); ?>"  class="desktop-image earn-crypto-img" alt="Mobile Image"/>  
+                                                    <img src="<?php the_sub_field('tablet_image_wrapper'); ?>"  class="tablet-earn-crypto-img" alt="Mobile Image"/> 
                                               </div>
                                               <div class="col-sm-6 first-col-content">
-                                                  <div class="first-col-content-sec">
+                                                  <div class="sec-col-content-sec">
                                                       <?php the_sub_field('content'); ?>
                                                   </div>                                        
                                               </div>
@@ -131,13 +132,16 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                   </div>
                                 <?php } else { ?>
                                   <div class="sec-mobile-section">
-                                      <div class="container">
-                                          <div class="row mobile-sec-row"  id="sec<?php echo $i ?>">
+                                      <div class="wallet-container">
+                                          <div class="row mobile-sec-row wallet-container-row"  id="sec<?php echo $i ?>">
                                               <div class="col-sm-6">
-                                                  <?php the_sub_field('content'); ?>
+                                                  <div class="first-col-content-sec">
+                                                      <?php the_sub_field('content'); ?>
+                                                  </div>  
                                               </div>
                                               <div class="col-sm-6  secondary-col-image-wrapper">                                                  
                                                   <img src="<?php the_sub_field('image'); ?>"  class="desktop-image easy-to-use-img" alt="Mobile Image"/>
+                                                   <img src="<?php the_sub_field('tablet_image_wrapper'); ?>"  class="tablet-earn-crypto-img" alt="Mobile Image"/> 
                                               </div>
                                           </div>
                                       </div>

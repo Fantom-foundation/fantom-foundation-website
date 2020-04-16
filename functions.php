@@ -101,3 +101,20 @@ add_action('widgets_init', 'ourWidgetsInit');
 function extra_user_profile_fields($user) {
   $meta = get_user_meta($user->ID, 'meta_key_name', false);
 }
+
+
+/**
+ * @desc ACF theme options page init function
+ * @date 15 April 2020
+ * @author Catalyst
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme Menu Options',
+		'menu_title'	=> 'Theme menu Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}

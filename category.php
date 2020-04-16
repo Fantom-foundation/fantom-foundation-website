@@ -55,6 +55,10 @@ $current_category = single_cat_title("", false);
                 endif;
                 ?>
             </div>
+        </div>
+    </div>                       
+    <div class="blog-post-section">
+        <div class="category-col-sec container">
             <div class="category-row-wrapper medium-blog-row">
                 <?php
                 if (have_posts()) {

@@ -182,8 +182,8 @@ jQuery(document).ready(function ($) {
 //show/hide Fantom wallet section
     jQuery(function () {
         jQuery('.showSingle').click(function () {
-            jQuery('.targetDiv').hide('.cnt');
-            jQuery('#div' + $(this).attr('target')).slideToggle();
+            jQuery('.targetDiv').fadeOut('.cnt');
+            jQuery('#div' + $(this).attr('target')).fadeIn('100');
 
         });
     });
@@ -191,8 +191,16 @@ jQuery(document).ready(function ($) {
     $(document).ready(function () {
         $(".showSingle").click(function () {
             $(".showSingle").removeClass("active");
-            // $(".tab").addClass("active"); // instead of this do the below 
-            $(this).addClass("active");
+            var targetid = $(this).attr('target');
+            $('.wallet-section a').each(function () {
+                var targetidInner = $(this).attr('target');
+                if (targetid === targetidInner) {
+                    $(this).addClass("active");
+                }
+                else{
+                     $(this).removeClass("active");
+                }
+            })
         });
     });
 

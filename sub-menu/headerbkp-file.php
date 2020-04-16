@@ -22,7 +22,230 @@
         <!--animation header-->
 
         <header class="globalNav noDropdownTransition">
-            <?php get_template_part('sub-menu/header', 'submenu'); ?>
+            <div class="header-sec">
+                <div class="container">
+                    <ul class="navRoot">
+                        <li class="navSection logo">
+                            <a class="item-home colorize" href="/">
+                                <?php
+                                if ('page' == get_option('show_on_front') && is_front_page()) {
+                                  ?><img src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
+                                } else {
+                                  echo '<img class="banner" src="' . get_template_directory_uri() . '/images/Fantom Logo.svg" alt="Banner 1">';
+                                }
+                                ?>
+                            </a>                          
+                        </li>
+                        <li class="navSection primary">
+                            <a class="rootLink item-products hasDropdown colorize" href="#" data-dropdown="technology">
+                                Technology
+                            </a>
+                            <a class="rootLink item-developers hasDropdown colorize" href="#" data-dropdown="tools">
+                                Tools
+                            </a>
+                            <a class="rootLink item-company hasDropdown colorize" href="#" data-dropdown="ecosystem">
+                                Ecosystem
+                            </a>
+                            <a class="rootLink item-company hasDropdown colorize" href="#" data-dropdown="developers">
+                                Developers
+                            </a>
+                        </li>
+                        <li class="navSection secondary">
+                            <?php
+                            if ('page' == get_option('show_on_front') && is_front_page()) {
+                              ?> <a class="rootLink item-support colorize fantom-wallte-btn" href="/fantom-wallet/">FantomWallet</a> <?php
+                            } else {
+                              echo '  <a class="rootLink item-support colorize fantom-wallte-btn get-start-btn" href="/get-started/">Get Started</a>';
+                            }
+                            ?>
+                        </li>                      
+                    </ul>
+                </div>
+                <div class="dropdownRoot">
+                    <div class="dropdownBackground" style="transform: translateX(452px) scaleX(0.707692) scaleY(1.1075);">
+                        <div class="alternateBackground" style="transform: translateY(255.53px);"></div>
+                    </div>
+                    <div class="dropdownArrow" style="transform: translateX(636px) rotate(45deg);"></div>
+                    <div class="dropdownContainer" style="transform: translateX(452px); width: 368px; height: 443px;">
+
+                        <div class="dropdownSection left" data-dropdown="technology">
+                            <div class="dropdownContent">
+                                <div class="linkGroup products-link fold-wrapper">
+                                    <ul class="productsGroup">
+                                        <li class="first-fold-group">
+                                            <ul>
+                                                <li><a class="linkContainer item-payments" href="/intro-to-fantom/">
+                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Intro to Fantom.svg" alt="Sub menu">         
+                                                        <div class="productLinkContent">
+                                                            <h3 class="linkTitle">Intro to Fantom</h3>
+                                                            <p class="linkSub">Fantom is a fast, scalable and secure platform for digital assets.</p>
+                                                        </div>
+                                                    </a></li> 
+                                                <li><a class="linkContainer item-connect" href="/stake/"> 
+                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Stake on Fantom.svg" alt="Sub menu"> 
+                                                        <div class="productLinkContent">
+                                                            <h3 class="linkTitle">Stake on Fantom</h3>
+                                                            <p class="linkSub">Earn rewards by securing the network.</p>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a class="linkContainer item-atlas" href="/ftm-token/">
+                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FTM token.svg" alt="Sub menu"> 
+                                                        <div class="productLinkContent">
+                                                            <h3 class="linkTitle">FTM token</h3>
+                                                            <p class="linkSub">FTM is the primary token of the Fantom ecosystem.</p>
+                                                        </div>
+                                                    </a></li>
+                                                <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
+                                                    <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                              ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                    <div class="productLinkContent">
+                                                    <h3 class="linkTitle">Fantom DeFi</h3>
+                                                    <p class="linkSub">Buy, sell, lend, and borrow synthetic assets on Fantom.</p>
+                                                    </div>
+                                                  </a></li>-->
+                                            </ul>
+                                        </li> 
+                                        <li class="sec-fold-group">
+                                            <ul>
+                                                <li><a class="linkContainer item-subscriptions" href="/what-is-lachesis/">
+                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/The Consensus.svg" alt="Sub menu"> 
+                                                        <div class="productLinkContent">
+                                                            <h3 class="linkTitle">The Consensus</h3> 
+                                                            <p class="linkSub">Discover Lachesis, Fantom’s ultra-fast consensus mechanism.</p>
+                                                        </div>
+                                                    </a></li> 
+                                                <li><a class="linkContainer item-relay" href="/what-is-opera/">
+                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Opera chain.svg" alt="Sub menu"> 
+                                                        <div class="productLinkContent">
+                                                            <h3 class="linkTitle">Opera chain</h3>
+                                                            <p class="linkSub">The Fantom mainnet, with staking and native DeFi built in.</p>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a class="linkContainer item-radar" href="/xar-network-banking-on-dlt/">
+                                                        <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Xar network.svg" alt="Sub menu"> 
+                                                        <div class="productLinkContent">
+                                                            <h3 class="linkTitle">Xar network</h3>
+                                                            <p class="linkSub">A fully-fledged DeFi toolbox for banks & financial institutions.</p>
+                                                        </div>
+                                                    </a></li> 
+                                            </ul>
+                                        </li>  
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="dropdownSection active sec-fold-section" data-dropdown="tools">
+                            <div class="dropdownContent">
+
+                                <ul class="linkGroup linkList companyGroup fold-wrapper">
+                                    <li class="first-fold-group">
+                                        <h4>WALLET</h4>
+                                        <ul>
+                                            <li><a class="linkContainer item-radar" href="/fantom-wallet/">
+                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FantomWallet.svg" alt="Sub menu"> 
+                                                    <div class="productLinkContent">
+                                                        <h3 class="linkTitle">FantomWallet</h3>
+                                                        <p class="linkSub">Access the web wallet or download the desktop and mobile wallets for Opera.</p>
+                                                    </div></a>
+                                            </li>
+                                        </ul>
+                                        <h4 class="explorers-text">EXPLORERS</h4>
+                                        <ul>
+                                            <li><a class="linkContainer item-radar" href="https://explorer.fantom.network/" target="_blank" >
+                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Opera Explorer.svg" alt="Sub menu"> 
+                                                    <div class="productLinkContent">                                            
+                                                        <h3 class="linkTitle">Opera Explorer</h3>
+                                                        <p class="linkSub">Explore the network transations, blocks, and nodes on Opera.</p>
+                                                    </div></a>
+                                            </li>
+                                            <li><a class="linkContainer item-radar" href="https://explorer.xar.network/" target="_blank" >
+                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Xar Explorer.svg" alt="Sub menu"> 
+                                                    <div class="productLinkContent">
+                                                        <h3 class="linkTitle">Xar Explorer</h3>
+                                                        <p class="linkSub">Explore the network transations, blocks, and nodes on Xar.</p>
+                                                    </div></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="sec-fold-group">
+                                        <h4>GUIDES</h4>
+                                        <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
+                                        <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
+                                        <a class="linkContainer-wrapper" href="/how-to-set-up-a-validator-node-on-fantom/"><p>How to set up a validator node on Fantom</p></a>
+                                    </li>
+                                </ul>                      
+                            </div>
+                        </div>
+
+                        <div class="dropdownSection right ecosystem-section" data-dropdown="ecosystem">
+                            <div class="dropdownContent ecosystem-content">
+
+                                <ul class="linkGroup linkList companyGroup">                             
+                                    <li class="team-sec-wrapper"><a class="linkContainer item-radar" href="/team/">
+                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Team.svg" alt="Sub menu"> 
+                                            <div class="productLinkContent">
+                                                <h3 class="linkTitle">Team</h3>
+                                                <p class="linkSub">Meet the people behind Fantom.</p>
+                                            </div></a>
+                                    </li>
+                                    <li><a class="linkContainer item-radar" href="/roadmap/">
+                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Roadmap.svg" alt="Sub menu"> 
+                                            <div class="productLinkContent">
+                                                <h3 class="linkTitle">Roadmap</h3>
+                                                <p class="linkSub">Keep up to date with our progress and discover what’s coming.</p>
+                                            </div></a>
+                                    </li>
+                                    <li><a class="linkContainer item-radar" href="/blog/">
+                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Blog.svg" alt="Sub menu"> 
+                                            <div class="productLinkContent">
+                                                <h3 class="linkTitle">Blog</h3>
+                                                <p class="linkSub">Learn about Fantom through our general and tech articles.</p>
+                                            </div></a>
+                                    </li>
+                                    <li><a class="linkContainer item-radar" href="/frequently-asked-questions/">
+                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FAQ.svg" alt="Sub menu"> 
+                                            <div class="productLinkContent">
+                                                <h3 class="linkTitle">FAQ</h3>
+                                                <p class="linkSub">Do you have questions? We probably have answers!</p>
+                                            </div></a>
+                                    </li>
+                                    <li><a class="linkContainer item-radar" href="/join-the-fantom-community/">
+                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Community.svg" alt="Sub menu"> 
+                                            <div class="productLinkContent">
+                                                <h3 class="linkTitle">Community</h3>
+                                                <p class="linkSub">Join our wonderful community and share ideas.</p>
+                                            </div></a>
+                                    </li>
+                                </ul>                      
+                            </div>
+                        </div>
+
+                        <div class="dropdownSection right developers-section" data-dropdown="developers">
+                            <div class="dropdownContent">
+
+                                <ul class="linkGroup linkList companyGroup">                               
+                                    <li><a class="linkContainer item-radar" href="https://github.com/Fantom-foundation/go-lachesis/wiki" target="_blank" >
+                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Documentation.svg" alt="Sub menu"> 
+                                            <div class="productLinkContent">
+                                                <h3 class="linkTitle">Documentation</h3>
+                                                <p class="linkSub">Our extensive documentation will guide you when building on Fantom.</p>
+                                            </div></a>
+                                    </li>
+                                    <li><a class="linkContainer item-radar" href="https://github.com/Fantom-foundation/go-lachesis/wiki/Technical-Papers" target="_blank" >
+                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Technical papers.svg" alt="Sub menu"> 
+                                            <div class="productLinkContent">
+                                                <h3 class="linkTitle">Technical papers</h3>
+                                                <p class="linkSub">Read our technical papers and latest research essays.</p>
+                                            </div></a>
+                                    </li>                                
+                                </ul>                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!--mobile header-->
@@ -44,7 +267,7 @@
                         <div class="menu-toggle">
                             <span></span>
                             <span></span>
-                            <span></span> 
+                            <span></span>
                         </div>
                         <nav class="mobile-nav theme-menus d-flex align-items-center"> 
                             <div class="inner-menu container">
@@ -83,7 +306,7 @@
                                                                             </div>
                                                                         </a></li>
                                                                     <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                               ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                              ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
                                                                          <div class="productLinkContent">
                                                                          <h3 class="linkTitle">Fantom DeFi</h3>
                                                                           </div>
@@ -151,6 +374,7 @@
                                                                 <h4>GUIDES</h4>
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
+                                                                <a class="linkContainer-wrapper" href="/how-to-set-up-a-validator-node-on-fantom/"><p>How to set up a validator node on Fantom</p></a>
                                                             </li>
                                                         </ul></li>
                                                 </ul>

@@ -10,11 +10,60 @@
     .wallet-section-wrapper {
         padding-left: 28%;
     }
+    .fantom-mobile-wallet-section .mobile-image {
+        width: 100%;
+    }
+    .fantom-mobile-wallet-section {
+        background-color: #1969ff;
+        padding-top: 106px;
+        height: 596px;
+        margin-bottom: 40px;
+    }
+    img.banner-desktop-image {
+        height: auto !important;
+    }
+    img.desktop-image.easy-to-use-img {
+        max-width: 928px !important;
+    }
+    img.desktop-image.earn-crypto-img {
+        max-width: 928px !important;
+    }
+    .safe-and-secure-section .container {
+        max-width: 1500px;
+    }
+    .safe-and-secure-section img {
+        max-width: 928px;
+        height: auto;
+        padding-top: 50px;
+        margin-left: 50px;
+    }
 }
+@media screen and (min-width: 1900px){
+    .safe-and-secure-section {
+        padding-top: 150px;
+    }
+    .first-col-content-sec {
+        margin: auto;
+    }
+    .sec-col-content-sec {
+        margin: auto;
+    }
+    img.banner-desktop-image {
+        height: 623px;
+    }
+    img.desktop-image.easy-to-use-img {
+        max-width: 770px;
+    }
+    img.desktop-image.earn-crypto-img {
+        max-width: 770px;
+    }
+}
+
 @media screen and (max-width: 1680px){
     .wallet-section-wrapper {
         padding-left: 245px;
     } 
+
 }
 
 @media screen and (max-width: 1440px){
@@ -2386,16 +2435,17 @@ ul.navRoot {
     }
     .mobile-col-section {
         padding-bottom: 50px;
+        padding-top: 30px;
     }
-    .first-col-content-sec {
-        max-width: 80%;
-        margin: auto;
+    .first-col-content-sec, .sec-col-content-sec {
+        margin-right: auto;
+        margin-left: unset;
+        padding-left: 98px;
         padding-bottom: 25px;
     }
     .mobile-col-section .row .col-sm-6:first-child {
-        max-width: 80%;
+        max-width: 100%;
         margin: auto;
-        padding-bottom: 25px;
     }
     .desktop-wallet-first-section .row .col-sm-6:first-child {
         max-width: 100%;
@@ -2482,6 +2532,19 @@ ul.navRoot {
     .two-col-section .row {
         padding: 40px 0;
     }
+    img.desktop-image {
+        display: none;
+    }
+    img.tablet-earn-crypto-img {
+        display: block;
+    }
+    .wallet-container {
+        max-width: 90%;
+        margin: auto;
+    }
+    .sec-mobile-section {
+        padding-top: 0;
+    }
 }
 @media screen and (max-width: 991px){
     ul.copyright-page-link-wrapper li {
@@ -2504,7 +2567,32 @@ ul.navRoot {
     ul#tabs-nav li a {
         padding: 10px 10px;
     }
-
+    .home a.rootLink.item-support.colorize.fantom-wallte-btn {
+        padding: 0;
+    }
+    a.rootLink.item-support.colorize.fantom-wallte-btn {
+        font-size: 14px;
+        width: 140px;
+        height: 40px;
+    }
+    li.navSection.primary a {
+        font-size: 14px;
+    }
+    .code-section-wrapper .col-sm-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .code-section-wrapper .col-sm-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: 20px;
+    }
+    .code-container {
+        width: 100%;
+    }
+    .medium-blog-row {
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 @media screen and (max-width: 898px){
     .wallet-section-wrapper {
@@ -2551,7 +2639,7 @@ ul.navRoot {
         height: 40px;
         font-size: 14px;
     }
-    .page-template-home a.rootLink.item-support.colorize.fantom-wallte-btn {
+    .home a.rootLink.item-support.colorize.fantom-wallte-btn {
         padding: 0;
     }
     li.navSection.primary a {
@@ -2583,7 +2671,7 @@ ul.navRoot {
         display: block;
     }
 
-    .page-template-home .menu-toggle span {
+    .home .menu-toggle span {
         background: #fff;
     }
     .menu-toggle span {
@@ -2745,7 +2833,7 @@ ul.navRoot {
         transition: all ease-in-out 0.5s;
     }
     /*header*/
-    .page-template-home header.mobile-row-sec-wrapper{
+    .home header.mobile-row-sec-wrapper{
         background-color: #1969ff;
     }
     .mobile-logo-icon-wrapper img {
@@ -2871,10 +2959,6 @@ ul.navRoot {
         width: 100%;
         flex-wrap: wrap;
     }
-    /*    ul#menu-footer-menu li {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }*/
     li#menu-item-96 {
         padding-bottom: 40px;
     }
@@ -2894,8 +2978,6 @@ ul.navRoot {
     li#menu-item-95 , li#menu-item-93 {
         flex: 0 0 50%;
         max-width: 50%;
-        /*        position: relative;
-                left: 88px;*/
     }
     .copyright-wrapper.copyright-sec-wrapper {
         position: absolute;
@@ -3182,6 +3264,39 @@ ul.navRoot {
     .mobile-blog-carousel {
         display: block !important;
     }
+    .wallet-container {
+        max-width: 100%;
+    }
+    .sec-col-content-sec {
+        max-width: 80%;
+    }
+    .first-col-content-sec {
+        max-width: 100%;
+    }
+    .col-sm-6.secondary-col-image-wrapper {
+        padding: 0;
+    }
+    img.tablet-earn-crypto-img {
+        height: 600px;
+        object-fit: cover;
+        object-position: left;
+        padding-left: 100px;
+    }
+    .col-sm-6.first-col-image-wrapper {
+        padding: 0;
+    }
+    .page-template-ftm-token header.mobile-row-sec-wrapper {
+        background-color: #fff;
+    }
+    .single-post header.mobile-row-sec-wrapper {
+        background-color: #fff;
+    }
+    section#xar-network p {
+        word-break: break-all;
+    }
+    .simple-page a {
+        word-break: break-all;
+    }
 }
 @media screen and (max-width: 600px){
     .home-section {
@@ -3291,6 +3406,18 @@ ul.navRoot {
     .banner-wrapper-section.ftm-token-wrapper-section {
         padding-bottom: 50px;
     }
+    .first-col-content-sec, .sec-col-content-sec {
+        padding-left: 0;
+    }
+    .sec-col-content-sec {
+        max-width: 100%;
+    }
+    img.tablet-earn-crypto-img {
+        height: 430px;
+        object-fit: cover;
+        object-position: left;
+        padding-left: 15px;
+    }
 }
 @media screen and (max-width: 375px){
     .menu-open .theme-menus {
@@ -3298,6 +3425,14 @@ ul.navRoot {
     } 
     .home-section {
         padding-top: 45px;
+    }
+}
+@media screen and (max-width: 320px){
+    img.tablet-earn-crypto-img {
+        height: 372px;
+    }
+    a.stake-now-btn {
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 896px) and (orientation: landscape) {
