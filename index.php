@@ -1,8 +1,4 @@
 <?php
-/*
- * Template Name: Blog Page
- */
-
 get_header();
 $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
 ?>
@@ -62,53 +58,50 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                 endif;
                 ?>
             </div>  
-            </div>
+        </div>
     </div>
-            
-            
-            <div class="blog-post-section">
-                <div class="category-col-sec container">
-                    <div class="medium-blog-row">          
-                        <?php
-                        $args = array(
-                            'post_type' => 'post',
-                            'post_status' => 'publish',
-                            'posts_per_page' => -1
-                        );
-                        $blogpost = new WP_Query($args);
-                        if ($blogpost->have_posts()) :
-                          ?>
-                          <?php
-                          while ($blogpost->have_posts()) :
-                            $blogpost->the_post();
-                            ?>
+    <div class="blog-post-section">
+        <div class="category-col-sec container">
+            <div class="medium-blog-row">          
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'posts_per_page' => -1
+                );
+                $blogpost = new WP_Query($args);
+                if ($blogpost->have_posts()) :
+                  ?>
+                  <?php
+                  while ($blogpost->have_posts()) :
+                    $blogpost->the_post();
+                    ?>
 
-                            <div class="medium-blog-col blog-col-section">
-                                <a href="<?php the_permalink(); ?>" class="card-link">
-                                    <div class="card">									
-                                        <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?php the_title(); ?></h5>
-                                            <div class="read-story-btn-wrapper">								
-                                                <span><?php echo the_time('F j, Y'); ?></span>
-                                            </div>                                       
-                                        </div>							
-                                    </div>
-                                </a>
+                    <div class="medium-blog-col blog-col-section">
+                        <a href="<?php the_permalink(); ?>" class="card-link">
+                            <div class="card">									
+                                <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php the_title(); ?></h5>
+                                    <div class="read-story-btn-wrapper">								
+                                        <span><?php echo the_time('F j, Y'); ?></span>
+                                    </div>                                       
+                                </div>							
                             </div>
-                            <?php
-                          endwhile;
-                          wp_reset_postdata();
-                          ?>
-                          <?php
-                        else :
-                          esc_html_e('No blogpost in the diving taxonomy!', 'text-domain');
-                        endif;
-                        ?>
+                        </a>
                     </div>
-                </div>
+                    <?php
+                  endwhile;
+                  wp_reset_postdata();
+                  ?>
+                  <?php
+                else :
+                  esc_html_e('No blogpost in the diving taxonomy!', 'text-domain');
+                endif;
+                ?>
             </div>
-        
+        </div>
+    </div>      
 </main>
 <?php get_footer(); ?>
 

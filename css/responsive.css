@@ -2435,6 +2435,7 @@ ul.navRoot {
     }
     .mobile-col-section {
         padding-bottom: 50px;
+        padding-top: 30px;
     }
     .first-col-content-sec, .sec-col-content-sec {
         margin-right: auto;
@@ -2576,6 +2577,21 @@ ul.navRoot {
     }
     li.navSection.primary a {
         font-size: 14px;
+    }
+    .code-section-wrapper .col-sm-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .code-section-wrapper .col-sm-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: 20px;
+    }
+    .code-container {
+        width: 100%;
+    }
+    .medium-blog-row {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media screen and (max-width: 898px){
@@ -3248,9 +3264,6 @@ ul.navRoot {
     .mobile-blog-carousel {
         display: block !important;
     }
-    main.blog-page-sec-wrapper {
-        padding-top: 70px;
-    }
     .wallet-container {
         max-width: 100%;
     }
@@ -3277,6 +3290,12 @@ ul.navRoot {
     }
     .single-post header.mobile-row-sec-wrapper {
         background-color: #fff;
+    }
+    section#xar-network p {
+        word-break: break-all;
+    }
+    .simple-page a {
+        word-break: break-all;
     }
 }
 @media screen and (max-width: 600px){
@@ -3411,6 +3430,9 @@ ul.navRoot {
 @media screen and (max-width: 320px){
     img.tablet-earn-crypto-img {
         height: 372px;
+    }
+    a.stake-now-btn {
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 896px) and (orientation: landscape) {
