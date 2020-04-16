@@ -1,4 +1,8 @@
 <?php
+/*
+ * Template Name:  post single page
+ */
+
 get_header();
 $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
 while (have_posts()) : the_post();

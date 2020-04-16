@@ -22,7 +22,7 @@
         <!--animation header-->
 
         <header class="globalNav noDropdownTransition">
-            <?php get_template_part('sub-menu/header', 'submenu'); ?>
+          <?php  get_template_part( 'sub-menu/header', 'submenu' ); ?>
         </header>
 
         <!--mobile header-->
@@ -83,7 +83,7 @@
                                                                             </div>
                                                                         </a></li>
                                                                     <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                               ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                              ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
                                                                          <div class="productLinkContent">
                                                                          <h3 class="linkTitle">Fantom DeFi</h3>
                                                                           </div>
@@ -151,6 +151,7 @@
                                                                 <h4>GUIDES</h4>
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
+                                                                <a class="linkContainer-wrapper" href="/how-to-set-up-a-validator-node-on-fantom/"><p>How to set up a validator node on Fantom</p></a>
                                                             </li>
                                                         </ul></li>
                                                 </ul>

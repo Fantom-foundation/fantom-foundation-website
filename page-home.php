@@ -143,18 +143,18 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                 <li class="active"><a href="#tab1"><?php the_field('request_title') ?></a></li>
                                 <li><a href="#tab2"><?php the_field('response_title') ?></a></li>
                             </ul>
-                            <a class="api-reference" href="https://jirka-malek.gitbook.io/fantom-api-graphql/" target="_blank"><?php the_field('full_api_reference_title') ?></a>
+                            <a class="api-reference" href="#" target="_blank"><?php the_field('full_api_reference_title') ?></a>
                         </div>
                         <div class="col-sm-10">                  
                             <div id="tabs-content">
                                 <div id="tab1" class="tab-content">
                                     <div class="code-container">
-                                        <textarea id="code"><?php the_field('request_code_section') ?></textarea>
+                                        <textarea id="code"><?php the_field('response_code_section') ?></textarea>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-content">
                                     <div class="code-container">
-                                        <textarea id="code1"><?php the_field('response_code_section') ?></textarea>
+                                        <textarea id="code1"><?php the_field('request_code_section') ?></textarea>
                                     </div>
                                 </div>
                             </div> 
@@ -171,7 +171,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                 <?php the_field('powered_by_fantom_section') ?>
             </div>
 
-            <div class="two-col-section two-col-section-wrapper">
+            <div class="two-col-section">
                 <?php
                 if (have_rows('powered_by_fantom_col_section')):
                   $i = 1;
@@ -212,58 +212,40 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             <a href="#" class="customer_logo-container">
                 <span class="see-our-customers-btn"><?php the_field('see_our_integrations_title') ?></span>
                 <ul>
-                    <li class="first-col">
-                        <?php
-                        if (have_rows('integrations_logo_section')):
-                          while (have_rows('integrations_logo_section')) : the_row();
-                            ?>
-                            <img class="kickstarter" alt="kickstarter" src="<?php the_sub_field('integrations_logo'); ?>">
-                            <?php
-                          endwhile;
-                        else :
-                        endif;
+                    <?php
+                    if (have_rows('customer_logo_section')):
+                      while (have_rows('customer_logo_section')) : the_row();
                         ?>
-                    </li>  
-                    <li class="sec-col">  
+                        <li><img class="kickstarter" alt="kickstarter" src="<?php the_sub_field('customer_logo'); ?>">
+                        </li>
                         <?php
-                        if (have_rows('integrations_logo_section_sec_row')):
-                          while (have_rows('integrations_logo_section_sec_row')) : the_row();
-                            ?>
-                            <img class="kickstarter" alt="kickstarter" src="<?php the_sub_field('integrations_logo'); ?>">
-                            <?php
-                          endwhile;
-                        else :
-                        endif;
-                        ?>  
-                    </li>  
+                      endwhile;
+                    else :
+                    endif;
+                    ?>
                 </ul>
             </a>
         </div>
     </div>
-    <!-- Blog Section-->
+    <!-- Medium Blog Section-->
     <div class="medium-blog-section desktop-medium-blog-sec">
         <div class="container">
             <h2><?php the_field('what’s_new_at_fantom_title') ?></h2>
             <div class="medium-blog-row">
                 <?php
-                $args = array(
-                    'post_type' => 'post',
-                    'post_status' => 'publish',
-                    'posts_per_page' => 3
-                );
-                $blogpost = new WP_Query($args);
-                if ($blogpost->have_posts()) :
-                  ?>
-                  <?php
-                  while ($blogpost->have_posts()) :
-                    $blogpost->the_post();
+                $url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fantomfoundation';
+                $str = file_get_contents($url);
+                $json = json_decode($str, true);
+                $i = 1;
+                foreach ($json['items'] as $item) {
+                  if ($i <= 3) {
                     ?>
                     <div class="medium-blog-col">
-                        <a href="<?php the_permalink(); ?>" class="card-link">
+                        <a href="<?php echo $item['link'] ?>" target="_blank" class="card-link">
                             <div class="card">									
-                                <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
+                                <img class="card-img-top" src="<?php echo $item['thumbnail'] ?>" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?php the_title(); ?></h5>
+                                    <h5 class="card-title"><?php echo $item['title'] ?></h5>
                                     <div class="read-story-btn-wrapper">
                                         <span>READ STORY</span>
                                     </div>                                       
@@ -272,13 +254,9 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         </a>
                     </div>
                     <?php
-                  endwhile;
-                  wp_reset_postdata();
-                  ?>
-                  <?php
-                else :
-                  esc_html_e('No blogpost in the diving taxonomy!', 'text-domain');
-                endif;
+                  }
+                  $i++;
+                }
                 ?>
             </div>
         </div>
@@ -290,25 +268,21 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             <div class="medium-blog-row"> 
                 <div class="owl-carousel owl-theme" id="medium-blog-carousel">
                     <?php
-                    $args = array(
-                        'post_type' => 'post',
-                        'post_status' => 'publish',
-                        'posts_per_page' => 3
-                    );
-                    $blogpost = new WP_Query($args);
-                    if ($blogpost->have_posts()) :
-                      ?>
-                      <?php
-                      while ($blogpost->have_posts()) :
-                        $blogpost->the_post();
+                    $url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fantomfoundation';
+                    $str = file_get_contents($url);
+                    $json = json_decode($str, true);
+                    $i = 1;
+                    foreach ($json['items'] as $item) {
+                      if ($i <= 3) {
                         ?>
+
                         <div class="medium-blog-col">
-                            <a href="<?php the_permalink(); ?>" class="card-link">
+                            <a href="<?php echo $item['link'] ?>" target="_blank" class="card-link item">
                                 <div class="card">									
-                                    <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
+                                    <img class="card-img-top" src="<?php echo $item['thumbnail'] ?>" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title"><?php the_title(); ?></h5>
-                                        <div class="read-story-btn-wrapper">
+                                        <h5 class="card-title"><?php echo $item['title'] ?></h5>
+                                        <div class="read-story-btn-wrapper">             
                                             <span>READ STORY</span>
                                         </div>                                       
                                     </div>							
@@ -316,13 +290,9 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                             </a>
                         </div>
                         <?php
-                      endwhile;
-                      wp_reset_postdata();
-                      ?>
-                      <?php
-                    else :
-                      esc_html_e('No blogpost in the diving taxonomy!', 'text-domain');
-                    endif;
+                      }
+                      $i++;
+                    }
                     ?>
                 </div>
             </div>

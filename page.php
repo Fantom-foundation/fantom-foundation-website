@@ -1,16 +1,17 @@
 <?php
+/*
+ *  Template Name: New page
+ */
 get_header();
 ?>
 <main> 
-    <div class="banner-wrap-section banner-wrapper-section simple-page">
-        <div class="banner-content-wrapper sub-menu-banner-content"> 
-            <div class="container">
-                <?php
-                while (have_posts()) : the_post();
-                  the_content();
-                endwhile;
-                ?> 
-            </div>         
+    <div class="banner-wrap-section banner-wrapper-section">
+        <div class="banner-content-wrapper">     
+            <?php
+            while (have_posts()) : the_post();
+                the_content();
+            endwhile;
+            ?> 
         </div>
     </div> 
 </main>
