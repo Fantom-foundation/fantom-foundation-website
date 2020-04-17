@@ -212,30 +212,18 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
             <a href="#" class="customer_logo-container">
                 <span class="see-our-customers-btn"><?php the_field('see_our_integrations_title') ?></span>
                 <ul>
-                    <li class="first-col">
-                        <?php
-                        if (have_rows('integrations_logo_section')):
-                          while (have_rows('integrations_logo_section')) : the_row();
-                            ?>
-                            <img class="kickstarter" alt="kickstarter" src="<?php the_sub_field('integrations_logo'); ?>">
-                            <?php
-                          endwhile;
-                        else :
-                        endif;
+                    <?php
+                    if (have_rows('integrations_logo_section')):
+                      while (have_rows('integrations_logo_section')) : the_row();
                         ?>
-                    </li>  
-                    <li class="sec-col">  
-                        <?php
-                        if (have_rows('integrations_logo_section_sec_row')):
-                          while (have_rows('integrations_logo_section_sec_row')) : the_row();
-                            ?>
+                        <li>
                             <img class="kickstarter" alt="kickstarter" src="<?php the_sub_field('integrations_logo'); ?>">
-                            <?php
-                          endwhile;
-                        else :
-                        endif;
-                        ?>  
-                    </li>  
+                        </li> 
+                        <?php
+                      endwhile;
+                    else :
+                    endif;
+                    ?>                                      
                 </ul>
             </a>
         </div>
@@ -259,7 +247,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     $blogpost->the_post();
                     ?>
                     <div class="medium-blog-col">
-                        <a href="<?php the_permalink(); ?>" class="card-link">
+                        <a href="<?php the_permalink(); ?>" target="_blank" class="card-link">
                             <div class="card">									
                                 <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
                                 <div class="card-body">
@@ -303,7 +291,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         $blogpost->the_post();
                         ?>
                         <div class="medium-blog-col">
-                            <a href="<?php the_permalink(); ?>" class="card-link">
+                            <a href="<?php the_permalink(); ?>" target="_blank" class="card-link">
                                 <div class="card">									
                                     <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
                                     <div class="card-body">

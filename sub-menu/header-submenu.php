@@ -31,7 +31,7 @@
             <li class="navSection secondary">
                 <?php
                 if ('page' == get_option('show_on_front') && is_front_page()) {
-                  ?> <a class="rootLink item-support colorize fantom-wallte-btn" href="/fantom-wallet/">FantomWallet</a> <?php
+                  ?> <a class="rootLink item-support colorize fantom-wallte-btn" href="https://wallet.fantom.network/" target="_blank">Fantom Wallet</a> <?php
                 } else {
                   echo '  <a class="rootLink item-support colorize fantom-wallte-btn get-start-btn" href="/get-started/">Get Started</a>';
                 }

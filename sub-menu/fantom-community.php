@@ -56,7 +56,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     $blogpost->the_post();
                     ?>
                     <div class="medium-blog-col">
-                        <a href="<?php the_permalink(); ?>" class="card-link">
+                        <a href="<?php the_permalink(); ?>" target="_blank" class="card-link">
                             <div class="card">									
                                 <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
                                 <div class="card-body">
@@ -96,7 +96,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         $blogpost->the_post();
                         ?>
                         <div class="medium-blog-col">
-                            <a href="<?php the_permalink(); ?>" class="card-link">
+                            <a href="<?php the_permalink(); ?>" target="_blank" class="card-link">
                                 <div class="card">									
                                     <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
                                     <div class="card-body">

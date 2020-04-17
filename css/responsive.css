@@ -40,22 +40,16 @@
 }
 @media screen and (min-width: 1900px){
     .safe-and-secure-section {
-        padding-top: 150px;
-    }
-    .first-col-content-sec {
-        margin: auto;
-    }
-    .sec-col-content-sec {
-        margin: auto;
+        padding-top: 130px;
     }
     img.banner-desktop-image {
         height: 623px;
     }
     img.desktop-image.easy-to-use-img {
-        max-width: 770px;
+        max-width: 883px;
     }
     img.desktop-image.earn-crypto-img {
-        max-width: 770px;
+        max-width: 883px;
     }
 }
 
@@ -66,9 +60,9 @@
 
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1500px){
     .wallet-section-wrapper {
-        padding-left: 200px;
+        padding-left: 394px !important;
     }
 }
 @media screen and (max-width: 1366px){
@@ -2201,15 +2195,17 @@ a.rootLink.item-support.colorize.fantom-wallte-btn {
     transition: all .15s ease !important;
     -webkit-transition-property: transform;
     transition-property: transform !important;
-    padding: 4px;
     width: 170px;
-    height: 50px;
+    height: 42px;
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 a.rootLink.item-support.colorize.fantom-wallte-btn:hover {
     -webkit-transform: translateY(-1px);
@@ -2542,8 +2538,50 @@ ul.navRoot {
         max-width: 90%;
         margin: auto;
     }
-    .sec-mobile-section {
+    div#div2 .sec-mobile-section {
         padding-top: 0;
+    }
+    .col-sm-6.mobile-wrapper-content p {
+        max-width: 100%;
+    }
+    .mobile-content-sec {
+        padding-left: 0;
+    }
+    .banner-wrapper-section {
+        padding-top: 100px;
+        padding-bottom: 32px;
+    }
+    .header-sec .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .pagenav-section {
+        max-width: 100%;
+    }
+    .pagenav-section-wrapper .col-sm-3 {
+        display: none;
+    }
+    .pagenav-section-wrapper .col-sm-9 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .customer-logo-wrapper ul li img {
+        width: 100%;
+        height: auto;
+    }
+    .page-id-277 .get-col-wrapper {
+        max-width: 100%;
+    }
+    div#sec1 .col-sm-6.mobile-wrapper-content p {
+        max-width: 100%;
+    }
+    .page-id-451 .pagenav-section img {
+        max-width: 100%;
+        height: auto;
+    }
+    .page-id-474 .pagenav-section img {
+        max-width: 100%;
     }
 }
 @media screen and (max-width: 991px){
@@ -3297,6 +3335,30 @@ ul.navRoot {
     .simple-page a {
         word-break: break-all;
     }
+    .blog a.item-home.colorize:before , 
+    .single a.item-home.colorize:before ,
+    .category a.item-home.colorize:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-image: url(../images/Fantom_blog.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 150px;
+        height: 35px;
+        top: 16px;
+        left: 15px;
+    }
+    .blog img.mobile-header-logo , 
+    .single img.mobile-header-logo ,
+    .category img.mobile-header-logo {
+        visibility: hidden;
+    }
+    .blog .mobile-logo-icon-wrapper.inner-logo img , 
+    .single .mobile-logo-icon-wrapper.inner-logo img ,
+    .category .mobile-logo-icon-wrapper.inner-logo img  {
+        visibility: hidden;
+    }
 }
 @media screen and (max-width: 600px){
     .home-section {
@@ -3528,7 +3590,5 @@ ul.navRoot {
         padding-bottom: 40px;
     }
 
-
-
-
 }
+

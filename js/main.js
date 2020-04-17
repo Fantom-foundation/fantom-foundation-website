@@ -267,8 +267,8 @@ var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineWrapping: true,
     autoCloseTags: true,
     styleActiveLine: true,
-    matchBrackets: true,
-    readOnly: 'nocursor',
+//    matchBrackets: true,
+//    readOnly: 'nocursor',
 
 });
 var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code1"), {
@@ -279,7 +279,7 @@ var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code1"), {
     lineWrapping: true,
     autoCloseTags: true,
     styleActiveLine: true,
-    matchBrackets: true,
-    readOnly: 'nocursor',
+//    matchBrackets: true,
+//    readOnly: 'nocursor',
 });
 

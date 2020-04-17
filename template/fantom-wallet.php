@@ -20,7 +20,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                 <div id="div1"  class="targetDiv targetDiv1">
                     <div class="fantom-mobile-wallet-section">
                         <div class="container">
-                            <div class="row mobile-row">
+                            <div class="row mobile-row fantom-mobile-row">
                                 <div class="col-sm-6 mobile-banner-col-content">
                                     <div class="sub-menu-banner-content">
                                         <?php
@@ -44,11 +44,11 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                               while (have_rows('mobile_two_col_section')) : the_row();
                                 if ($i % 2 == 0) {
                                   ?>
-                                  <div class="first-mobile-section">
+                                  <div class="first-mobile-section mobile-row">
                                       <div class="container">
                                           <div class="row row-background-wrapper"  id="sec<?php echo $i ?>">
                                               <div class="col-sm-6 mobile-wrapper-content">
-                                                  <?php the_sub_field('content'); ?>
+                                                    <?php the_sub_field('content'); ?>                                                                                             
                                               </div>
                                               <div class="col-sm-6 mobile-wrapper-image">
                                                   <img src="<?php the_sub_field('image'); ?>"  class="mobile-image" alt="Mobile Image"/>
@@ -65,7 +65,9 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                                   <img src="<?php the_sub_field('image'); ?>"  class="mobile-image" alt="Mobile Image"/>
                                               </div>
                                               <div class="col-sm-6 mobile-wrapper-content">
-                                                  <?php the_sub_field('content'); ?>
+                                                <div class="mobile-content-sec">
+                                                    <?php the_sub_field('content'); ?>
+                                                  </div>  
                                               </div>
                                           </div>
                                       </div>
