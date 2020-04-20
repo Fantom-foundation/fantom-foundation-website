@@ -172,7 +172,7 @@
                                                                         <h3 class="linkTitle">Roadmap</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="/blog/">
+                                                            <li><a class="linkContainer item-radar" href="/blog/" target="_blank">
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Blog.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Blog</h3>

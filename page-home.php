@@ -18,7 +18,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         ?>                     
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 home-banner-image-sec">
                     <img src="<?php the_field('home_banner_image') ?>"  class="image-wrapper" alt="Header Image"/>
                 </div>
             </div>

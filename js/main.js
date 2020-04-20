@@ -26,13 +26,13 @@ jQuery(document).ready(function ($) {
             $('body').removeClass('active');
             setTimeout(function () {
                 $('body').removeClass('menu-open');
-            }, 200);
+            }, );
         } else {
             $('body').addClass('menu-open');
             setTimeout(function () {
                 $('body').addClass('active');
 
-            }, 400);
+            }, );
 
         }
     });

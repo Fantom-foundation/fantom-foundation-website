@@ -132,12 +132,9 @@ a.fantom-wallte-btn:hover {
 img.image-wrapper {
     height: auto;
     position: absolute;
-    /*    width: 650px;
-        right: -17px;
-        top: -23px;*/
-    width: 670px;
-    right: -29px;
-    top: -33px;
+    width: 770px;
+    right: -85px;
+    top: -89px;
 }
 .logo img {
     width: 110px;
@@ -190,8 +187,9 @@ a.get-started-btn {
     transition-property: transform !important;
     width: 170px;
     height: 50px;
-    padding: 16px;
-    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 16px 24px 0 rgba(48, 49, 51, 0.1), 0 0 1px 0 rgba(48, 49, 51, 0.05);
     margin-top: 15px;
 }
@@ -888,9 +886,6 @@ a.rootLink.item-support.colorize.fantom-wallte-btn:hover {
     padding-top: 36px;
 }
 .banner-wrapper-section {
-    /*    padding-top: 60px;
-        padding-bottom: 100px;
-        border-bottom: 1px solid #d8d8d8;*/
     padding-top: 180px;
     padding-bottom: 100px;
     background-color: #fbfcff;
@@ -1509,6 +1504,7 @@ h5.total-staked {
     margin-right: 170px;
     margin-bottom: 0;
 }
+
 .cryptocurrency-exchanges {
     padding-top: 40px;
 }
@@ -1711,8 +1707,10 @@ a.wallet-link {
     border-radius: 24px;
     background: #ffffff;
     font-family: WorkSans;
-    padding: 14px;
     margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 a.wallet-link.download-wallet-btn {
     background-color: #03358c;
@@ -1943,8 +1941,11 @@ a.api-reference {
     right: 95px;
     margin: auto;
 }
-.fantom-mobile-row .app-link-wrapper {
-    margin-left: -21px;
+img.alignnone.wp-image-755.size-full {
+    margin-right: 16px;
+}
+.app-link-wrapper {
+    padding-top: 20px;
 }
 .fantom-mobile-row img.alignnone.size-medium.wp-image-298 {
     margin-left: -15px;
@@ -2161,7 +2162,7 @@ pre.pre-wrapper {
     margin: 25px 0;
 }
 span.private-key-wrapper {
-    font-size: 21px;
+    font-size: 16px;
     line-height: 44px;
     padding: 10px 0;
 }
@@ -2214,9 +2215,11 @@ a.api-reference:hover {
     position: relative;
 }
 .page-id-494 div#container-wrapper img {
-    width: 600px;
+    width: 100%;
     height: auto;
-    object-fit: contain;
+}
+.page-id-494 .pagenav-section a {
+    color: #2b3954;
 }
 /*FTM page style*/
 .banner-wrapper-section.ftm-token-wrapper-section {
@@ -2273,6 +2276,9 @@ img.ftm-icon-wrapper {
 .simple-page ul {
     padding-inline-start: 40px;
 }
+.page-template-get-started .pagenav-section {
+    max-width: 100%; 
+}
 .page-template-get-started .pagenav-wrapper {
     padding-bottom: 64px;
 }
@@ -2297,16 +2303,77 @@ img.ftm-icon-wrapper {
 .page-template-fantom-wallet .row.footer-row .logo img {
     visibility: visible;
 }
-.page-id-451 .pagenav-section img {
-    max-width: 380px;
-    height: auto;
-}
 strong {
     font-weight: bold !important;
 }
-.page-id-474 .pagenav-section img {
-    max-width: 390px;
-}
 .page-id-474 .pagenav-section-wrapper {
     padding-bottom: 0;
+}
+.page-id-167 .pagenav-section-wrapper ul li:before{
+    display: none;
+}
+/*404 page style*/
+.pp404-std header.globalNav {
+    background-color: #fff;
+}
+.pp404-std .banner-wrapper-section {
+    padding-top: 154px;
+    padding-bottom: 200px;
+    background-color: #fff;
+}
+.pp404-std .sub-menu-banner-content .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pp404-std .sub-menu-banner-content h1 {
+    margin-bottom: 8px;
+}
+p.found-message {
+    font-size: 26px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: normal;
+    margin-bottom: 32px;
+}
+.pp404-std .sub-menu-banner-content h1:before {
+    display: none;
+}
+.page-id-492 .fixed {
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+/*Sassy Social Share plugin style*/
+.heateor_sss_sharing_container.heateor_sss_vertical_sharing.heateor_sss_bottom_sharing {
+    display: none !important;
+}
+.heateor_sss_horizontal_sharing .heateorSssSharing, .heateor_sss_standard_follow_icons_container .heateorSssSharing {
+    border: 1px solid;
+    margin-bottom: 18px !important;
+}
+.heateorSssSharingSvg {
+    width: 27px !important;
+    object-fit: contain;
+    margin: auto;
+}
+ul.heateor_sss_sharing_ul {
+    max-width: 90px;
+}
+i.heateorSssSharing.heateorSssMoreBackground {
+    display: none !important;
+}
+ul.heateor_sss_follow_ul li, ul.heateor_sss_sharing_ul li {
+    margin-bottom: 18px !important;
+}
+ss.heateorSssSharingSvg.heateorSssLinkedinSvg {
+    width: 23px !important;
+}
+.row.footer-row .logo img {
+    width: 150px;
+    object-fit: contain;
+    height: 40px;
 }
