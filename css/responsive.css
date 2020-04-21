@@ -976,7 +976,7 @@ li.navSection.primary a:focus {
     z-index: 1000;
     left: 0;
     right: 0;
-    top: 85px;
+    top: 70px;
     pointer-events: none;
     -webkit-transform: rotateX(-15deg);
     transform: rotateX(-15deg);
@@ -2462,6 +2462,11 @@ ul.navRoot {
     .first-mobile-section.desktop-wallet-first-section {
         padding-top: 0;
     }
+    .sec-mobile-section {
+        position: relative;
+        padding-bottom: 40px;
+        padding-top: 70px;
+    }
     .col-sm-6.mobile-wrapper-image {
         order: 2;
     }
@@ -2473,8 +2478,8 @@ ul.navRoot {
         margin: auto;
     }
     .first-mobile-section {
-        padding: 30px 0;
-        padding-top: 50px;
+        padding-top: 70px;
+        padding-bottom: 35px;
     }
     .col-sm-6.mobile-banner-col-content {
         flex: 0 0 63%;
@@ -2620,7 +2625,11 @@ ul.navRoot {
         padding-bottom: 40px;
     }
     .blog-banner-wrapper {
-        padding-top: 90px;
+        padding-top: 80px;
+    }
+    .pp404-std .banner-wrapper-section {
+        padding-top: 112px;
+        padding-bottom: 120px;
     }
 }
 @media screen and (max-width: 991px){
@@ -2774,8 +2783,8 @@ ul.navRoot {
         display: block;
         margin-bottom: 10px;
         background: #1969ff;
-/*        transition: all ease-in-out 0.5s;*/
-    transition: all ease-in-out 0.1s;
+        /*        transition: all ease-in-out 0.5s;*/
+        transition: all ease-in-out 0.1s;
         cursor: pointer;
         position: absolute;
         top: 10px;
@@ -2791,39 +2800,39 @@ ul.navRoot {
     }
     .menu-toggle {
         position: absolute;
-        max-width: 40px;
-        margin: auto;
+        /*        max-width: 40px;
+                margin: auto;*/
         cursor: pointer;
         /*        right: 30px;*/
         right: 114px;
         z-index: 999;
-        height: 50px;
-        width: 50px;
+        /*        height: 50px;
+                width: 50px;*/
         top: 15px;
-/*        transition: all ease-in-out 0.5s;*/
-  transition: all ease-in-out 0.1s;
+        /*        transition: all ease-in-out 0.5s;*/
+        transition: all ease-in-out 0.1s;
         z-index: 9999
     }
     .theme-menus {
-/*        position: fixed;
+        /*        position: fixed;
+                background: #fff;
+                height: 100%;
+                width: 100%;
+                z-index: 999;
+                transition: all ease-in-out 0.5s;
+                top: 0;
+                opacity: 0;
+                visibility: hidden;*/
+        position: fixed;
         background: #fff;
         height: 100%;
         width: 100%;
         z-index: 999;
-        transition: all ease-in-out 0.5s;
-        top: 0;
-        opacity: 0;
-        visibility: hidden;*/
-position: fixed;
-    background: #fff;
-    height: 100%;
-    width: 100%;
-    z-index: 999;
-    transition: all ease-in-out 0.1s;
-    transition-timing-function: cubic-bezier(0.69, 0, 0.19, 1);
-    right: -120%;
-    top: -120%;
-    bottom: -120%;
+        transition: all ease-in-out 0.1s;
+        transition-timing-function: cubic-bezier(0.69, 0, 0.19, 1);
+        right: -120%;
+        top: -120%;
+        bottom: -120%;
     }
     ul#menu-main-menu-1 li a:hover {
         text-decoration: none;
@@ -2842,11 +2851,11 @@ position: fixed;
         opacity: 0;
     }
     .menu-open .theme-menus {
-/*        opacity: 1;
-        visibility: visible;*/
-right: 0%;
-    top: 0%;
-    bottom: 0%;
+        /*        opacity: 1;
+                visibility: visible;*/
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
     }
     ul.social-icon-section {
         padding-inline-start: 0;
@@ -2924,25 +2933,25 @@ right: 0%;
         opacity: 1 ;
     }
     .theme-menus .mobile-menu-section {
-/*        opacity: 0 ;
-        transition: all ease-in-out 0.5s;*/
-  transition: all ease-in-out 0.1s;
+        /*        opacity: 0 ;
+                transition: all ease-in-out 0.5s;*/
+        transition: all ease-in-out 0.1s;
     }
     .active .theme-menus .mobile-menu-footer-section {
-/*        opacity: 1 ;*/
+        /*        opacity: 1 ;*/
     }
     .theme-menus .mobile-menu-footer-section {
-/*        opacity: 0 ;
-        transition: all ease-in-out 0.5s;*/
-  transition: all ease-in-out 0.1s;
+        /*        opacity: 0 ;
+                transition: all ease-in-out 0.5s;*/
+        transition: all ease-in-out 0.1s;
     }
     .active .theme-menus .mobile-logo-wrapper {
-/*        opacity: 1 ;*/
+        /*        opacity: 1 ;*/
     }
     .theme-menus .mobile-logo-wrapper {
-/*        opacity: 0 ;
-        transition: all ease-in-out 0.5s;*/
-  transition: all ease-in-out 0.1s;
+        /*        opacity: 0 ;
+                transition: all ease-in-out 0.5s;*/
+        transition: all ease-in-out 0.1s;
     }
     /*header*/
     .home header.mobile-row-sec-wrapper{
@@ -2961,9 +2970,30 @@ right: 0%;
     .mobile-logo-icon-wrapper {
         display: inline-block;
         float: left;
-    }   
-
-
+    } 
+    /*menu-image style*/
+    img.menu-image {
+        width: 24px;
+        height: auto;
+        top: 6px;
+        position: relative;
+        right: 0;
+    }
+    .menu-toggle.open img.menu-image {
+        visibility: hidden;
+    }
+    .mobile-logo-icon-wrapper.inner-logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    img.close-image {
+        width: 20px;
+        height: auto;
+        z-index: -1;
+        right: 7px;
+    }
     /*home*/
     .banner-content h1 {
         font-size: 36px;
@@ -3234,7 +3264,7 @@ right: 0%;
         line-height: 1.25;
     }
     .banner-wrapper-section {
-        padding-top: 90px;
+        padding-top: 108px;
         padding-bottom: 70px;
     }
     .pagenav-wrapper h2 {
@@ -3313,7 +3343,7 @@ right: 0%;
         padding-bottom: 82px;
     }
     a.wallet-link.download-wallet-btn {
-        top: 57px;
+        top: 10px;
     }
     .wallet-section-wrapper {
         padding-left: 100px;
@@ -3351,22 +3381,7 @@ right: 0%;
     .page-template-fantom-wallet a.item-home.colorize {
         position: relative;
     }
-    .page-template-fantom-wallet a.item-home.colorize:before {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        background-image: url(../images/fantom_logo_white_new.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 110px;
-        height: 35px;
-        top: -15px;
-        left: 15px;
-        margin-left: 110px;
-    }
-    .page-template-fantom-wallet img.mobile-header-logo {
-        visibility: hidden;
-    }
+
     .ftm-token-wrapper-section h2 {
         font-size: 28px;
     }
@@ -3442,11 +3457,14 @@ right: 0%;
     .category .mobile-logo-icon-wrapper.inner-logo img  {
         visibility: hidden;
     }
+    img.close-image {
+        visibility: visible !important;
+    }
     p.found-message {
         font-size: 21px;
     }
     .pp404-std .banner-wrapper-section {
-        padding-top: 100px;
+        padding-top: 108px;
         padding-bottom: 120px;
     }
     .pp404-std header.mobile-row-sec-wrapper {
@@ -3455,9 +3473,28 @@ right: 0%;
     .page-template-get-started header.mobile-row-sec-wrapper {
         background-color: #fff;
     }
-
+    body h4{
+        font-size: 21px;
+        line-height: 27px;
+    }
+    .page-template-fantom-community header.mobile-row-sec-wrapper {
+        background-color: #fff;
+    }
+    .latest-blog-date span {
+        bottom: 0;
+    }
+    .page-id-232 .banner-wrapper-section {
+        padding-top: 108px;
+    }
+    .row.row-wrapper {
+        padding-top: 0;
+    }
 }
-
+@media screen and (max-width: 783px){
+    div.heateor_sss_mobile_footer {
+        display: none !important;
+    }
+}
 @media screen and (max-width: 600px){
     .home-section {
         padding-top: 77px;
@@ -3480,9 +3517,6 @@ right: 0%;
     .wallet-section {
         left: 0;
     }
-    .page-template-fantom-wallet a.item-home.colorize:before {
-        margin-left: 33px;
-    }
 }
 @media screen and (max-width: 480px){
     .menu-toggle {
@@ -3490,7 +3524,7 @@ right: 0%;
     }
     .home-banner-sec-wrapper {
         padding-top: 90px;
-        height: 570px;
+        height: 592px;
     }
     img.image-wrapper {
         width: 100%;
@@ -3514,6 +3548,8 @@ right: 0%;
     }
     .three-col-wrapper h4 {
         margin-bottom: 0;
+        font-size: 21px;
+        line-height: 27px;
     }
     .home-banner-sec {
         margin-top: 0;
@@ -3526,6 +3562,7 @@ right: 0%;
     }
     .rangeslider-sec h4 {
         font-size: 21px;
+        line-height: 27px;
     }
     ul.range-number {
         font-size: 12px;
@@ -3616,10 +3653,6 @@ right: 0%;
     .app-link-wrapper img {
         width: 100%;
     }
-    .page-template-fantom-wallet a.item-home.colorize:before {
-        margin-left: 15px;
-        left: 0;
-    }
     .wallet-section {
         left: 15px;
     }
@@ -3663,7 +3696,11 @@ right: 0%;
         padding-bottom: 40px;
     }
     .sec-mobile-section {
-        padding: 40px;
+        padding: 40px 0;
+    }
+    .mobile-col-section {
+        padding-bottom: 0px;
+        padding-top: 0;
     }
     a.desktop-wallets {
         width: 100%;
@@ -3683,6 +3720,15 @@ right: 0%;
     }
     .page-template-stake-fantom .banner-wrapper-section {
         padding-bottom: 26px;
+    }
+    .home-banner {
+        padding-top: 60px;
+    }
+    .page-template-fantom-community .banner-wrapper-section {
+        padding-bottom: 40px;
+    }
+    img.post-feat-image {
+        height: 211px;
     }
 }
 @media screen and (max-width: 375px){
@@ -3713,7 +3759,7 @@ right: 0%;
         margin-left: 108px;
     }
     .menu-toggle {
-        right: 100px;
+        right: 127px;
     }
     .home-banner-sec-wrapper {
         height: 670px;
@@ -3730,6 +3776,12 @@ right: 0%;
         margin: auto;
         padding-top: 75px;
     }
+    .fantom-wallet-section .sub-menu-banner-content h1:after {
+        right: 194px;
+    }
+    a.wallet-link.download-wallet-btn {
+        top: 7px;
+    }
 }
 @media screen and (max-width: 667px) and (orientation: landscape) {  
     .menu-toggle {
@@ -3743,14 +3795,17 @@ right: 0%;
     img.mobile-header-logo {
         margin-left: 65px;
     }
-    .page-template-fantom-wallet a.item-home.colorize:before {
-        margin-left: 45px;
+}
+@media screen and (max-width: 568px) and (orientation: landscape) {
+    .menu-toggle {
+        right: 15px;
+    }
+    img.mobile-header-logo {
+        margin-left: 15px;
     }
 }
-
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    /* IE10+ CSS styles go here */
+/* IE10+ CSS styles go here */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
     .medium-blog-row {
         display: -ms-flexbox;
         display: flex;

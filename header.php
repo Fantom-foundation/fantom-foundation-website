@@ -33,7 +33,7 @@
                         <div class="mobile-logo-icon-wrapper">
                             <a class="item-home colorize" href="/">
                                 <?php
-                                if ('page' == get_option('show_on_front') && is_front_page()) {
+                                if ( is_page( array( 25, 296 ) ) ) {
                                   ?><img  class="mobile-header-logo" src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
                                 } else {
                                   echo '<img class="mobile-header-logo" src="' . get_template_directory_uri() . '/images/Fantom Logo.svg" alt="Banner 1">';
@@ -42,9 +42,14 @@
                             </a> 
                         </div>
                         <div class="menu-toggle">
-                            <span></span>
-                            <span></span>
-                            <span></span> 
+                           <?php
+                                if ( is_page( array( 25, 296 ) ) ){
+                                  ?><img  class="menu-image" src="<?php echo get_template_directory_uri(); ?>/images/menu.svg" alt="menu"/> <?php
+                                }                               
+                                else {
+                                  echo '<img class="menu-image" src="' . get_template_directory_uri() . '/images/menu_blue.svg" alt="menu">';
+                                }
+                                ?>                     
                         </div>
                         <nav class="mobile-nav theme-menus d-flex align-items-center"> 
                             <div class="inner-menu container">
@@ -52,6 +57,7 @@
                                     <a class="item-home colorize" href="/">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/Fantom Logo.svg" alt="Fantom Logo"/>                                      
                                     </a> 
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/Close.svg" class="close-image" alt="close"/>
                                 </div>
                                 <div class="mobile-menu-section">
                                     <div class="mobile-menu-content">
@@ -83,7 +89,7 @@
                                                                             </div>
                                                                         </a></li>
                                                                     <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                               ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                                ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
                                                                          <div class="productLinkContent">
                                                                          <h3 class="linkTitle">Fantom DeFi</h3>
                                                                           </div>

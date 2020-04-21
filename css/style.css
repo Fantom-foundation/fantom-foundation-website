@@ -274,7 +274,13 @@ span.text-blue {
 .stake-fantom-section p {
     line-height: 30px;
     max-width: 400px;
-    padding: 8px 0 0 0;
+    padding: 8px 0;
+    margin: 0;
+}
+.col-sm-6.content-sec p {
+    line-height: 30px;
+    padding: 8px 0;
+    margin: 0;
 }
 .row.stake-row {
     align-items: center;
@@ -325,7 +331,7 @@ h5.you-stake-wrapper {
     align-items: center;
 }
 .two-col-section .row {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 .two-col-section-wrapper .row {
     margin-top: 32px;
@@ -951,7 +957,8 @@ a.navigation__link.active:before {
 }
 .fixed {
     position: fixed;
-    top: 0;
+    /*    top: 0;*/
+    top: 70px;
     z-index: 1;
 }
 .navigation-section {
@@ -1619,6 +1626,7 @@ a.showSingle.active {
 }
 div#div2 .sec-mobile-section {
     padding-bottom: 20px;
+    padding-top: 40px;
 }
 .col-sm-6.first-col-image-wrapper {
     padding: 0;
@@ -1711,9 +1719,23 @@ a.wallet-link {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease !important;
+    -webkit-transition-property: transform;
+    transition-property: transform !important;
+}
+a.wallet-link:hover {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    color: #1969ff;
 }
 a.wallet-link.download-wallet-btn {
-    background-color: #03358c;
+    background-color: #1450be;
     color: #ffffff;
 }
 .col-sm-6.desktop-banner-image {
@@ -1792,21 +1814,6 @@ a.desktop-web-wallet-link {
     transition: all .3s ease-in-out;
     cursor: pointer;
 }
-.page-template-fantom-wallet li.navSection.logo:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    background-image: url(../images/fantom_logo_white_new.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 110px;
-    height: 35px;
-    top: 3px;
-}
-.page-template-fantom-wallet .logo img {
-    visibility: hidden;
-}
-
 .col-sm-6.content {
     top: 80px;
 }

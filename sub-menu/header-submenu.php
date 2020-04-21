@@ -4,7 +4,7 @@
             <li class="navSection logo">
                 <a class="item-home colorize" href="/">
                     <?php
-                    if ('page' == get_option('show_on_front') && is_front_page()) {
+                    if ( is_page( array( 25, 296 ) ) ) {
                       ?><img src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
                     } else {
                       echo '<img class="banner" src="' . get_template_directory_uri() . '/images/Fantom Logo.svg" alt="Banner 1">';
