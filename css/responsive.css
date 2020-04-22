@@ -1117,7 +1117,7 @@ li.navSection.primary a:focus {
     color: #2b3954;
     font-size: 16px;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: .025em;
 }
 .globalNav .linkSub {
@@ -2500,18 +2500,17 @@ ul.navRoot {
         object-position: left;
         width: 100%;
     }
-    /*    .app-link-wrapper {
-            justify-content: space-between;
-        }*/
     .app-link-wrapper img {
         margin-right: 0;
     }
     .get-col-wrapper {
         max-width: 100%;
+        padding-left: 0;
     }
     .roadmap-banner-content {
         max-width: 100%;
         margin-left: auto;
+        padding-left: 0;
     }
     .page-id-494 div#container-wrapper img {
         width: 100%;
@@ -2585,22 +2584,11 @@ ul.navRoot {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .customer-logo-wrapper ul li img {
-        object-fit: contain;
-        height: 50px;
-        width: 100%;
-        object-position: left;
-    }
     .page-id-277 .get-col-wrapper {
         max-width: 100%;
     }
     div#sec1 .col-sm-6.mobile-wrapper-content p {
         max-width: 100%;
-    }
-    .customer-logo-wrapper ul {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 57px;
     }
     .col-sm-6.home-banner-image-sec{
         position: absolute;
@@ -2630,6 +2618,9 @@ ul.navRoot {
     .pp404-std .banner-wrapper-section {
         padding-top: 112px;
         padding-bottom: 120px;
+    }
+    .wallet-section-wrapper {
+        padding-left: 100px;
     }
 }
 @media screen and (max-width: 991px){
@@ -2747,6 +2738,23 @@ ul.navRoot {
     }
     li.navSection.primary a {
         font-size: 14px;
+    }
+    .customer-logo-wrapper ul {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 27px;
+        row-gap: 45px;
+    }
+    img.vid-logo {
+        position: relative;
+        right: 20px;
+    }
+    img.afghanistan-health-logo {
+        right: 0;
+    }
+    img.chekkit-logo {
+        position: relative;
+        right: 12px;
     }
 }
 
@@ -3002,11 +3010,12 @@ ul.navRoot {
     a.get-started-btn {
         width: 162px;
         height: 50px;
+        margin-top: 30px;
     }
     .banner-content p {
         line-height: 30px;
         max-width: 100%;
-        padding: 15px 0 10px 0;
+        padding: 10px 0 10px 0;
         color: #fff;
     }
     .col-sm-6 {
@@ -3030,7 +3039,7 @@ ul.navRoot {
         height: 669px;
     }
     .home-banner-sec-wrapper {
-        padding-top: 70px;
+        padding-top: 100px;
     }
     img.mobile-header-logo {
         margin-left: 129px;
@@ -3489,6 +3498,18 @@ ul.navRoot {
     .row.row-wrapper {
         padding-top: 0;
     }
+    .wallet-link-wrapper {
+        padding-top: 10px;
+    }
+    .rewards-section h5 {
+        font-weight: 500;
+    }
+    li.sec-fold-group .accordion-content a, li.sec-fold-group .accordion-contents a {
+        padding-left: 19px;
+    }
+    .accordion-content a {
+        padding-left: 19px;
+    }
 }
 @media screen and (max-width: 783px){
     div.heateor_sss_mobile_footer {
@@ -3523,19 +3544,19 @@ ul.navRoot {
         right: 15px;
     }
     .home-banner-sec-wrapper {
-        padding-top: 90px;
-        height: 592px;
+        height: 623px;
     }
     img.image-wrapper {
         width: 100%;
         right: 0;
         position: relative;
+        top: 24px;
     }
     a.get-started-btn {
-        margin: 0;
+        margin-top: 30px;
     }
     .banner-content p {
-        padding: 9px 0 0px 0;
+        padding: 10px 0 0px 0;
     }
     .home-sec-page .row.banner-row .col-sm-6:nth-child(2) {
         padding: 0;
@@ -3544,7 +3565,7 @@ ul.navRoot {
         margin-left: 15px;
     }
     .three-col-wrapper img {
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
     .three-col-wrapper h4 {
         margin-bottom: 0;
@@ -3584,7 +3605,7 @@ ul.navRoot {
         padding-bottom: 0;
     }
     .code-section-wrapper {
-        padding-top: 0;
+        padding-top: 15px;
     }
     .code-section-wrapper .col-sm-10 {
         padding-top: 0;
@@ -3630,8 +3651,8 @@ ul.navRoot {
         top: 375px;
     }
     .fantom-wallet-section .sub-menu-banner-content h1 {
-        padding-top: 30px;
-        margin-bottom: 10px;
+        padding-top: 10px;
+        margin-bottom: 8px;
     }
     .safe-and-secure-section {
         padding: 40px 0;
@@ -3730,6 +3751,46 @@ ul.navRoot {
     img.post-feat-image {
         height: 211px;
     }
+    img.vid-logo {
+        right: 0;
+    }
+    img.chekkit-logo {
+        right: 0;
+    }
+    .customer-logo-wrapper ul {
+        grid-template-columns: repeat(3,1fr);
+    }
+    img.seed-group-logo {
+        object-position: left;
+    }
+    img.coti-logo {
+        height: 20px;
+    }
+    img.fusion-logo {
+        height: 30px;
+        object-position: left;
+    }
+    img.house-africa-logo {
+        height: 25px;
+    }
+    img.afghanistan-health-logo {
+        height: 32px;
+    }
+    img.chainlink-logo {
+        height: 28px;
+    }
+    img.chekkit-logo {
+        height: 30px;
+    }
+    img.seed-group-logo {
+        height: 30px;
+        object-position: left;
+    }
+    img.xar-network-logo {
+        height: 28px;
+        position: relative;
+        right: 33px;
+    }
 }
 @media screen and (max-width: 375px){
     .menu-open .theme-menus {
@@ -3738,6 +3799,17 @@ ul.navRoot {
     .home-section {
         padding-top: 45px;
     }
+    .home-banner-sec-wrapper {
+        height: 602px;
+    }
+    .home-banner {
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 360px){
+    .home-banner-sec-wrapper {
+        height: 595px;
+    }
 }
 @media screen and (max-width: 320px){
     img.tablet-earn-crypto-img {
@@ -3745,6 +3817,12 @@ ul.navRoot {
     }
     a.stake-now-btn {
         font-size: 16px;
+    }
+}
+@media screen and (max-height: 700px){
+    .blog-share-wrapper {
+        position: static;
+
     }
 }
 @media screen and (max-width: 896px) and (orientation: landscape) {
@@ -3780,7 +3858,10 @@ ul.navRoot {
         right: 194px;
     }
     a.wallet-link.download-wallet-btn {
-        top: 7px;
+        top: 24px;
+    }
+    .fantom-wallet-section .sub-menu-banner-content h1 {
+        padding-top: 11px;
     }
 }
 @media screen and (max-width: 667px) and (orientation: landscape) {  

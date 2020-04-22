@@ -25,6 +25,9 @@ body h6 {
     margin-bottom: 10px;
     font-weight: bold;
 }
+body h3 {
+    font-weight: 500;
+}
 body h5{
     font-weight: bold;
     font-size: 21px;
@@ -191,7 +194,7 @@ a.get-started-btn {
     justify-content: center;
     align-items: center;
     box-shadow: 0 16px 24px 0 rgba(48, 49, 51, 0.1), 0 0 1px 0 rgba(48, 49, 51, 0.05);
-    margin-top: 15px;
+    margin-top: 40px;
 }
 a.get-started-btn:hover {
     color: #1969ff;
@@ -208,6 +211,7 @@ a.get-started-btn:hover {
     line-height: 30px;
     max-width: 475px;
     color: #fff;
+    margin-bottom: 0;
 }
 .banner-content {
     padding-top: 80px;
@@ -252,7 +256,7 @@ a.sub-menu-btn {
 span.text-blue {
     font-size: 21px;
     color: #1969FF;
-    font-weight: 900;
+    font-weight: 600;
 }
 .rewards-section {
     display: flex;
@@ -265,8 +269,8 @@ span.text-blue {
     margin-bottom: 0px;
     padding: 0;
     font-size: 18px;
-    color: #2b3954;
-    font-weight: bold;
+    color: #8e8e98;
+    font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.56;
@@ -308,6 +312,7 @@ h5.you-stake-wrapper {
 .three-col-wrapper img {
     max-width: 50px;
     margin-bottom: 24px;
+    height: 50px;
 }
 .three-col-wrapper h4 {
     font-size: 21px;
@@ -1118,6 +1123,7 @@ ul#accordions , ul#accordions ul {
 .roadmap-banner-content{
     max-width: 75%;
     margin-left: auto;
+    padding-left: 8px;
 }
 .page-template-roadmap .page-section ul {
     padding-inline-start: 40px;
@@ -1223,7 +1229,9 @@ nav.pagenav a.active:before {
     left: -23px;
     top: 10px;
 }
-
+.page-id-120 .pagenav-section-wrapper ul li:before {
+    background: #1969FF;
+}
 .customer-logo-wrapper ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1245,13 +1253,61 @@ nav.pagenav a.active:before {
 }
 .customer-logo-wrapper ul {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-gap: 56px;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 27px;
+    row-gap: 60px;
 }
 .customer-logo-wrapper ul li img {
-    width: auto;
-    height: 40px;
+    /*    width: auto;
+        height: 40px;*/
+    object-fit: contain;
 }
+.customer-logo-wrapper ul li img.band-logo {
+    height: 25px;
+}
+img.chainlink-logo {
+    height: 35px;
+}
+img.chainlink-logo {
+    height: 35px;
+}
+img.coti-logo {
+    height: 22px;
+}
+img.etclab-logo {
+    height: 37px;
+}
+img.vid-logo {
+    height: 27px;
+}
+img.fusion-logo {
+    height: 33px;
+    object-position: left;
+}
+img.afghanistan-health-logo {
+    height: 35px;
+    position: relative;
+    right: 8px;
+}
+img.house-africa-logo {
+    height: 27px;
+}
+img.chekkit-logo {
+    height: 35px;
+}
+img.seed-group-logo {
+    height: 33px;
+}
+img.xar-network-logo {
+    height: 28px;
+}
+
+
+
+
+
+
+
 .customer-logo-wrapper a:focus ul, .customer-logo-wrapper a:hover ul {
     opacity: .7;
     -webkit-transform: scale(.95);
@@ -1351,25 +1407,32 @@ a.rootLink.item-support.colorize.fantom-wallte-btn.get-start-btn {
 
 input#fname {
     width: 100%;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
     height: 40px;
-    border: none;
+    border: 2px solid #1969ff;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8e8e98;
 }
 input#fname:focus {
     border: 2px solid #1969FF;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 h5.opera-address-wrapper {
+    padding-top: 40px;
     font-size: 14px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.43;
     letter-spacing: normal;
-    color: #2b3954;
-    padding-top: 40px;
+    color: #8e8e98;
+    font-family: ProximaNova;
 }
 .budget-wrap {
     padding-bottom: 40px;
@@ -1408,20 +1471,23 @@ h5.opera-address-wrapper {
     background-color: #ffffff;
     padding: 24px;
 }
+.page-id-232 .card-wrapper {
+    height: 214px;
+}
 .card-wrapper:hover {
     -webkit-box-shadow: 0 10px 20px rgba(3,27,78,.1);
     box-shadow: 0 10px 20px rgba(3,27,78,.1);
     color: rgba(3,27,78,.7);
 }
 .card-wrapper img {
-    width: 80px;
-    height: auto;
+    width: 72px;
+    height: 72px;
     margin: auto;
     display: flex;
 }
 .card-wrapper h3 {
     font-size: 21px;
-    font-weight: bold;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.52;
@@ -1454,6 +1520,10 @@ h5.opera-address-wrapper {
     display: flex;
     height: 50px;
     object-fit: contain;
+}
+.page-id-259 .card-section .card-wrapper:first-child img {
+    width: 50px;
+    height: 56px;
 }
 main.sub-menu-page ul {
     padding-inline-start: 40px;
@@ -1506,6 +1576,7 @@ h5.total-staked {
 .get-col-wrapper {
     margin-left: auto;
     max-width: 75%;
+    padding-left: 8px;
 }
 .get-started-content p {
     margin-right: 170px;
@@ -1536,7 +1607,7 @@ h5.total-staked {
 .wallet-section {
     background-color: #ffffff;
     min-width: 284px;
-    min-height: 50px;
+    min-height: 40px;
     border-radius: 23px;
     display: flex;
     align-items: center;
@@ -1554,7 +1625,7 @@ a.showSingle {
     border-radius: 23px;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    min-height: 50px;
+    min-height: 40px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -1670,7 +1741,7 @@ a.app-link {
 }
 .fantom-wallet-app-section h3 {
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.23;
@@ -1678,6 +1749,9 @@ a.app-link {
     text-align: center;
     color: #8e8e98;
     margin: 0;
+}
+div#div2 .fantom-wallet-app-section h3{
+    padding-top: 28px;
 }
 a.desktop-wallets {
     font-size: 21px;
@@ -1784,6 +1858,9 @@ div#sec1 .col-sm-6.mobile-wrapper-content p {
 }
 .create-wallet-link-wrapper.mac-web-wallet {
     margin-right: 70px;
+}
+.create-wallet-link h4 {
+    margin: 0;
 }
 img.device-icon {
     width: 64px;
@@ -1930,7 +2007,7 @@ a.api-reference {
     left: 10px !important;
 }
 .fantom-wallet-section .sub-menu-banner-content h1 {
-    padding-top: 30px;
+    padding-top: 0;
     font-size: 64px;
     margin: 0;
 }
@@ -1938,14 +2015,14 @@ a.api-reference {
     content: "";
     position: absolute;
     background-image: url(../images/arrow.svg);
-    height: 75px;
-    width: 37px;
+    height: 51px;
+    width: 40px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     top: -31px;
     left: 0;
-    right: 95px;
+    right: 79px;
     margin: auto;
 }
 img.alignnone.wp-image-755.size-full {
@@ -1981,18 +2058,25 @@ img.tablet-earn-crypto-img {
     content: '';
     position: absolute;
     z-index: -1;
-    background-image: url(../images/Fantom_blog.svg);
+    background-image: url(../images/Fantom-blog-logo.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 125px;
-    height: 35px;
+    width: 100%;
+    height: 100%;
     top: 3px;
 }
 .blog .logo img , 
 .single .logo img ,
 .category .logo img {
     visibility: hidden;
+    width: 157px;
+    height: 40px;
 }
+.blog .logo , 
+.single .logo ,
+.category .logo {
+    max-width: 170px;
+}
+
 .blog .banner-wrapper-section ,
 .category .banner-wrapper-section  {
     padding-top: 75px;
@@ -2039,6 +2123,13 @@ img.tablet-earn-crypto-img {
 .row.row-wrapper {
     padding-bottom: 20px;
     padding-top: 24px;
+}
+.blog-share-wrapper {
+    position: fixed;
+}
+.single .read-more-blog-sec {
+    z-index: 9;
+    position: relative;
 }
 img.post-feat-image {
     height: 378px;
@@ -2297,12 +2388,6 @@ img.ftm-icon-wrapper {
 .page-id-492 header.globalNav {
     background-color: #fff;
 }
-.page-id-492 .pagenav-wrapper h2 {
-    font-weight: normal;
-}
-.fantom-community-section .card-wrapper {
-    height: 214px;
-}
 .page-id-277 .get-col-wrapper {
     margin-left: auto;
     max-width: 82%;
@@ -2348,12 +2433,6 @@ p.found-message {
 .pp404-std .sub-menu-banner-content h1:before {
     display: none;
 }
-.page-id-492 .fixed {
-    height: 100%;
-    overflow: scroll;
-    padding-bottom: 20px;
-    scroll-behavior: smooth;
-}
 /*Sassy Social Share plugin style*/
 .heateor_sss_sharing_container.heateor_sss_vertical_sharing.heateor_sss_bottom_sharing {
     display: none !important;
@@ -2383,4 +2462,37 @@ ss.heateorSssSharingSvg.heateorSssLinkedinSvg {
     width: 150px;
     object-fit: contain;
     height: 40px;
+    visibility: visible;
+}
+img.alignnone.size-medium.wp-image-708 {
+    padding: 12px 0;
+}
+.page-id-474 .banner-wrapper-section {
+    padding-bottom: 64px;
+}
+.your-rewards-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 14px;
+}
+span.your-rewards-wrapper {
+    width: 235px;
+    height: 32px;
+    font-family: ProximaNova;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: #ffffff;
+    border-radius: 21px;
+    background-color: #19b6ff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -58,6 +58,9 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     </div>
                     <!-- Rangeslider Section-->
                     <div class="col-sm-6">
+                        <div class="your-rewards-section">
+                            <span class="your-rewards-wrapper">Estimate your rewards</span>
+                        </div>                      
                         <div class="rangeslider-sec"> 
                             <?php the_field('staking_calculator_heading_wrapper') ?>
                             <h5 class="you-stake-wrapper"><?php the_field('ftm_number') ?></h5>
@@ -217,7 +220,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                       while (have_rows('integrations_logo_section')) : the_row();
                         ?>
                         <li>
-                            <img class="kickstarter" alt="kickstarter" src="<?php the_sub_field('integrations_logo'); ?>">
+                            <img class="<?php the_sub_field('class_wrapper'); ?>" alt="" src="<?php the_sub_field('integrations_logo'); ?>">
                         </li> 
                         <?php
                       endwhile;

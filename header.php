@@ -132,7 +132,7 @@
                                                                     <li><a class="linkContainer item-radar" href="/fantom-wallet/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FantomWallet.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
-                                                                                <h3 class="linkTitle">FantomWallet</h3>
+                                                                                <h3 class="linkTitle">Fantom Wallet</h3>
                                                                             </div></a>
                                                                     </li>
                                                                 </ul>

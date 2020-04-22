@@ -16,18 +16,8 @@ while (have_posts()) : the_post();
                       </div>
                       <div class="row">
                           <div class="col-sm-2">
-                              <div class="social-icon-wrapper">
+                              <div class="social-icon-wrapper blog-share-wrapper">
                                   <?php echo do_shortcode('[Sassy_Social_Share]') ?>
-<!--                                  <a href="https://twitter.com/FantomFDN" target="_blank" class="social-link">
-                                      <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.svg" class="social-icon-image" alt="Twitter">  
-                                  </a>                                
-                                  <a href="https://www.linkedin.com/company/fantom-foundation/" target="_blank" class="social-link">
-                                      <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" class="social-icon-image" alt="Linkedin"> 
-                                  </a>                              
-                                  <a href="https://www.facebook.com/Fantom.Foundation.English/" target="_blank" class="social-link">
-                                      <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" class="social-icon-image" alt="Facebook">  
-                                  </a>-->
-
                               </div>
                           </div>
                           <div class="col-sm-10">

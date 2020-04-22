@@ -20,9 +20,10 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="rangeslider-sec">
-                        <h4>Staking calculator</h4>
-                        <p>Find out what's your ataking rewards</p>
+                    <div class="your-rewards-section">
+                        <span class="your-rewards-wrapper">Estimate your rewards</span>
+                    </div>  
+                    <div class="rangeslider-sec staking-rangeslider-sec">
                         <h5 class="opera-address-wrapper">Enter your FTM amount or your Opera address</h5>
                         <div class="budget-wrap">
                             <div class="staking-budget">                          
