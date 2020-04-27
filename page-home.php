@@ -61,8 +61,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         <div class="your-rewards-section">
                             <span class="your-rewards-wrapper">Estimate your rewards</span>
                         </div>                      
-                        <div class="rangeslider-sec"> 
-                            <?php the_field('staking_calculator_heading_wrapper') ?>
+                        <div class="rangeslider-sec">                         
                             <h5 class="you-stake-wrapper"><?php the_field('ftm_number') ?></h5>
                             <div class="budget-wrap">
                                 <div class="budget">                         

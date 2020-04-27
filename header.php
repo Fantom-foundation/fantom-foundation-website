@@ -154,7 +154,7 @@
                                                             </li>
 
                                                             <li class="sec-fold-group">
-                                                                <h4>GUIDES</h4>
+                                                                <h4 class="explorers-text">GUIDES</h4>
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
                                                             </li>

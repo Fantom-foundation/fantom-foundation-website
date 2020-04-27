@@ -20,6 +20,7 @@ function fantom() {
   wp_enqueue_script('header-animation-js', get_template_directory_uri() . '/js/header-animation.js', array(), '2019061112', true);
   wp_enqueue_script('rangeslider-js', get_template_directory_uri() . '/js/rangeslider.js', array(), '2019061112', true);
   wp_enqueue_script('cc-rangeslider-min-js', get_template_directory_uri() . '/js/rangeslider.min.js', array(), true);
+    wp_enqueue_script('velocity-min-js', get_template_directory_uri() . '/js/velocity.min.js', array(), true);
   wp_enqueue_style('typekit', 'https://use.typekit.net/evf2xmx.css');
   wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 }

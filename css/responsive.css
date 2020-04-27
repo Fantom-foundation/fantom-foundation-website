@@ -1208,6 +1208,11 @@ li.navSection.primary a:focus {
     -ms-flex: 1 0 50%;
     flex: 1 0 50%
 }
+.sec-fold-section li.sec-fold-group {
+    -webkit-flex: 1 0 38%;
+    -ms-flex: 1 0 38%;
+    flex: 1 0 38% !important;
+}
 .globalNav .productsGroup .linkContainer, .globalNav .productsGroup>li {
     -webkit-box-flex: 1;
     display: -webkit-box;
@@ -2615,12 +2620,34 @@ ul.navRoot {
     .blog-banner-wrapper {
         padding-top: 80px;
     }
-    .pp404-std .banner-wrapper-section {
+    .error404 .banner-wrapper-section {
         padding-top: 112px;
         padding-bottom: 120px;
     }
     .wallet-section-wrapper {
         padding-left: 100px;
+    }
+    main.sub-menu-page .container {
+        padding: 0 82px;
+    }
+    .home .header-sec .container {
+        max-width: 960px;
+        padding: 0 15px;
+    }
+    .page-template-team .sub-menu-banner-content {
+        max-width: 100%;
+    }
+    .about-section {
+        padding-bottom: 48px;
+        max-width: 100%;
+    }
+    .page-template-roadmap .banner-wrapper-section .container, .page-template-faq-page .banner-wrapper-section .container {
+        max-width: 960px;
+        padding: 0 82px;
+    }
+    .page-template-roadmap .roadmap-banner-content, .page-template-faq-page .roadmap-banner-content {
+        padding-left: 0;
+        max-width: 100%;
     }
 }
 @media screen and (max-width: 991px){
@@ -2672,6 +2699,9 @@ ul.navRoot {
     }
     .medium-blog-row {
         grid-template-columns: repeat(2,1fr);
+    }
+    .page-template-roadmap .banner-wrapper-section .container, .page-template-faq-page .banner-wrapper-section .container {
+        max-width: 720px;
     }
 }
 @media screen and (max-width: 898px){
@@ -2755,6 +2785,16 @@ ul.navRoot {
     img.chekkit-logo {
         position: relative;
         right: 12px;
+    }
+    .page-id-474 .pagenav-section-wrapper {
+        padding-bottom: 0;
+        padding: 0;
+    }
+    .home .header-sec .container {
+        max-width: 720px;
+    }
+    .page-template-roadmap .banner-wrapper-section .container, .page-template-faq-page .banner-wrapper-section .container {
+        max-width: 720px;
     }
 }
 
@@ -3189,14 +3229,20 @@ ul.navRoot {
         line-height: 1.25;
     }
     h5.you-stake-wrapper {
-        padding-top: 30px;
+        padding-top: 50px;
         margin-bottom: 30px;
+    }
+    .rangeslider-sec:before {
+        height: 155px;
     }
     .budget-wrap {
         padding-bottom: 30px;
     }
     .rewards-section {
         padding-top: 30px;
+    }
+    .page-template-stake-fantom .rewards-section.staking-rewards-section:before {
+        height: calc(100% + 17px);
     }
     .two-col-section .row {
         margin-right: 0;
@@ -3218,8 +3264,8 @@ ul.navRoot {
         list-style-type: none;
     }   
     img.sub-menu-img {
-        width: 40px;
-        height: auto;
+        width: 32px;
+        height: 32px;
         position: absolute;
         left: -20px;
         top: 5px;
@@ -3232,13 +3278,13 @@ ul.navRoot {
         padding: 0 0;
     }
     .productsGroup ul {
-        padding-inline-start: 40px;
+        padding-inline-start: 35px;
     }
     ul.fold-wrapper {
         display: block;
     }   
     ul.linkGroup.linkList.companyGroup {
-        padding-inline-start: 40px;
+        padding-inline-start: 21px;
     }
     .team-sec-wrapper img.sub-menu-img {
         top: 11px;
@@ -3252,7 +3298,7 @@ ul.navRoot {
     }
     a.menu-page-link {
         color: #2b3954;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         line-height: 1.33;
     }
@@ -3472,11 +3518,11 @@ ul.navRoot {
     p.found-message {
         font-size: 21px;
     }
-    .pp404-std .banner-wrapper-section {
+    .error404.banner-wrapper-section {
         padding-top: 108px;
         padding-bottom: 120px;
     }
-    .pp404-std header.mobile-row-sec-wrapper {
+    .error404 header.mobile-row-sec-wrapper {
         background-color: #fff;
     }
     .page-template-get-started header.mobile-row-sec-wrapper {
@@ -3507,8 +3553,57 @@ ul.navRoot {
     li.sec-fold-group .accordion-content a, li.sec-fold-group .accordion-contents a {
         padding-left: 19px;
     }
-    .accordion-content a {
-        padding-left: 19px;
+    .mobile-menu-content .accordion-content a {
+        padding-left: 19px !important;
+    }
+    .ftm-used-for-sec {
+        padding: 50px 0 50px;
+    }
+    .mobile-menu-content ul#accordion li {
+        padding-bottom: 20px;
+    }
+    .mobile-menu-content .accordion .link {
+        padding-bottom: 28px;
+    }
+    ul.productsGroup ul li {
+        padding-bottom: 0 !important;
+    }
+    li.first-fold-group {
+        padding-bottom: 0 !important;
+    }
+    h4.explorers-text {
+        padding-top: 12px;
+    }
+    ul.wallet-container li {
+        padding-bottom: 0 !important;
+    }
+    ul.linkGroup.linkList.companyGroup li {
+        padding-bottom: 0 !important;
+    }
+    a.linkContainer-wrapper {
+        padding: 4px 12px;
+    }
+    .mobile-menu-content ul.accordion-content {
+        padding-bottom: 0;
+    }
+    main.sub-menu-page .container {
+        padding: 0 15px;
+    }
+    .page-id-474 header.mobile-row-sec-wrapper {
+        background-color: #fff;
+    }
+    .page-template-team .banner-wrapper-section {
+        padding-bottom: 45px;
+    }
+    .team-member-section {
+        padding-top: 35px;
+    }
+    .page-template-roadmap .banner-wrapper-section .container, .page-template-faq-page .banner-wrapper-section .container {
+        max-width: 540px;
+        padding: 0 15px;
+    }
+    .page-id-337 header.mobile-row-sec-wrapper {
+        background-color: #fff;
     }
 }
 @media screen and (max-width: 783px){
@@ -3537,6 +3632,16 @@ ul.navRoot {
     }
     .wallet-section {
         left: 0;
+    }
+
+}
+@media screen and (max-width: 575px){
+    .home .header-sec .container {
+        max-width: 540px;
+    }
+    .page-template-roadmap .banner-wrapper-section .container, .page-template-faq-page .banner-wrapper-section .container {
+        max-width: 540px;
+        padding: 0 15px;
     }
 }
 @media screen and (max-width: 480px){
@@ -3708,7 +3813,7 @@ ul.navRoot {
         padding: 48px 0;
     }
     .team-member-section {
-        padding-top: 48px;
+        padding-top: 35px;
     }
     .wallet-section-wrapper {
         padding-top: 103px;
@@ -3790,6 +3895,9 @@ ul.navRoot {
         height: 28px;
         position: relative;
         right: 33px;
+    }
+    .page-template-default .banner-wrapper-section {
+        padding-bottom: 60px;
     }
 }
 @media screen and (max-width: 375px){
@@ -3885,6 +3993,9 @@ ul.navRoot {
         margin-left: 15px;
     }
 }
+
+
+
 /* IE10+ CSS styles go here */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
     .medium-blog-row {
