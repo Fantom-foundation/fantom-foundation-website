@@ -41,23 +41,18 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                 if (have_rows('sub_faq_section')):
                                   while (have_rows('sub_faq_section')) : the_row();
                                     ?>
-                               <a href="#<?php the_sub_field('sub_faq_id'); ?>"><?php the_sub_field('sub_faq'); ?></a>
+                                    <a href="#<?php the_sub_field('sub_faq_id'); ?>"><?php the_sub_field('sub_faq'); ?></a>
                                     <?php
                                   endwhile;
                                 else :
                                 endif;
                                 ?> 
                             </div>
-
-
-
-
                             <?php
                           endwhile;
                         else :
                         endif;
                         ?> 
-
                     </nav>
                 </div>
                 <div class="col-sm-9">

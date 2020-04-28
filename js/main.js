@@ -525,7 +525,50 @@ jQuery(document).ready(function ($) {
     }(jQuery)
 
 
+// enterprise case study slider
 
+$('.enterprise-case-study-carousel').slick({
+  dots: false,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
+  adaptiveHeight: true,
+  draggable: false
+});
+    
+    function sliderAnimatedHeader (){
+        
+        var caseHeight = jQuery(".enterprise-case-study-carousel article.slick-active .case-study--header").outerHeight();
+        jQuery(".case-study--animated-header").height(caseHeight);
+        jQuery(".enterprise-case-study-carousel article.slick-active").addClass("animate-active");
+        
+    }
+    
+    sliderAnimatedHeader()
+    
+    // On before slide change
+    $('.enterprise-case-study-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      sliderAnimatedHeader()
+    });
+    // On before slide change
+    $('.enterprise-case-study-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      jQuery(".enterprise-case-study-carousel article").removeClass("animate-active");
+    });
+
+  // Add smooth scrolling to links
+  $("a.link-wrapper").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;    
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } // End if
+  });
 
 
 }); //main.js

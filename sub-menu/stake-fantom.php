@@ -62,7 +62,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
     <div class="pagenav-section-wrapper" id="container-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <nav class="pagenav" id="pagenav">
                         <a href="#1" class="active"><?php the_field('what_is_staking'); ?></a> 
                         <a href="#22"><?php the_field('rewards_schedule'); ?>  </a>  
@@ -70,7 +70,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         <a href="#3"> <?php the_field('faq_heading'); ?></a>  
                     </nav>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-9">
                     <div class="pagenav-section">                     
                         <section class="pagenav-wrapper" id="1"> 
                             <?php the_field('what_is_staking_content'); ?>

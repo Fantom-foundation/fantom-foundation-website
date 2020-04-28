@@ -7,6 +7,7 @@ function fantom() {
   wp_enqueue_style('owl.theme.default.min', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css', '1.01', '1.01');
   wp_enqueue_style("codemirrorcss", get_template_directory_uri() . '/css/codemirror.css');
   wp_enqueue_style("materialcss", get_template_directory_uri() . '/css/material.css');
+  wp_enqueue_style("slickcss", 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
   wp_enqueue_script('cc-tweenmax-js', get_template_directory_uri() . '/js/TweenMax.js', array(), true);
   wp_enqueue_script("owlcarouseljs", get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), 1.1, true);
   wp_enqueue_script('cc-codemirror-js', get_template_directory_uri() . '/js/codemirror.js', array(), true);
@@ -21,6 +22,7 @@ function fantom() {
   wp_enqueue_script('rangeslider-js', get_template_directory_uri() . '/js/rangeslider.js', array(), '2019061112', true);
   wp_enqueue_script('cc-rangeslider-min-js', get_template_directory_uri() . '/js/rangeslider.min.js', array(), true);
     wp_enqueue_script('velocity-min-js', get_template_directory_uri() . '/js/velocity.min.js', array(), true);
+    wp_enqueue_script('slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array(), true);
   wp_enqueue_style('typekit', 'https://use.typekit.net/evf2xmx.css');
   wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 }
@@ -48,10 +50,6 @@ add_action('after_setup_theme', 'fantom_setup');
 
 //Add our Widget location
 function ourWidgetsInit() {
-  register_sidebar(array(
-      'name' => 'Sidebar',
-      'id' => 'sidebar1'
-  ));
   //footer Area bar
   register_sidebar(array(
       'name' => 'Footer Area 1',
@@ -69,32 +67,7 @@ function ourWidgetsInit() {
       'before_title' => '<h6 class="my-special-class">',
       'after_title' => '</h6>'
   ));
-  register_sidebar(array(
-      'name' => 'Header menu',
-      'id' => 'header-menu',
-      'before_widget' => '<div class="widget-items">',
-      'after_widget' => '</div>',
-      'before_title' => '<h6 class="my-special-classs">',
-      'after_title' => '</h6>'
-  ));
-  register_sidebar(array(
-      'name' => 'Footer Area 4',
-      'id' => 'footer4',
-      'before_widget' => '<div class="widget-item">',
-      'after_widget' => '</div>',
-      'before_title' => '<h6 class="my-special-class">',
-      'after_title' => '</h6>'
-  ));
-  register_sidebar(array(
-      'name' => 'Footer Area 5',
-      'id' => 'footer',
-      'before_widget' => '<div class="widget-item">',
-      'after_widget' => '</div>',
-      'before_title' => '<h6 class="my-special-class">',
-      'after_title' => '</h6>'
-  ));
 }
-
 add_action('widgets_init', 'ourWidgetsInit');
 
 //featured post

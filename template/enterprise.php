@@ -4,7 +4,6 @@
  */
 
 get_header();
-$feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
 ?>
 <main class="sub-menu-page">
     <div class="banner-wrapper-section">
@@ -64,7 +63,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                       while (have_rows('faq_tab_section')) : the_row();
                         ?> 
                         <li>
-                            <div class="links"><i class="fa fa-chevron-down"></i><?php the_sub_field('heading'); ?></div>
+                            <div class="links"><i class="fa fa-chevron-down"></i><span class="link-heading-wrapper"><?php the_sub_field('heading'); ?></span></div>
                             <ul class="accordion-contents">
                                 <li><?php the_sub_field('content'); ?></li>
                             </ul>
@@ -75,6 +74,49 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     endif;
                     ?> 
                 </ul>
+            </div>
+        </div>
+    </div>
+    <section class="enterprise-case-study-section">
+        <div class="container">
+            <div class="case-study--animated-header"></div>
+            <div class="enterprise-case-study-carousel">
+                <?php
+                if (have_rows('case_study_section')):
+                  $i = 1;
+                  while (have_rows('case_study_section')) : the_row();
+                    ?> 
+                    <article>
+                        <div class="case-study--header"  id="sec<?php echo $i ?>">
+                            <div class="case-study--header-content">
+                                <span class="case-study-title">
+                                    <h3><?php the_sub_field('case_study_title'); ?></h3> <span class="case-study--label">Use case</span>
+                                </span>                              
+                                <?php the_sub_field('case_study_content'); ?>
+                            </div>
+                            <div class="case-study--screenshot">
+                                <?php //the_sub_field('case_study_image'); ?>
+                                <img src='<?php get_template_directory_uri(); ?>/images/pladeholder.svg' alt="" width="400" height="300" />
+                            </div>
+                        </div>
+                        <div class="case-study--content">
+                            <h4>Solution</h4>
+                            <?php the_sub_field('case_study_solution'); ?>
+                        </div>
+                    </article>
+                    <?php
+                    $i++;
+                  endwhile;
+                else :
+                endif;
+                ?>                             
+            </div>
+        </div>
+    </section>
+    <div class="fantom-enterprise-section">
+        <div class="fantom-enterprise-content">
+            <div class="container">
+                <?php the_field('about_fantom_enterprise_section'); ?>
             </div>
         </div>
     </div>

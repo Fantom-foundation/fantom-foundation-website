@@ -1,12 +1,12 @@
 <footer>
     <div class="footer-section">
-        <div class="container">
+        <div class="container footer-container">
             <div class="row footer-row">
                 <div class="col-sm-4">
                     <div class="logo">
                         <a href="/">                           
                             <?php
-                            if (is_page(array(788))) {
+                            if (is_page(array(788, 941))) {
                               ?><img src="<?php echo get_template_directory_uri(); ?>/images/Fantom Logo.svg" alt="Fantom Logo"/> <?php
                             } else {
                               echo '<img src="' . get_template_directory_uri() . '/images/fantom_logo_white_new.svg" alt="Fantom Logo">';

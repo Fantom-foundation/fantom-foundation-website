@@ -98,7 +98,7 @@
                                                             </li> 
                                                             <li class="sec-fold-group">
                                                                 <ul>
-                                                                    <li><a class="linkContainer item-subscriptions" href="#">
+                                                                    <li><a class="linkContainer item-subscriptions" href="/what-is-lachesis/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/The Consensus.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">The Consensus</h3> 
@@ -169,7 +169,7 @@
                                                             <li class="team-sec-wrapper"><a class="linkContainer item-radar" href="/team/">
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Team.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
-                                                                        <h3 class="linkTitle">Team</h3>
+                                                                        <h3 class="linkTitle">About us</h3>
                                                                     </div></a>
                                                             </li>
                                                             <li><a class="linkContainer item-radar" href="/roadmap/">
@@ -210,7 +210,7 @@
                                                                         <h3 class="linkTitle">Documentation</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="https://github.com/Fantom-foundation/go-lachesis/wiki/Technical-Papers" target="_blank" >
+                                                            <li><a class="linkContainer item-radar" href="/research-papers/" >
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Technical papers.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Technical papers</h3>
