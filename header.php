@@ -70,13 +70,13 @@
                                                     <li>  <ul class="productsGroup">
                                                             <li class="first-fold-group">
                                                                 <ul>
-                                                                    <li><a class="linkContainer item-payments" href="/intro-to-fantom/">
+                                                                    <li><a class="linkContainer item-payments" href="/intro-to-fantom-blockchain-platform/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Intro to Fantom.svg" alt="Sub menu">         
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">Intro to Fantom</h3>                                                          
                                                                             </div>
                                                                         </a></li> 
-                                                                    <li><a class="linkContainer item-connect" href="/stake/"> 
+                                                                    <li><a class="linkContainer item-connect" href="/ftm-staking/"> 
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Stake on Fantom.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">Stake on Fantom</h3>
@@ -98,13 +98,13 @@
                                                             </li> 
                                                             <li class="sec-fold-group">
                                                                 <ul>
-                                                                    <li><a class="linkContainer item-subscriptions" href="/what-is-lachesis/">
+                                                                    <li><a class="linkContainer item-subscriptions" href="/lachesis-consensus-algorithm/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/The Consensus.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">The Consensus</h3> 
                                                                             </div>
                                                                         </a></li> 
-                                                                    <li><a class="linkContainer item-relay" href="/what-is-opera/">
+                                                                    <li><a class="linkContainer item-relay" href="/what-is-fantom-opera/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Opera chain.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">Opera chain</h3>
@@ -129,7 +129,7 @@
                                                             <li class="first-fold-group">
                                                                 <h4>WALLET</h4>
                                                                 <ul class="wallet-container">
-                                                                    <li><a class="linkContainer item-radar" href="/fantom-wallet/">
+                                                                    <li><a class="linkContainer item-radar" href="/ftm-wallet/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FantomWallet.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">Fantom Wallet</h3>
@@ -155,7 +155,7 @@
 
                                                             <li class="sec-fold-group">
                                                                 <h4 class="explorers-text">GUIDES</h4>
-                                                                <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
+                                                                <a class="linkContainer-wrapper" href="/how-to-use-ftm-wallet/"><p>How to use Fantom Wallet</p></a> 
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
                                                             </li>
                                                         </ul></li>
@@ -184,13 +184,13 @@
                                                                         <h3 class="linkTitle">Blog</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="/frequently-asked-questions/">
+                                                            <li><a class="linkContainer item-radar" href="/fantom-faq/">
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FAQ.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">FAQ</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="/join-the-fantom-community/">
+                                                            <li><a class="linkContainer item-radar" href="/fantom-community/">
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Community.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Community</h3>
@@ -210,7 +210,7 @@
                                                                         <h3 class="linkTitle">Documentation</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="/research-papers/" >
+                                                            <li><a class="linkContainer item-radar" href="/fantom-research-papers/" >
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Technical papers.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Technical papers</h3>

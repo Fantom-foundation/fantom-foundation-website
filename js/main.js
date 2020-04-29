@@ -257,7 +257,7 @@ jQuery(document).ready(function ($) {
     });
 
 //add Image data-action
-    $('div#container-wrapper img').attr('data-action', 'zoom');
+    $('.page-id-451 div#container-wrapper img , .page-id-474 div#container-wrapper img , .page-id-494 div#container-wrapper img ').attr('data-action', 'zoom');
 
 //Image zoom js
 
@@ -557,7 +557,7 @@ $('.enterprise-case-study-carousel').slick({
     });
 
   // Add smooth scrolling to links
-  $("a.link-wrapper").on('click', function(event) {
+  $("a.link-wrapper , section#going-to-do a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
       // Store hash

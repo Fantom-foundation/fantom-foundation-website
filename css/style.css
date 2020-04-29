@@ -12,12 +12,6 @@ body {
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
-button, h1, h2, h3, h4, h5, h6, html, input, p, textarea ,a {
-
-}
-body h4{
-    font-weight: 500;
-}
 body h1,
 body h2,
 body h6 {
@@ -33,13 +27,11 @@ body h3 {
     margin-bottom: 10px;
 }
 body h5{
-    font-weight: bold;
+    font-weight: 500;
     font-size: 21px;
     line-height: 27px;
     color: #2B3954;
-}
-h2, h3, h4, h5, h6 {
-    line-height: 1.25;
+    font-family: WorkSans !important;
 }
 body h1 {
     font-size: 70px ;
@@ -54,17 +46,11 @@ body h2 {
     font-stretch: normal;
     font-style: normal;
 }
-
-
 body h4 {
     font-size: 24px;
     line-height: 36px;
-}
-
-body h5 {
-    font-size: 20px ;
-    line-height: 30px;
-    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: proxima-nova, sans-serif !important;
 }
 
 p {
@@ -1469,7 +1455,7 @@ input#fname:focus {
 h5.opera-address-wrapper {
     padding-top: 40px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.43;
@@ -2565,6 +2551,21 @@ span.your-rewards-wrapper {
 .page-template-enterprise .banner-wrapper-section {
     padding-top: 140px;
     background-color: #fff;
+    margin-bottom: 64px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.page-template-enterprise .banner-wrapper-section:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #d8d8d8;
+    border-bottom: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .page-template-enterprise .footer-section ,
 .page-template-contact .footer-section {
@@ -2610,6 +2611,9 @@ span.your-rewards-wrapper {
     width: 100%;
     bottom: -58px;
     background: #0d3580;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .page-template-contact .container.footer-container:before {
     content: "";
@@ -2625,6 +2629,7 @@ span.your-rewards-wrapper {
 .page-template-enterprise a.get-started-btn {
     background: #1969ff;
     color: #fff;
+    line-height: 0;
 }
 .page-template-enterprise a.social-icon ,
 .page-template-contact a.social-icon{
@@ -2847,7 +2852,8 @@ img.zoom-img {
     overflow: hidden;
 }
 
-.case-study--screenshot img {
+.case-study--screenshot img ,
+.case-study--screenshot iframe{
     background: #ccc;
     position: relative;
     bottom: -100px;
@@ -2856,8 +2862,13 @@ img.zoom-img {
     transform: scale(0);
     transition: transform .3s .3s ease-in-out
 }
-article.animate-active .case-study--screenshot img{
+article.animate-active .case-study--screenshot img ,
+article.animate-active .case-study--screenshot iframe{
     transform: scale(1);
+}
+.case-study--screenshot iframe {
+    width: 100% !important;
+    height: 300px !important;
 }
 .enterprise-case-study-section .container {
     position: relative;
@@ -2898,6 +2909,7 @@ section.enterprise-case-study-section {
 article.animate-active .case-study--header-content, article.animate-active .case-study--content{
     opacity: 1;
     transition: all .3s .1s ease-in-out;
+    padding-right: 10px;
 }
 
 .case-study--header {
@@ -2928,6 +2940,10 @@ article.animate-active .case-study--header-content, article.animate-active .case
     padding: 7px 27px;
     border-radius: 16px;
     margin-left: 32px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .case-study--header p {
@@ -2990,18 +3006,21 @@ div#sec2 .case-study--label {
     text-align: center;
     background-color: #1969ff;
     color: #fff;
-    padding-top: 51px;
-    padding-bottom: 100px;
+    padding: 120px 0;
 }
 .fantom-enterprise-content a.get-started-btn {
     background: transparent;
     color: #fff;
     margin: auto;
     border: 1px solid #fff;
+    line-height: 0;
 }
 .fantom-enterprise-content h2 {
     color: #fff;
     margin-bottom: 48px;
+}
+.fantom-enterprise-content p {
+    margin: 0;
 }
 /*contact page style*/
 .page-template-contact .footer-section {
@@ -3123,4 +3142,15 @@ p.submitting-wrapper {
 }
 .page-template-contact .sub-menu-banner-content h1:before {
     display: none;
+}
+.home li.navSection.primary a:focus ,
+.page-template-fantom-wallet li.navSection.primary a:focus{
+    color: rgba(255,255,255,.5);
+}
+.case-study--screenshot.mobile-case-study-sec {
+    display: none;
+}
+li#menu-item-969 a {
+    color: #fff !important;
+    cursor: auto;
 }

@@ -6,6 +6,7 @@
         padding: 0 87px;
     }
 }
+
 @media screen and (min-width: 2000px){
     .wallet-section-wrapper {
         padding-left: 31%;
@@ -36,6 +37,20 @@
         height: auto;
         padding-top: 50px;
         margin-left: 50px;
+    }
+}
+@media screen and (min-width: 2561px){
+    img.banner-desktop-image {
+        width: 1070px;
+    }
+    .col-sm-6.desktop-banner-image {
+        position: unset;
+        right: 0;
+        padding: 0;
+        top: 0;
+    }
+    .wallet-section-wrapper {
+        padding-left: 35%;
     }
 }
 @media screen and (min-width: 1900px){
@@ -2676,6 +2691,85 @@ ul.navRoot {
         flex: 0 0 50%;
         max-width: 50% !important;
     }
+    .row.row-wrapper .col-sm-6.enterprise-banner-content {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .row.row-wrapper .col-sm-6.enterprise-banner-image {
+        flex: 0 0 30%;
+        max-width: 30%;
+        position: absolute;
+        right: 0;
+        padding: 0;
+    }
+    .enterprise-banner-image img.banner-image {
+        right: 0;
+        bottom: 0;
+        height: 399px;
+        width: 100%;
+        object-fit: cover;
+        object-position: left;
+        position: unset;
+    }
+    .page-template-enterprise .banner-wrapper-section {
+        padding-bottom: 60px;
+    }
+    .blockchain-benefits-col {
+        max-width: 100%;
+    }
+    .blockchain-benefits-row {
+        display: block;
+    }
+    .enterprises-card-row {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .benefits-for-enterprises-sec:before {
+        height: 75%;
+        max-height: 100%;
+    }
+    .blockchain-benefits-container {
+        max-width: 100%;
+        margin: auto;
+    }
+    .enterprise-case-study-carousel h3 {
+        font-size: 26px;
+    }
+    .case-study--content h4 {
+        font-size: 21px;
+    }
+    span.case-study-title {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+    }
+    .case-study--screenshot iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .case-study--screenshot img, .case-study--screenshot iframe {
+        bottom: -168px;
+    }
+    .case-study--screenshot iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+    img.case-study-image {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    img.case-study-image {
+        height: 200px !important;
+        width: 100% !important;
+        object-fit: contain;
+    }
+    .page-template-enterprise main.sub-menu-page .container {
+        padding: 0 15px;
+    }
+    main.sub-menu-page .benefits-for-enterprises-sec .container ,
+    main.sub-menu-page .blockchain-benefits-sec .container{
+        padding: 0 82px;
+    }
+
 }
 @media screen and (max-width: 991px){
     .banner-content {
@@ -2730,6 +2824,38 @@ ul.navRoot {
     .page-template-roadmap .banner-wrapper-section .container, .page-template-faq-page .banner-wrapper-section .container {
         max-width: 720px;
     }
+
+    .case-study--screenshot iframe {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 327px !important;
+    }
+    img.case-study-image {
+        height: 350px !important;
+        width: 100% !important;
+        object-fit: contain;
+    }
+    .case-study--header {
+        display: block;
+    }    
+    .case-study--screenshot.desktop-case-study-sec {
+        display: none;
+    }
+    .case-study--screenshot.mobile-case-study-sec {
+        display: block;
+        padding: 33px;
+    }
+    .case-study--content {
+        width: 100%;
+        color: #2b3954;
+        padding: 30px 60px !important;
+    }
+    .case-study--screenshot img, .case-study--screenshot iframe {
+        bottom: 0;
+    }
+
+
+
 }
 @media screen and (max-width: 898px){
     .wallet-section-wrapper {
@@ -3653,6 +3779,70 @@ ul.navRoot {
     .contact-Page label {
         margin-bottom: 16px;
     }
+    .page-template-contact header.mobile-row-sec-wrapper {
+        background-color: #fff;
+    }
+    .page-template-enterprise header.mobile-row-sec-wrapper {
+        background-color: #fff;
+    }
+    .row.row-wrapper .col-sm-6.enterprise-banner-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .row.row-wrapper .col-sm-6.enterprise-banner-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        position: unset;
+        right: 0;
+        padding: 0 15px;
+    }
+    main.sub-menu-page .benefits-for-enterprises-sec .container, 
+    main.sub-menu-page .blockchain-benefits-sec .container {
+        padding: 0 15px;
+    }
+    .enterprise-banner-image img.banner-image {
+        width: 100%;
+        height: 100%;       
+        padding-top: 15px;
+    }
+    .page-template-enterprise h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+        line-height: 1.43;
+    }
+    .enterprises-card-col {
+        padding: 32px 32px;
+    }
+    .advantages-accordion-section .accordions .links {
+        padding: 20px 58px;
+        font-size: 16px;
+    }
+    span.link-heading-wrapper {
+        padding-left: 0;
+    }
+    .advantages-accordion-section .accordions li i.fa-chevron-down {
+        left: 13px;
+        top: 18px;
+    }
+    .case-study--header, .case-study--content {
+        padding: 30px 30px;
+    }
+    .case-study--content {
+        padding: 30px 30px !important;
+    }
+    .case-study--screenshot.mobile-case-study-sec {
+        padding: 30px;
+    }
+    .fantom-enterprise-content {
+        padding: 80px 0;
+    }
+    .benefits-for-enterprises-sec:before {
+        height: 80%;
+        max-height: 100%;
+    }
+    .page-template-enterprise .banner-wrapper-section {
+        padding-top: 108px;
+    }
 }
 @media screen and (max-width: 783px){
     div.heateor_sss_mobile_footer {
@@ -3946,6 +4136,27 @@ ul.navRoot {
     }
     .page-template-default .banner-wrapper-section {
         padding-bottom: 60px;
+    }
+    .advantages-accordion-section .links {
+        max-width: 100%;
+    }
+    .case-study--screenshot iframe {
+        min-height: 100% !important;
+    }
+    .slick-arrow {
+        margin-top: 90px;
+    }
+    .slick-next {
+        right: -15px;
+    }
+    .slick-prev {
+        left: -15px;
+    }
+    div#sec2 .case-study--label {
+        margin-left: -20px;
+    }
+    .case-study--header, .case-study--content {
+        padding: 38px;
     }
 }
 @media screen and (max-width: 375px){

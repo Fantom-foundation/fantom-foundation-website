@@ -9,7 +9,7 @@ get_header();
     <div class="banner-wrapper-section">
         <div class="container">
             <div class="row row-wrapper">
-                <div class="col-sm-6">
+                <div class="col-sm-6 enterprise-banner-content">
                     <div class="sub-menu-banner-content">
                         <?php
                         while (have_posts()) : the_post();
@@ -18,7 +18,7 @@ get_header();
                         ?> 
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 enterprise-banner-image">
                     <img src="<?php the_field('banner_image') ?>"  class="wrapper-image banner-image" alt="Header Image"/>
                 </div>
             </div>               
@@ -94,15 +94,41 @@ get_header();
                                 </span>                              
                                 <?php the_sub_field('case_study_content'); ?>
                             </div>
-                            <div class="case-study--screenshot">
-                                <?php //the_sub_field('case_study_image'); ?>
-                                <img src='<?php get_template_directory_uri(); ?>/images/pladeholder.svg' alt="" width="400" height="300" />
+                            <div class="case-study--screenshot desktop-case-study-sec">
+                                <?php
+                                if (get_sub_field('youtube_video')) {
+                                  ?>
+                                  <iframe src="https://www.youtube.com/embed/<?php the_sub_field('youtube_video') ?>?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  <?php
+                                } elseif (get_sub_field('image')) {
+                                  ?>
+                                  <img class="case-study-image" src="<?php the_sub_field('image') ?>" />      
+                                  <?php
+                                } else {
+                                  echo '<img class="case-study-image" src="' . get_template_directory_uri() . '/images/pladeholder.svg"  alt="" width="400" height="300" />';
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="case-study--content">
                             <h4>Solution</h4>
                             <?php the_sub_field('case_study_solution'); ?>
                         </div>
+                         <div class="case-study--screenshot mobile-case-study-sec">
+                                <?php
+                                if (get_sub_field('youtube_video')) {
+                                  ?>
+                                  <iframe src="https://www.youtube.com/embed/<?php the_sub_field('youtube_video') ?>?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  <?php
+                                } elseif (get_sub_field('image')) {
+                                  ?>
+                                  <img class="case-study-image" src="<?php the_sub_field('image') ?>" />      
+                                  <?php
+                                } else {
+                                  echo '<img class="case-study-image" src="' . get_template_directory_uri() . '/images/pladeholder.svg"  alt="" width="400" height="300" />';
+                                }
+                                ?>
+                            </div>
                     </article>
                     <?php
                     $i++;
