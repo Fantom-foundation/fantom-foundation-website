@@ -31,10 +31,16 @@
                 <div class="mobile-show-container">
                     <div class="mobile-show">
                         <div class="mobile-logo-icon-wrapper">
-                            <a class="item-home colorize" href="/">
-                                <?php
-                                if ( is_page( array( 25, 296 ) ) ) {
-                                  ?><img  class="mobile-header-logo" src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
+                            <a class="item-home colorize" href="<?php
+                            if (is_single() || is_category() || is_archive()) {
+                              ?>/blog/<?php
+                               } else {
+                                 echo '/';
+                               }
+                               ?>">
+                                   <?php
+                                   if (is_page(array(25, 296))) {
+                                     ?><img  class="mobile-header-logo" src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
                                 } else {
                                   echo '<img class="mobile-header-logo" src="' . get_template_directory_uri() . '/images/Fantom Logo.svg" alt="Banner 1">';
                                 }
@@ -42,14 +48,13 @@
                             </a> 
                         </div>
                         <div class="menu-toggle">
-                           <?php
-                                if ( is_page( array( 25, 296 ) ) ){
-                                  ?><img  class="menu-image" src="<?php echo get_template_directory_uri(); ?>/images/menu.svg" alt="menu"/> <?php
-                                }                               
-                                else {
-                                  echo '<img class="menu-image" src="' . get_template_directory_uri() . '/images/menu_blue.svg" alt="menu">';
-                                }
-                                ?>                     
+                            <?php
+                            if (is_page(array(25, 296))) {
+                              ?><img  class="menu-image" src="<?php echo get_template_directory_uri(); ?>/images/menu.svg" alt="menu"/> <?php
+                            } else {
+                              echo '<img class="menu-image" src="' . get_template_directory_uri() . '/images/menu_blue.svg" alt="menu">';
+                            }
+                            ?>                     
                         </div>
                         <nav class="mobile-nav theme-menus d-flex align-items-center"> 
                             <div class="inner-menu container">
@@ -89,7 +94,7 @@
                                                                             </div>
                                                                         </a></li>
                                                                     <!--<li><a class="linkContainer item-atlas" href="/defi-on-fantom/">
-                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                                ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
+                                                                        <img class="sub-menu-img" src="<?php //echo get_template_directory_uri();                                  ?>/images/Fantom DeFi.svg" alt="Sub menu"> 
                                                                          <div class="productLinkContent">
                                                                          <h3 class="linkTitle">Fantom DeFi</h3>
                                                                           </div>
@@ -178,12 +183,12 @@
                                                                         <h3 class="linkTitle">Roadmap</h3>
                                                                     </div></a>
                                                             </li>
-                                                            <li><a class="linkContainer item-radar" href="/blog/" target="_blank">
-                                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Blog.svg" alt="Sub menu"> 
+                                                            <li><a class="linkContainer item-radar" href="/enterprise/">
+                                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Roadmap.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
-                                                                        <h3 class="linkTitle">Blog</h3>
+                                                                        <h3 class="linkTitle">Enterprise</h3>
                                                                     </div></a>
-                                                            </li>
+                                                            </li>                                                      
                                                             <li><a class="linkContainer item-radar" href="/fantom-faq/">
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/FAQ.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
@@ -194,6 +199,12 @@
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Community.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Community</h3>
+                                                                    </div></a>
+                                                            </li>
+                                                            <li><a class="linkContainer item-radar" href="/blog/" target="_blank">
+                                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Blog.svg" alt="Sub menu"> 
+                                                                    <div class="productLinkContent">
+                                                                        <h3 class="linkTitle">Blog</h3>
                                                                     </div></a>
                                                             </li>
                                                         </ul> </li>

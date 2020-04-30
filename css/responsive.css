@@ -1239,7 +1239,7 @@ li.navSection.primary a:focus {
     display: flex
 }
 .globalNav .productsGroup .linkContainer {
-    padding: 18px 10px;
+    padding: 12px 10px;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -2686,11 +2686,6 @@ ul.navRoot {
     .page-template-contact .banner-wrapper-section {
         padding-bottom: 120px;
     }
-    .contact-form-sec .col-sm-6 {
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50% !important;
-    }
     .row.row-wrapper .col-sm-6.enterprise-banner-content {
         flex: 0 0 70%;
         max-width: 70%;
@@ -2708,7 +2703,6 @@ ul.navRoot {
         height: 399px;
         width: 100%;
         object-fit: cover;
-        object-position: left;
         position: unset;
     }
     .page-template-enterprise .banner-wrapper-section {
@@ -2726,10 +2720,6 @@ ul.navRoot {
     .benefits-for-enterprises-sec:before {
         height: 75%;
         max-height: 100%;
-    }
-    .blockchain-benefits-container {
-        max-width: 100%;
-        margin: auto;
     }
     .enterprise-case-study-carousel h3 {
         font-size: 26px;
@@ -2769,7 +2759,33 @@ ul.navRoot {
     main.sub-menu-page .blockchain-benefits-sec .container{
         padding: 0 82px;
     }
-
+    .contact-Page .sub-menu-banner-content {
+        max-width: 80%;
+        margin: auto;
+    }
+    main.sub-menu-page.contact-Page .container {
+        padding: 0 15px;
+    }
+    .contact-Page .check-wrapper-sec img {
+        margin-right: 4px;
+    }
+    .blockchain-benefits-sec .blockchain-benefits-container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+    section.enterprise-case-study-section {
+        padding: 96px 0;
+    }
+    .advantages-accordion-section {
+        max-width: 100%;
+        margin: auto;
+    }
+    .blockchain-benefits-container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0 33px;
+    }
 }
 @media screen and (max-width: 991px){
     .banner-content {
@@ -2853,8 +2869,30 @@ ul.navRoot {
     .case-study--screenshot img, .case-study--screenshot iframe {
         bottom: 0;
     }
-
-
+    .card-section {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+    }
+    .row.row-wrapper .col-sm-6.enterprise-banner-content {
+        flex: 0 0 64%;
+        max-width: 64%;
+    }
+    .row.row-wrapper .col-sm-6.enterprise-banner-image {
+        flex: 0 0 36%;
+        max-width: 36%;
+        position: unset;
+        right: 0;
+        padding: 0 15px;
+    }
+    .enterprise-banner-image img.banner-image {
+        right: 0;
+        bottom: 0;
+        height: 285px;
+        width: 100%;
+        object-fit: cover;
+        position: unset;
+    }
 
 }
 @media screen and (max-width: 898px){
@@ -3771,11 +3809,6 @@ ul.navRoot {
     .page-id-232 .card-section {
         grid-template-columns: repeat(1,1fr);
     }
-    .contact-form-sec .col-sm-6 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100% !important;
-    }
     .contact-Page label {
         margin-bottom: 16px;
     }
@@ -3818,10 +3851,10 @@ ul.navRoot {
         font-size: 16px;
     }
     span.link-heading-wrapper {
-        padding-left: 0;
+        padding-left: 16px;
     }
     .advantages-accordion-section .accordions li i.fa-chevron-down {
-        left: 13px;
+        left: 24px;
         top: 18px;
     }
     .case-study--header, .case-study--content {
@@ -3842,6 +3875,23 @@ ul.navRoot {
     }
     .page-template-enterprise .banner-wrapper-section {
         padding-top: 108px;
+    }
+    .contact-Page .sub-menu-banner-content {
+        max-width: 100%;
+        margin: auto;
+    }
+    .contact-form-sec .form-row {
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 16px;
+    }
+    .advantages-accordion-section {
+        max-width: 100%;
+        margin: auto;
+    }
+    .blockchain-benefits-container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0 27px;
     }
 }
 @media screen and (max-width: 783px){
@@ -4027,7 +4077,7 @@ ul.navRoot {
         padding-top: 0;
     }
     .banner-wrapper-section {
-        padding-bottom: 0;
+        padding-bottom: 20px;
     }
     .banner-wrapper-section.ftm-token-wrapper-section {
         padding-bottom: 50px;
@@ -4157,6 +4207,13 @@ ul.navRoot {
     }
     .case-study--header, .case-study--content {
         padding: 38px;
+    }
+    .page-template-roadmap .banner-wrapper-section {
+        padding-bottom: 25px;
+    }
+    .ftm-token-wrapper-section .sub-menu-banner-content {
+        max-width: 100%;
+        padding-bottom: 15px;
     }
 }
 @media screen and (max-width: 375px){

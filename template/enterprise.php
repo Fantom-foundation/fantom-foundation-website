@@ -98,7 +98,7 @@ get_header();
                                 <?php
                                 if (get_sub_field('youtube_video')) {
                                   ?>
-                                  <iframe src="https://www.youtube.com/embed/<?php the_sub_field('youtube_video') ?>?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  <iframe src="https://www.youtube.com/embed/<?php the_sub_field('youtube_video') ?>" frameborder="0" allowfullscreen></iframe>
                                   <?php
                                 } elseif (get_sub_field('image')) {
                                   ?>

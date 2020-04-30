@@ -2,12 +2,18 @@
     <div class="container">
         <ul class="navRoot">
             <li class="navSection logo">
-                <a class="item-home colorize" href="/">
-                    <?php
-                    if ( is_page( array( 25, 296 ) ) ) {
-                      ?><img src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
+                <a class="item-home colorize" href="<?php
+                if (is_single() || is_category() || is_archive() ) {
+                  ?>/blog/<?php
+                   } else {
+                     echo '/';
+                   }
+                   ?>">
+                       <?php
+                       if (is_page(array(25, 296))) {
+                         ?><img src="<?php echo get_template_directory_uri(); ?>/images/fantom_logo_white_new.svg" alt="Fantom Logo"/> <?php
                     } else {
-                      echo '<img class="banner" src="' . get_template_directory_uri() . '/images/Fantom Logo.svg" alt="Banner 1">';
+                      echo '<img class="banner" src="' . get_template_directory_uri() . '/images/Fantom Logo.svg" alt="Fantom Logo">';
                     }
                     ?>
                 </a>                          
