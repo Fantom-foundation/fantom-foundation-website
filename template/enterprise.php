@@ -86,8 +86,8 @@ get_header();
                   $i = 1;
                   while (have_rows('case_study_section')) : the_row();
                     ?> 
-                    <article>
-                        <div class="case-study--header"  id="sec<?php echo $i ?>">
+                    <article id="sec<?php echo $i ?>">
+                        <div class="case-study--header">
                             <div class="case-study--header-content">
                                 <span class="case-study-title">
                                     <h3><?php the_sub_field('case_study_title'); ?></h3> <span class="case-study--label">Use case</span>
@@ -98,7 +98,7 @@ get_header();
                                 <?php
                                 if (get_sub_field('youtube_video')) {
                                   ?>
-                                  <iframe src="https://www.youtube.com/embed/<?php the_sub_field('youtube_video') ?>" frameborder="0" allowfullscreen></iframe>
+                                  <iframe src="https://www.youtube.com/embed/<?php the_sub_field('youtube_video') ?>?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
                                   <?php
                                 } elseif (get_sub_field('image')) {
                                   ?>

@@ -57,7 +57,7 @@ p {
     font-size: 16px;
     line-height: 1.75;
     font-weight: 300;
-    color: #404a64;
+    color: #2b3954;
     margin: 0 0 20px;
     font-family: WorkSans !important;
     letter-spacing: -0.5px;
@@ -1116,10 +1116,6 @@ a.navigation__link.active:before {
     color: #1969ff;
     top: 7px;
 }
-.accordion li.open i , .accordions li.opens i { 
-    color: #2b3954;
-}
-
 .accordion li.open i.fa-chevron-down , .accordions li.opens i.fa-chevron-down {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -1233,11 +1229,11 @@ nav.pagenav a.active:before {
     padding-bottom: 8px;
 }
 .pagenav-section ul li ul:first-child li:before {
-    border: 1px solid #1969ff;
+    border: 1px solid #2b3954;
     background: transparent;
 }
 .pagenav-section ul li ul:first-child li ul:first-child li:before {
-    border: 1px solid;
+    border-radius: 0;
 }
 .pagenav-section-wrapper {
     /* padding: 100px 0; */
@@ -1264,7 +1260,7 @@ nav.pagenav a.active:before {
     content: "";
     position: absolute;
     border-radius: 50%;
-    background: #1969ff;
+    background: #2b3954;
     font-size: 60px;
     width: 6px;
     height: 6px;
@@ -1340,25 +1336,19 @@ img.seed-group-logo {
 img.xar-network-logo {
     height: 28px;
 }
-
-
-
-
-
-
-
 .customer-logo-wrapper a:focus ul, .customer-logo-wrapper a:hover ul {
-    opacity: .7;
-    -webkit-transform: scale(.95);
-    transform: scale(.95);
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
+    /*    opacity: .7;
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+        -webkit-filter: blur(10px);
+        filter: blur(10px);*/
 }
 .customer-logo-wrapper a {
     display: block;
     padding-top: 70px;
     padding-bottom: 65px;
     position: relative;
+    cursor: default;
 }
 span.see-our-customers-btn {
     position: absolute;
@@ -1382,6 +1372,7 @@ span.see-our-customers-btn {
     top: 0;
     bottom: 0;
     margin: auto;
+    visibility: hidden;
 }
 
 .customer-logo-wrapper a:focus span.see-our-customers-btn, .customer-logo-wrapper a:hover span.see-our-customers-btn {
@@ -2268,6 +2259,15 @@ a.social-link:first-child {
 .blog-banner-wrapper {
     padding-bottom: 80px;
 }
+.blog-page-sec-wrapper {
+    font-family: "proxima-nova" !important;
+}
+.blog-page-sec-wrapper p {
+    font-family: "proxima-nova" !important;
+}
+.blog-page-sec-wrapper ul , .blog-page-sec-wrapper ol {
+    font-family: "proxima-nova" !important;
+}
 .single-post header.globalNav {
     background-color: #fff;
 }
@@ -2593,7 +2593,8 @@ span.your-rewards-wrapper {
     background-color: #fff;
 }
 .page-template-enterprise .banner-wrapper-section {
-    padding-top: 140px;
+    /*    padding-top: 140px;*/
+    padding-top: 60px;
     background-color: #fff;
     margin-bottom: 64px;
     padding-bottom: 10px;
@@ -2610,6 +2611,10 @@ span.your-rewards-wrapper {
     left: 0;
     right: 0;
     margin: auto;
+}
+.enterprise-banner-image img.banner-image {
+    width: 700px;
+    bottom: 15px;
 }
 .page-template-enterprise .footer-section ,
 .page-template-contact .footer-section {
@@ -2688,9 +2693,12 @@ span.your-rewards-wrapper {
     margin-bottom: 16px;
 }
 .blockchain-benefits-container {
-    max-width: 92%;
+    /*    max-width: 92%;
+        margin: auto;
+        padding: 0 37px;*/
+    max-width: 85%;
     margin: auto;
-    padding: 0 37px;
+    padding: 0 80px 0 0;
 }
 .enterprises-card-row {
     display: grid;
@@ -2762,7 +2770,7 @@ span.link-heading-wrapper {
     padding-left: 16px;
 }
 span.number-wrapper {
-    color: #1969ff;
+    color: #2b3954;
     font-weight: bold;
 }
 .advantages-accordion-section ul#accordions li {
@@ -2999,7 +3007,9 @@ article.animate-active .case-study--header-content, article.animate-active .case
 .enterprise-case-study-carousel h3 {
     margin-bottom: 30px;
 }
-
+span.case-study-title h3 {
+    max-width: 275px;
+}
 .case-study--label {
     height: 32px;
     background:  #e8eef2;
@@ -3067,11 +3077,12 @@ article.animate-active .case-study--header-content, article.animate-active .case
 }
 .slick-slider {
     box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    border-radius: 8px;
 }
 span.case-study-title {
     display: flex;
 }
-div#sec2 .case-study--label {
+article#sec1 .case-study--label {
     margin-left: 0;
 }
 .fantom-enterprise-content {
@@ -3098,14 +3109,14 @@ div#sec2 .case-study--label {
 .page-template-contact .footer-section {
     border-top: 1px solid #e6e6e6;
 }
-.contact-Page .sub-menu-banner-content {
-    max-width: 483px;
-}
 .page-template-contact .sub-menu-banner-content h1 {
     color: #fff;
 }
 .page-template-contact .sub-menu-banner-content p {
     color: #fff;
+}
+.col-sm-5.get-in-touch-sec {
+    top: 40px;
 }
 .contact-form-sec .form-row {
     display: grid;
@@ -3127,7 +3138,7 @@ div#sec2 .case-study--label {
     height: 56px;
     border-radius: 4px;
     border: 1px solid #2b3954;
-    padding: 0 12px;
+    padding: 16px;
     margin-top: 4px;
     font-family: WorkSans;
     font-size: 16px;
@@ -3145,7 +3156,7 @@ label.sales-team-sec {
     word-wrap: normal;
     width: 100%;
     height: 56px;
-    padding: 0 12px;
+    padding: 16px;
     border-radius: 4px;
     border: 1px solid #2b3954;
     margin-top: 4px;
@@ -3182,10 +3193,10 @@ p.check-wrapper-sec {
 }
 .contact-Page textarea {
     width: 100%;
-    height: 96px;
+    height: 110px;
     border-radius: 4px;
     border: 1px solid #2b3954;
-    padding: 0 12px;
+    padding: 16px;
     margin-top: 4px;
 }
 .page-template-contact header.globalNav {
@@ -3193,9 +3204,10 @@ p.check-wrapper-sec {
 }
 .page-template-contact .row.row-wrapper {
     align-items: unset;
+    padding-top: 37px;
 }
 .page-template-contact .banner-wrapper-section {
-    padding-top: 98px;
+    padding-top: 75px;
     padding-bottom: 160px;
     background-color: transparent;
     position: relative;
@@ -3204,7 +3216,7 @@ p.check-wrapper-sec {
     content: "";
     position: absolute;
     background: #1969ff;
-    height: 500px;
+    height: 580px;
     z-index: -1;
     width: 100%;
     top: 0;
@@ -3247,7 +3259,7 @@ input.wpcf7-form-control.wpcf7-submit {
 }
 .contact-form-sec p.submitting-wrapper {
     color: #8e8e98;
-    font-family: ProximaNova !important;
+    font-family: "proxima-nova" !important;
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
@@ -3291,5 +3303,23 @@ input.wpcf7-form-control.wpcf7-submit {
 .form-wrapper-sec select {
     -moz-appearance: window;
     -webkit-appearance: none;
+    background: url(../images/icon_arrow_down.svg) 95% center/13px no-repeat #fff;
+    display: block;
 
+}
+article#sec3 .slick-slide img , 
+article#sec4 .slick-slide img {
+    display: none;
+}
+article#sec3 .case-study--header ,
+article#sec4 .case-study--header {
+    display: block;
+}
+article#sec3 .case-study--content , 
+article#sec4 .case-study--content{
+    width: 100%;
+}
+article#sec3 .case-study--screenshot ,
+article#sec4 .case-study--screenshot {
+    display: none;
 }

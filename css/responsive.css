@@ -52,6 +52,10 @@
     .wallet-section-wrapper {
         padding-left: 35%;
     }
+    .wallet-container {
+        max-width: 1600px;
+        margin: auto;
+    }
 }
 @media screen and (min-width: 1900px){
     .safe-and-secure-section {
@@ -88,6 +92,9 @@
     }   
     .wallet-section-wrapper {
         padding-left: 195px;
+    }
+    .enterprise-banner-image img.banner-image {
+        width: 632px;
     }
 }
 @media screen and (max-width: 1280px){
@@ -2677,8 +2684,19 @@ ul.navRoot {
     .page-id-232 .card-section {
         grid-template-columns: repeat(2,1fr);
     }
-    .col-sm-6.form-section {
-        margin-top: 40px;
+    .page-template-contact .row.row-wrapper {
+        align-items: unset;
+        padding-top: 60px;
+    }
+    .col-sm-5.get-in-touch-sec {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 48px;
+        top: 0;
+    }
+    .col-sm-7.form-section {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
     .page-template-contact .banner-wrapper-section:before {
         height: 708px;
@@ -2687,12 +2705,12 @@ ul.navRoot {
         padding-bottom: 120px;
     }
     .row.row-wrapper .col-sm-6.enterprise-banner-content {
-        flex: 0 0 70%;
-        max-width: 70%;
+        flex: 0 0 63%;
+        max-width: 63%;
     }
     .row.row-wrapper .col-sm-6.enterprise-banner-image {
-        flex: 0 0 30%;
-        max-width: 30%;
+        flex: 0 0 37%;
+        max-width: 37%;
         position: absolute;
         right: 0;
         padding: 0;
@@ -2700,13 +2718,16 @@ ul.navRoot {
     .enterprise-banner-image img.banner-image {
         right: 0;
         bottom: 0;
-        height: 399px;
+        height: 485px;
         width: 100%;
         object-fit: cover;
-        position: unset;
+        object-position: left;
+        top: -20px;
+        position: relative;
     }
     .page-template-enterprise .banner-wrapper-section {
         padding-bottom: 60px;
+        padding-top: 130px;
     }
     .blockchain-benefits-col {
         max-width: 100%;
@@ -2727,7 +2748,7 @@ ul.navRoot {
     .case-study--content h4 {
         font-size: 21px;
     }
-    span.case-study-title {
+    article#sec1 span.case-study-title {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-gap: 10px;
@@ -2874,26 +2895,9 @@ ul.navRoot {
         grid-template-columns: repeat(2,1fr);
         grid-gap: 30px;
     }
-    .row.row-wrapper .col-sm-6.enterprise-banner-content {
-        flex: 0 0 64%;
-        max-width: 64%;
-    }
-    .row.row-wrapper .col-sm-6.enterprise-banner-image {
-        flex: 0 0 36%;
-        max-width: 36%;
-        position: unset;
-        right: 0;
-        padding: 0 15px;
-    }
     .enterprise-banner-image img.banner-image {
-        right: 0;
-        bottom: 0;
-        height: 285px;
-        width: 100%;
-        object-fit: cover;
-        position: unset;
+        height: 396px;
     }
-
 }
 @media screen and (max-width: 898px){
     .wallet-section-wrapper {
@@ -3837,6 +3841,7 @@ ul.navRoot {
         width: 100%;
         height: 100%;       
         padding-top: 15px;
+        position: unset;
     }
     .page-template-enterprise h2 {
         font-size: 28px;
@@ -3892,6 +3897,9 @@ ul.navRoot {
         max-width: 100%;
         margin: auto;
         padding: 0 27px;
+    }
+    .page-template-contact .row.row-wrapper {
+        padding-top: 35px;
     }
 }
 @media screen and (max-width: 783px){
@@ -4202,8 +4210,14 @@ ul.navRoot {
     .slick-prev {
         left: -15px;
     }
-    div#sec2 .case-study--label {
-        margin-left: -20px;
+    article#sec1 .case-study--label {
+        width: 100px;
+        padding: 0;
+        margin: 0;
+    }
+    article#sec1 .case-study--screenshot.mobile-case-study-sec {
+        padding: 30px;
+        margin-bottom: 30px;
     }
     .case-study--header, .case-study--content {
         padding: 38px;
@@ -4214,6 +4228,11 @@ ul.navRoot {
     .ftm-token-wrapper-section .sub-menu-banner-content {
         max-width: 100%;
         padding-bottom: 15px;
+    }
+    span.case-study-title {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
     }
 }
 @media screen and (max-width: 375px){
