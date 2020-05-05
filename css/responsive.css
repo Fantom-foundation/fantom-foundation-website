@@ -4306,6 +4306,9 @@ ul.navRoot {
     .fantom-wallet-section .sub-menu-banner-content h1 {
         padding-top: 11px;
     }
+    .blog a.item-home.colorize:before, .single a.item-home.colorize:before, .category a.item-home.colorize:before {
+        left: 100px;
+    }
 }
 @media screen and (max-width: 667px) and (orientation: landscape) {  
     .menu-toggle {
@@ -4314,10 +4317,16 @@ ul.navRoot {
     img.mobile-header-logo {
         margin-left: 81px;
     }
+    .blog a.item-home.colorize:before, .single a.item-home.colorize:before, .category a.item-home.colorize:before {
+        left: 75px;
+    }
 }
 @media screen and (max-width: 640px) and (orientation: landscape) {
     img.mobile-header-logo {
         margin-left: 65px;
+    }
+    .blog a.item-home.colorize:before, .single a.item-home.colorize:before, .category a.item-home.colorize:before {
+        left: 60px;
     }
 }
 @media screen and (max-width: 568px) and (orientation: landscape) {

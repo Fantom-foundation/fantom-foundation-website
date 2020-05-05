@@ -115,12 +115,12 @@
                                                                                 <h3 class="linkTitle">Opera chain</h3>
                                                                             </div>
                                                                         </a></li>
-                                                                    <li><a class="linkContainer item-radar" href="/xar-network-banking-on-dlt/">
-                                                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Xar network.svg" alt="Sub menu"> 
+<!--                                                                    <li><a class="linkContainer item-radar" href="/xar-network-banking-on-dlt/">
+                                                                            <img class="sub-menu-img" src="<?php //echo get_template_directory_uri(); ?>/images/Xar network.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">Xar network</h3>
                                                                             </div>
-                                                                        </a></li> 
+                                                                        </a></li> -->
                                                                 </ul>
                                                             </li>  
                                                         </ul></li>
@@ -239,11 +239,4 @@
                 </div>
             </div>
         </header>
-
-
-
-
-
-
-
-
+        

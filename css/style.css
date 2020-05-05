@@ -2212,14 +2212,14 @@ img.post-feat-image {
     content: "";
     position: absolute;
     border-radius: 50%;
-    background: #1969ff;
+    background: #2b3954;
     font-size: 60px;
     width: 8px;
     height: 8px;
     left: -20px;
     top: 12px;
 }
-.post-content a {
+.link-break-wrapper {
     word-break: break-all;
 }
 .social-icon-wrapper img {
@@ -3311,15 +3311,16 @@ article#sec3 .slick-slide img ,
 article#sec4 .slick-slide img {
     display: none;
 }
-article#sec3 .case-study--header ,
+/*article#sec3 .case-study--header ,
 article#sec4 .case-study--header {
     display: block;
 }
 article#sec3 .case-study--content , 
 article#sec4 .case-study--content{
     width: 100%;
-}
+}*/
 article#sec3 .case-study--screenshot ,
 article#sec4 .case-study--screenshot {
     display: none;
 }
+
