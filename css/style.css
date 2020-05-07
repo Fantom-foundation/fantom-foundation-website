@@ -2222,6 +2222,9 @@ img.post-feat-image {
 .link-break-wrapper {
     word-break: break-all;
 }
+.postid-446 .link-break-wrapper {
+    word-break: unset;
+}
 .social-icon-wrapper img {
     width: 17px;
     height: 17px;
@@ -2613,7 +2616,7 @@ span.your-rewards-wrapper {
     margin: auto;
 }
 .enterprise-banner-image img.banner-image {
-    width: 700px;
+    width: 675px;
     bottom: 15px;
 }
 .page-template-enterprise .footer-section ,
@@ -2698,7 +2701,8 @@ span.your-rewards-wrapper {
         padding: 0 37px;*/
     max-width: 85%;
     margin: auto;
-    padding: 0 80px 0 0;
+    padding: 0 40px;
+    /*    padding: 0 80px 0 0;*/
 }
 .enterprises-card-row {
     display: grid;
@@ -2714,8 +2718,11 @@ span.your-rewards-wrapper {
     padding-bottom: 13px;
 }
 .blockchain-benefits-row {
-    display: flex;
-    justify-content: space-between;
+    /*    display: flex;
+        justify-content: space-between;*/
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+    display: grid;
 }
 .blockchain-benefits-col {
     max-width: 470px;
@@ -3323,4 +3330,12 @@ article#sec3 .case-study--screenshot ,
 article#sec4 .case-study--screenshot {
     display: none;
 }
-
+.enterprises-card-col:nth-of-type(2) img {
+    position: relative;
+    right: 5px;
+}
+.page-id-120 img.banner-image {
+    height: 100%;
+    position: unset;
+    width: 100%;
+}

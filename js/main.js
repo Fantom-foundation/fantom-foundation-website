@@ -1,16 +1,86 @@
 jQuery(document).ready(function ($) {
 
+//Currency Format
+    function formatMoney(amount, decimalCount = 0, decimal = ".", thousands = ",") {
+        try {
+            decimalCount = Math.abs(decimalCount);
+            decimalCount = isNaN(decimalCount) ? 0 : decimalCount;
+
+            const negativeSign = amount < 0 ? "-" : "";
+
+            let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+            let j = (i.length > 3) ? i.length % 3 : 0;
+
+            return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+        } catch (e) {
+            console.log(e)
+    }
+    }
+    $(".staking-form #fname").keypress(function (e) {
+        //if the letter is not digit then display error and don't type anything
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            //display error message
+            $("#errmsg").html("Digits Only").show().fadeOut("slow");
+            return false;
+        }
+        var maxLength = 10;
+        var sliderVal = $(this).val();
+        $(this).val(sliderVal.substring(0, maxLength))
+
+    });
+    var totalStaked = $('#totalStaked').val();
+    var totalStakedValue = parseInt(totalStaked, 16) / 1e18;
+    var stakedValue = Math.round(totalStakedValue) / 31750000;
+    var stakedValuePercantage = stakedValue.toFixed(2);
+    $('#totalStakedpercentage').text(stakedValuePercantage + "%");
+    $(".staking-form #fname").keyup(function (e) {
+        var number = $(this).val();
+        var charLength = $(this).val().length;
+        var sliderVal = Number(number.replace(/[^0-9.-]+/g, ""));
+        console.log(number);
+
+        var maxLength = 10;
+        var convertedValue = formatMoney(sliderVal);
+        var rewardPercantage = $('#rewardpercentageYearly').val();
+        var YearlyRewards = parseFloat(sliderVal) * parseFloat(rewardPercantage) / 100;
+        $('#yearReward').text(formatMoney(YearlyRewards) + " FTM");
+
+        var rewardPercantageMonthly = $('#rewardpercentagemonthly').val();
+        var monthlyRewards = parseFloat(sliderVal) * parseFloat(rewardPercantageMonthly) / 100;
+        $('#monthlyReward').text(formatMoney(monthlyRewards) + " FTM");
+       // $(this).val(sliderVal.substring(0, maxLength))
+    });
+    $('.staking-form #fname').on('blur', function () {
+        const value = this.value.replace(/,/g, '');
+        this.value = parseFloat(value).toLocaleString('en-US', {
+            style: 'decimal',
+            maximumFractionDigits: 0,
+            minimumFractionDigits: 0
+        });
+    });
 //rangeslider
     $(function () {
         $('input[type="range"]').rangeslider({
             polyfill: false,
             onInit: function () {
-                $('.header .pull-right').text($('input[type="range"]').val() + '%');
+                var sliderVal = $('input[type="range"]').val();
+                var convertedValue = formatMoney(sliderVal);
+                $('.you-stake-wrapper .text-blue').text(convertedValue.toString() + " FTM");
+                var rewardPercantage = $('#rewardpercentage').val();
+                var YearlyRewards = parseFloat(sliderVal) * parseFloat(rewardPercantage) / 100;
+
+                $('.rewards-wrapper > .text-blue').text(formatMoney(YearlyRewards) + " FTM");
+
             },
             onSlide: function (position, value) {
                 //console.log('onSlide');
                 //console.log('position: ' + position, 'value: ' + value);
-                $('.header .pull-right').text(value + '%');
+                $('.you-stake-wrapper .text-blue').text(formatMoney(value) + " FTM");
+                var rewardPercantage = $('#rewardpercentage').val();
+                var YearlyRewards = parseFloat(value) * parseFloat(rewardPercantage) / 100;
+
+                $('.rewards-wrapper > .text-blue').text(formatMoney(YearlyRewards) + " FTM");
+
             },
             onSlideEnd: function (position, value) {
                 //console.log('onSlideEnd');
@@ -527,48 +597,48 @@ jQuery(document).ready(function ($) {
 
 // enterprise case study slider
 
-$('.enterprise-case-study-carousel').slick({
-  dots: false,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  adaptiveHeight: true,
-  draggable: false
-});
-    
-    function sliderAnimatedHeader (){
-        
+    $('.enterprise-case-study-carousel').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        draggable: false
+    });
+
+    function sliderAnimatedHeader() {
+
         var caseHeight = jQuery(".enterprise-case-study-carousel article.slick-active .case-study--header").outerHeight();
         jQuery(".case-study--animated-header").height(caseHeight);
         jQuery(".enterprise-case-study-carousel article.slick-active").addClass("animate-active");
-        
+
     }
-    
+
     sliderAnimatedHeader()
-    
+
     // On before slide change
-    $('.enterprise-case-study-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
-      sliderAnimatedHeader()
+    $('.enterprise-case-study-carousel').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        sliderAnimatedHeader()
     });
     // On before slide change
-    $('.enterprise-case-study-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      jQuery(".enterprise-case-study-carousel article").removeClass("animate-active");
+    $('.enterprise-case-study-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        jQuery(".enterprise-case-study-carousel article").removeClass("animate-active");
     });
 
-  // Add smooth scrolling to links
-  $("a.link-wrapper , section#going-to-do a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      // Store hash
-      var hash = this.hash;    
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    } // End if
-  });
+    // Add smooth scrolling to links
+    $("a.link-wrapper , section#going-to-do a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            // Store hash
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                window.location.hash = hash;
+            });
+        } // End if
+    });
 
 
 }); //main.js

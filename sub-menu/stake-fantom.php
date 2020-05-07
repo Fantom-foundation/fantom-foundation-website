@@ -5,6 +5,7 @@
 
 get_header();
 $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
+$data = getGraphqlValue();
 ?>
 <main class="sub-menu-page">
     <div class="banner-wrapper-section">
@@ -24,12 +25,12 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         <span class="your-rewards-wrapper">Estimate your rewards</span>
                     </div>  
                     <div class="rangeslider-sec staking-rangeslider-sec">
-                        <h5 class="opera-address-wrapper">Enter your FTM amount or your Opera address</h5>
+                        <h5 class="opera-address-wrapper">Enter your FTM amount </h5>
                         <div class="budget-wrap">
                             <div class="staking-budget">                          
                                 <div class="staking-content">
                                     <form class="staking-form">                                    
-                                        <input type="text" id="fname" name="fname" placeholder="0 FTM 0x...">
+                                        <input type="text" id="fname" value="1,000,000" max="10000000" name="fname" placeholder="Enter FTM">
                                     </form>
                                 </div>                                
                             </div>
@@ -37,21 +38,33 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                         <div class="rewards-section">
                             <div class="rewards-wrapper">
                                 <h5>Your monthly rewards</h5>
-                                <span class="text-blue">65,434 FTM</span>
+                                <span class="text-blue" id="monthlyReward">
+                                    <?php 
+                                    $monthlystaked = 1000000 * $data['monthlyReward'] / 100;
+                                    echo number_format($monthlystaked);
+                                    ?> FTM </span>
+                                <input type="hidden" value="<?php echo $data['monthlyReward']; ?>" id="rewardpercentagemonthly"/>
                             </div>
                             <div class="rewards-wrapper">
                                 <h5>Your yearly rewards</h5>
-                                <span class="text-blue">300,453 FTM</span>
+                                <span class="text-blue" id="yearReward">
+                                    <?php
+                                    $yearlystaked = 1000000 * $data['yearlyReward'] / 100;
+                                    echo number_format($yearlystaked);
+                                    ?>
+                                    FTM</span>
+                                <input type="hidden" value="<?php echo $data['yearlyReward']; ?>" id="rewardpercentageYearly"/>
+                                <input type="hidden" value="<?php echo $data['totalStaked']; ?>" id="totalStaked" />
                             </div>
                         </div>
                         <div class="rewards-section staking-rewards-section">
                             <div class="rewards-wrapper">
                                 <h5 class="total-staked">Total staked</h5>
-                                <span class="text-blue">45.03%</span>
+                                <span class="text-blue" id="totalStakedpercentage">45.03%</span>
                             </div>
                             <div class="rewards-wrapper">
                                 <h5 class="total-staked">Current APR</h5>
-                                <span class="text-blue">49.52%</span>
+                                <span class="text-blue"><?php echo $data['yearlyReward']; ?>% </span>
                             </div>
                         </div>
                     </div> 
@@ -110,5 +123,6 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
         </div>
     </div>
 </main>
-<?php get_footer(); ?>
+<?php
+get_footer();
 

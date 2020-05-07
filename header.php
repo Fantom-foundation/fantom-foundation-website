@@ -184,7 +184,7 @@
                                                                     </div></a>
                                                             </li>
                                                             <li><a class="linkContainer item-radar" href="/enterprise/">
-                                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Roadmap.svg" alt="Sub menu"> 
+                                                                    <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/enterprise.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">Enterprise</h3>
                                                                     </div></a>

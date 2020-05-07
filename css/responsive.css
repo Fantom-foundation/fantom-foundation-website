@@ -94,7 +94,7 @@
         padding-left: 195px;
     }
     .enterprise-banner-image img.banner-image {
-        width: 632px;
+        width: 600px;
     }
 }
 @media screen and (max-width: 1280px){
@@ -1001,7 +1001,7 @@ li.navSection.primary a:focus {
     z-index: 1000;
     left: 0;
     right: 0;
-    top: 70px;
+    top: 56px;
     pointer-events: none;
     -webkit-transform: rotateX(-15deg);
     transform: rotateX(-15deg);
@@ -3900,6 +3900,9 @@ ul.navRoot {
     }
     .page-template-contact .row.row-wrapper {
         padding-top: 35px;
+    }
+    .postid-446 .link-break-wrapper {
+        word-break: break-all;
     }
 }
 @media screen and (max-width: 783px){
