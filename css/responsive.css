@@ -2807,6 +2807,9 @@ ul.navRoot {
         margin: auto;
         padding: 0 33px;
     }
+    .page-id-402 .banner-wrapper-section {
+        padding-bottom: 20px;
+    }
 }
 @media screen and (max-width: 991px){
     .banner-content {

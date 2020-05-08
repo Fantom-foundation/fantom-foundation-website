@@ -149,12 +149,12 @@
                                                                                 <h3 class="linkTitle">Opera Explorer</h3>
                                                                             </div></a>
                                                                     </li>
-                                                                    <li><a class="linkContainer item-radar" href="https://explorer.xar.network/" target="_blank" >
-                                                                            <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Xar Explorer.svg" alt="Sub menu"> 
+<!--                                                                    <li><a class="linkContainer item-radar" href="https://explorer.xar.network/" target="_blank" >
+                                                                            <img class="sub-menu-img" src="<?php //echo get_template_directory_uri(); ?>/images/Xar Explorer.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">Xar Explorer</h3>
                                                                             </div></a>
-                                                                    </li>
+                                                                    </li>-->
                                                                 </ul>
                                                             </li>
 

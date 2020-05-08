@@ -204,7 +204,7 @@ a.get-started-btn:hover {
     margin-bottom: 0;
 }
 .banner-content {
-    padding-top: 80px;
+    padding-top: 35px;
     padding-bottom: 53px;
 }
 .home-banner p {
@@ -834,10 +834,10 @@ ul.fold-wrapper {
     font-style: normal;
     line-height: 1.75;
     letter-spacing: normal;
-    color: #2b3954;
+    color: #8E8E98;
 }
 .fold-wrapper p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -2807,7 +2807,7 @@ span.number-wrapper {
 }
 .advantages-accordion-section ul.accordion-contents {
     padding: 0;
-    max-width: 769px;
+    max-width: 670px;
     margin-left: 37px;
     margin-top: 24px;
 }
@@ -2916,11 +2916,14 @@ img.zoom-img {
     border-bottom: 1px solid #e6e6e6;
     margin-bottom: 20px;
 }
+.page-id-402 .banner-wrapper-section {;
+                                      padding-bottom: 10px;
+}
 .page-id-402 img.banner-image {
     height: 100%;
     position: relative;
     right: 0;
-    bottom: 97px;
+    bottom: 40px;
     width: 100%;
 }
 .page-id-402 .row.row-wrapper {
@@ -2999,6 +3002,7 @@ article.animate-active .case-study--header-content, article.animate-active .case
 .case-study--header {
     padding-top: 50px;
     font-size: 18px;
+    position: relative;
 }
 
 .case-study--content {
@@ -3111,6 +3115,14 @@ article#sec1 .case-study--label {
 }
 .fantom-enterprise-content p {
     margin: 0;
+}
+.case-study--screenshot.desktop-case-study-sec {
+    position: absolute;
+    right: 60px;
+    width: 43%;
+    bottom: 0;
+    top: 0;
+    margin: auto;
 }
 /*contact page style*/
 .page-template-contact .footer-section {
