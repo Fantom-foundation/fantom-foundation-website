@@ -17,6 +17,7 @@ jQuery(document).ready(function ($) {
     }
     }
     $(".staking-form #fname").keypress(function (e) {
+        $(this).attr('placeholder', 'Enter FTM');
         //if the letter is not digit then display error and don't type anything
         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
             //display error message
@@ -48,7 +49,7 @@ jQuery(document).ready(function ($) {
         var rewardPercantageMonthly = $('#rewardpercentagemonthly').val();
         var monthlyRewards = parseFloat(sliderVal) * parseFloat(rewardPercantageMonthly) / 100;
         $('#monthlyReward').text(formatMoney(monthlyRewards) + " FTM");
-       // $(this).val(sliderVal.substring(0, maxLength))
+        // $(this).val(sliderVal.substring(0, maxLength))
     });
     $('.staking-form #fname').on('blur', function () {
         const value = this.value.replace(/,/g, '');

@@ -30,7 +30,7 @@ $data = getGraphqlValue();
                             <div class="staking-budget">                          
                                 <div class="staking-content">
                                     <form class="staking-form">                                    
-                                        <input type="text" id="fname" value="1,000,000" max="10000000" name="fname" placeholder="Enter FTM">
+                                        <input type="text" id="fname" value="" max="10000000" name="fname" placeholder="1,000,000 FTM">
                                     </form>
                                 </div>                                
                             </div>

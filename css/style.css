@@ -2438,6 +2438,7 @@ img.ftm-icon-wrapper {
 .ftm-col h3 {
     font-size: 21px;
     padding-top: 17px;
+    font-weight: 700;
 }
 .ftm-used-for-sec {
     background-color: #fbfcff;
@@ -2740,6 +2741,7 @@ img.enterprises-card-icon {
     line-height: 1.29;
     padding-top: 17px;
     font-size: 21px;
+    color: #2b3954;
 }
 .advantages-accordion-section {
     max-width: 92%;
@@ -3350,4 +3352,7 @@ article#sec4 .case-study--screenshot {
     height: 100%;
     position: unset;
     width: 100%;
+}
+.page-id-492 .pagenav-wrapper h3 {
+    padding-top: 25px;
 }
