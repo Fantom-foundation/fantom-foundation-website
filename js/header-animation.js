@@ -45,15 +45,16 @@ Strut.touch.isDragging || t.closeDropdown()
 function globalNavPopup(e) {
 var t = this,
         n = Strut.touch.isSupported ? "touchend" : "click";
-        this.activeClass = "globalPopupActive", this.root = document.querySelector(e), this.link = this.root.querySelector(".rootLink"), this.popup = this.root.querySelector(".popup"), this.closeButton = this.root.querySelector(".popupCloseButton"), this.link.addEventListener(n, function(e) {
-e.stopPropagation(), t.togglePopup()
-}), this.popup.addEventListener(n, function(e) {
-e.stopPropagation()
-}), this.closeButton && this.closeButton.addEventListener(n, function(e) {
-t.closeAllPopups()
-}), document.body.addEventListener(n, function(e) {
-Strut.touch.isDragging || t.closeAllPopups()
-}, !1)
+        this.activeClass = "globalPopupActive";
+                //this.root = document.querySelector(e), this.link = this.root.querySelector(".rootLink"), this.popup = this.root.querySelector(".popup"), this.closeButton = this.root.querySelector(".popupCloseButton"), this.link.addEventListener(n, function(e) {
+//e.stopPropagation(), t.togglePopup()
+//}), this.popup.addEventListener(n, function(e) {
+//e.stopPropagation()
+//}), this.closeButton && this.closeButton.addEventListener(n, function(e) {
+//t.closeAllPopups()
+//}), document.body.addEventListener(n, function(e) {
+//Strut.touch.isDragging || t.closeAllPopups()
+//}, !1)
         }(function() {
 window.$ && window.$.ajaxPrefilter && $(function() {
 return $.ajaxPrefilter(function(e, t, n) {

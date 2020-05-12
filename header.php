@@ -75,7 +75,7 @@
                                                     <li>  <ul class="productsGroup">
                                                             <li class="first-fold-group">
                                                                 <ul>
-                                                                    <li><a class="linkContainer item-payments" href="/intro-to-fantom-blockchain-platform/">
+                                                                    <li><a class="linkContainer item-payments" href="/intro-to-fantom/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Intro to Fantom.svg" alt="Sub menu">         
                                                                             <div class="productLinkContent">
                                                                                 <h3 class="linkTitle">Intro to Fantom</h3>                                                          
@@ -112,7 +112,7 @@
                                                                     <li><a class="linkContainer item-relay" href="/what-is-fantom-opera/">
                                                                             <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Opera chain.svg" alt="Sub menu"> 
                                                                             <div class="productLinkContent">
-                                                                                <h3 class="linkTitle">Opera chain</h3>
+                                                                                <h3 class="linkTitle">Opera Chain</h3>
                                                                             </div>
                                                                         </a></li>
 <!--                                                                    <li><a class="linkContainer item-radar" href="/xar-network-banking-on-dlt/">
@@ -160,7 +160,7 @@
 
                                                             <li class="sec-fold-group">
                                                                 <h4 class="explorers-text">GUIDES</h4>
-                                                                <a class="linkContainer-wrapper" href="/how-to-use-ftm-wallet/"><p>How to use Fantom Wallet</p></a> 
+                                                                <a class="linkContainer-wrapper" href="/how-to-use-fantom-wallet/"><p>How to use Fantom Wallet</p></a> 
                                                                 <a class="linkContainer-wrapper" href="/how-to-use-fantom-bridge/"><p>Swap FTM with the Bridge</p></a>
                                                             </li>
                                                         </ul></li>
@@ -171,7 +171,7 @@
                                                 <div class="link">  <a class="menu-page-link" href="#">Ecosystem</a><i class="fa fa-chevron-down"></i></div>
                                                 <ul class="accordion-content">
                                                     <li> <ul class="linkGroup linkList companyGroup">                             
-                                                            <li class="team-sec-wrapper"><a class="linkContainer item-radar" href="/team/">
+                                                            <li class="team-sec-wrapper"><a class="linkContainer item-radar" href="/about/">
                                                                     <img class="sub-menu-img" src="<?php echo get_template_directory_uri(); ?>/images/Team.svg" alt="Sub menu"> 
                                                                     <div class="productLinkContent">
                                                                         <h3 class="linkTitle">About us</h3>

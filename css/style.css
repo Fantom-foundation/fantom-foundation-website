@@ -740,11 +740,15 @@ a.social-icon:hover {
     color: #fff;
     opacity: 0.7;
 }
+.copyright-wrapper.social-icon-wrapper {
+    position: relative;
+    left: 110px;
+}
 ul.copyright-page-link-wrapper li:first-child {
     margin: 0;
 }
 ul.copyright-page-link-wrapper li {
-    margin-left: 55px;
+    margin-left: 35px;
 }
 a.copyright-page-link {
     color: rgba(255, 255, 255, 0.7);
@@ -1286,11 +1290,21 @@ nav.pagenav a.active:before {
     -webkit-filter: blur(0);
     filter: blur(0);
 }
-.customer-logo-wrapper ul {
+/*.customer-logo-wrapper ul {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-gap: 27px;
     row-gap: 60px;
+}*/
+.customer-logo-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.customer-logo-wrapper ul li {
+    width: 16%;
+    margin-bottom: 60px;
 }
 .customer-logo-wrapper ul li img {
     /*    width: auto;
@@ -1317,12 +1331,9 @@ img.vid-logo {
 }
 img.fusion-logo {
     height: 33px;
-    object-position: left;
 }
 img.afghanistan-health-logo {
     height: 35px;
-    position: relative;
-    right: 8px;
 }
 img.house-africa-logo {
     height: 27px;
@@ -1517,7 +1528,7 @@ h5.opera-address-wrapper {
     padding: 24px;
 }
 .page-id-232 .card-wrapper {
-    height: 214px;
+    height: 100%;
 }
 .card-wrapper:hover {
     -webkit-box-shadow: 0 10px 20px rgba(3,27,78,.1);
@@ -3262,6 +3273,7 @@ input.wpcf7-form-control.wpcf7-submit {
     justify-content: center;
     border: none;
     margin-bottom: 7px;
+    line-height: 0;
 }
 
 .country-select .selected-flag {
@@ -3355,4 +3367,67 @@ article#sec4 .case-study--screenshot {
 }
 .page-id-492 .pagenav-wrapper h3 {
     padding-top: 25px;
+}
+.country-select.inside .selected-flag {   
+    width: 100%;
+}
+.country-select .selected-flag .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid #000;
+}
+
+.mc4wp-alert.mc4wp-error ,
+.mc4wp-alert.mc4wp-notice {
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 17px;
+    border-radius: 20px;
+    width: 85%;
+    right: 13px;
+}
+.mc4wp-alert.mc4wp-error:before , 
+.mc4wp-alert.mc4wp-notice:before{
+    position: absolute;
+    content: "";
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid #fff;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    top: -13px;
+}
+.mc4wp-alert.mc4wp-error p  ,
+.mc4wp-alert.mc4wp-notice p{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #2b3954;
+    line-height: 20px;
+}
+.mc4wp-response {
+    max-width: 290px;
+    margin: auto;
+}
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors ,
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ng{
+    background: #1969ff;
+    border: none;
+    padding: 16px;
+    margin: 0;
+    color: #fff;
+    border-radius: 4px;
+    position: relative;
+    top: -14px;
+    text-align: center;
 }

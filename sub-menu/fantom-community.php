@@ -22,13 +22,13 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     if (have_rows('card_content')):
                       while (have_rows('card_content')) : the_row();
                         ?> 
-                        <div class="card-wrapper">
-                            <a href="<?php the_sub_field('link'); ?>" target="_blank" class="get-card-link">
+                        <a href="<?php the_sub_field('link'); ?>" target="_blank" class="get-card-link">
+                            <div class="card-wrapper">
                                 <img src="<?php the_sub_field('card_image'); ?>"  class="card-image" alt="Card Image"/>
                                 <h3><?php the_sub_field('card_title'); ?></h3>
                                 <p><?php the_sub_field('card_text'); ?></p>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                         <?php
                       endwhile;
                     else :
@@ -57,14 +57,14 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                     ?>
                     <div class="medium-blog-col">
                         <a href="<?php the_permalink(); ?>" target="_blank" class="card-link">
-                            <div class="card">									
+                            <div class="card">	                                
                                 <img class="card-img-top" src="<?php the_post_thumbnail_url($size); ?>" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php the_title(); ?></h5>
                                     <div class="read-story-btn-wrapper">
                                         <span>READ STORY</span>
                                     </div>                                       
-                                </div>							
+                                </div>                            
                             </div>
                         </a>
                     </div>

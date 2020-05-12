@@ -1,6 +1,12 @@
 jQuery(document).ready(function ($) {
 
-//Currency Format
+
+    /**
+     * @desc Currency Format
+     * @date 10 April 2020
+     * @author Catalyst
+     */
+
     function formatMoney(amount, decimalCount = 0, decimal = ".", thousands = ",") {
         try {
             decimalCount = Math.abs(decimalCount);
@@ -16,6 +22,11 @@ jQuery(document).ready(function ($) {
             console.log(e)
     }
     }
+    /**
+     * @desc Staked page input field on keypress function
+     * @date 10 April 2020
+     * @author Catalyst
+     */
     $(".staking-form #fname").keypress(function (e) {
         $(this).attr('placeholder', 'Enter FTM');
         //if the letter is not digit then display error and don't type anything
@@ -38,7 +49,6 @@ jQuery(document).ready(function ($) {
         var number = $(this).val();
         var charLength = $(this).val().length;
         var sliderVal = Number(number.replace(/[^0-9.-]+/g, ""));
-        console.log(number);
 
         var maxLength = 10;
         var convertedValue = formatMoney(sliderVal);
@@ -51,15 +61,28 @@ jQuery(document).ready(function ($) {
         $('#monthlyReward').text(formatMoney(monthlyRewards) + " FTM");
         // $(this).val(sliderVal.substring(0, maxLength))
     });
+
+    /**
+     * @desc Staked page input field change input to currency format on blur
+     * @date 10 April 2020
+     * @author Catalyst
+     */
     $('.staking-form #fname').on('blur', function () {
         const value = this.value.replace(/,/g, '');
-        this.value = parseFloat(value).toLocaleString('en-US', {
-            style: 'decimal',
-            maximumFractionDigits: 0,
-            minimumFractionDigits: 0
-        });
+        if (value != '') {
+            this.value = parseFloat(value).toLocaleString('en-US', {
+                style: 'decimal',
+                maximumFractionDigits: 0,
+                minimumFractionDigits: 0
+            });
+        }
     });
-//rangeslider
+
+    /**
+     * @desc Reward rangeslider home page
+     * @date 10 April 2020
+     * @author Catalyst
+     */
     $(function () {
         $('input[type="range"]').rangeslider({
             polyfill: false,
@@ -74,8 +97,6 @@ jQuery(document).ready(function ($) {
 
             },
             onSlide: function (position, value) {
-                //console.log('onSlide');
-                //console.log('position: ' + position, 'value: ' + value);
                 $('.you-stake-wrapper .text-blue').text(formatMoney(value) + " FTM");
                 var rewardPercantage = $('#rewardpercentage').val();
                 var YearlyRewards = parseFloat(value) * parseFloat(rewardPercantage) / 100;
@@ -83,15 +104,14 @@ jQuery(document).ready(function ($) {
                 $('.rewards-wrapper > .text-blue').text(formatMoney(YearlyRewards) + " FTM");
 
             },
-            onSlideEnd: function (position, value) {
-                //console.log('onSlideEnd');
-                //console.log('position: ' + position, 'value: ' + value);
-            }
         });
     });
 
-//mobile menu
-
+    /**
+     * @desc Mobile menu toggle function
+     * @date 15 April 2020
+     * @author Catalyst
+     */
     $('.menu-toggle').click(function () {
         if ($('body').hasClass('menu-open')) {
             $('body').removeClass('active');
@@ -108,7 +128,13 @@ jQuery(document).ready(function ($) {
         }
     });
 
-// Hide Header on on scroll down
+    /**
+     * @desc Hide Header on on scroll down
+     * @date 18 April 2020
+     * @author Catalyst
+     */
+
+
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
@@ -205,9 +231,7 @@ jQuery(document).ready(function ($) {
 
 
 //tab active section
-    var sections = $('section')
-            , nav = $('nav.pagenav')
-            , nav_height = nav.outerHeight();
+    var sections = $('section'), nav = $('nav.pagenav'), nav_height = nav.outerHeight();
 
     $(window).on('scroll', function () {
         var cur_pos = $(this).scrollTop();
@@ -215,8 +239,7 @@ jQuery(document).ready(function ($) {
         sections.each(function () {
             var top = $(this).offset().top,
                     bottom = top + $(this).outerHeight();
-
-            if (cur_pos >= top && cur_pos <= bottom) {
+            if (cur_pos >= top - 80 && cur_pos <= bottom) {
                 nav.find('a').removeClass('active');
                 sections.removeClass('active');
 
@@ -231,7 +254,7 @@ jQuery(document).ready(function ($) {
                 , id = $el.attr('href');
 
         $('html, body').animate({
-            scrollTop: $(id).offset().top
+            scrollTop: $(id).offset().top - 50
         }, 500);
 
         return false;
@@ -239,70 +262,69 @@ jQuery(document).ready(function ($) {
 
 //add class
     $(window).scroll(function (event) {
-        var scroll = $(window).scrollTop();
-        $('#pagenav').toggleClass('fixed',
-                scroll >= $('#container-wrapper').offset().top
-                );
+        if ($('div').hasClass('pagenav-section-wrapper')) {
+            var scroll = $(window).scrollTop();
+            $('#pagenav').toggleClass('fixed', scroll >= $('#container-wrapper').offset().top);
+        }
     });
 
-    jQuery(document).ready(function () {
-        $(".targetDiv").hide();
-        jQuery('#div2').show();
-    });
+
+    $(".targetDiv").hide();
+    jQuery('#div2').show();
+
 
 //show/hide Fantom wallet section
-    jQuery(function () {
-        jQuery('.showSingle').click(function () {
-            jQuery('.targetDiv').fadeOut('.cnt');
-            jQuery('#div' + $(this).attr('target')).fadeIn('100');
 
-        });
+    jQuery('.showSingle').click(function () {
+        jQuery('.targetDiv').fadeOut('.cnt');
+        jQuery('#div' + $(this).attr('target')).fadeIn('100');
+
     });
 
-    $(document).ready(function () {
-        $(".showSingle").click(function () {
-            $(".showSingle").removeClass("active");
-            var targetid = $(this).attr('target');
-            $('.wallet-section a').each(function () {
-                var targetidInner = $(this).attr('target');
-                if (targetid === targetidInner) {
-                    $(this).addClass("active");
-                } else {
-                    $(this).removeClass("active");
-                }
-            })
-        });
-    });
 
-//medium-blog-carouse
-    jQuery(document).ready(function () {
-        jQuery('.menu-toggle').click(function () {
-            jQuery('.site-nav').toggleClass('site-nav--open', 500);
-            jQuery(this).toggleClass('open');
-        });
-        jQuery('#medium-blog-carousel').owlCarousel({
-            loop: true,
-            items: 1,
-            margin: 5,
-            // nav: false,
-            //dots: true,
-            autoplay: false,
-            smartSpeed: 900,
-            responsive: {
-                0: {
-                    items: 1,
-                    //nav: false,
-                    //dots: true,
-                },
-                600: {
-                    items: 1
-                },
-                768: {
-                    items: 1
-                },
+
+    $(".showSingle").click(function () {
+        $(".showSingle").removeClass("active");
+        var targetid = $(this).attr('target');
+        $('.wallet-section a').each(function () {
+            var targetidInner = $(this).attr('target');
+            if (targetid === targetidInner) {
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
             }
         })
     });
+
+
+//medium-blog-carouse
+    jQuery('.menu-toggle').click(function () {
+        jQuery('.site-nav').toggleClass('site-nav--open', 500);
+        jQuery(this).toggleClass('open');
+    });
+    jQuery('#medium-blog-carousel').owlCarousel({
+        loop: true,
+        items: 1,
+        margin: 5,
+        // nav: false,
+        //dots: true,
+        autoplay: false,
+        smartSpeed: 900,
+        responsive: {
+            0: {
+                items: 1,
+                //nav: false,
+                //dots: true,
+            },
+            600: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+        }
+    })
+
 
 //Developer friendly Tab section
 // Show the first tab and hide the rest
@@ -642,33 +664,34 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+
 }); //main.js
-
-
-
 //CodeMirror js
-
-var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
-    lineNumbers: true,
-    mode: 'htmlmixed',
-    // theme: 'default',
-    tabMode: 'indent',
-    lineWrapping: true,
-    autoCloseTags: true,
-    styleActiveLine: true,
+if (jQuery('div').hasClass('code-container')) {
+    var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        mode: 'htmlmixed',
+        // theme: 'default',
+        tabMode: 'indent',
+        lineWrapping: true,
+        autoCloseTags: true,
+        styleActiveLine: true,
 //    matchBrackets: true,
 //    readOnly: 'nocursor',
 
-});
-var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code1"), {
-    lineNumbers: true,
-    mode: 'htmlmixed',
-    // theme: 'default',
-    tabMode: 'indent',
-    lineWrapping: true,
-    autoCloseTags: true,
-    styleActiveLine: true,
+    });
+    var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        lineNumbers: true,
+        mode: 'htmlmixed',
+        // theme: 'default',
+        tabMode: 'indent',
+        lineWrapping: true,
+        autoCloseTags: true,
+        styleActiveLine: true,
 //    matchBrackets: true,
 //    readOnly: 'nocursor',
-});
+    });
+}
+
 

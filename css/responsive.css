@@ -2245,6 +2245,9 @@ a.rootLink.item-support.colorize.fantom-wallte-btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    line-height: 0;
+    margin: 0;
 }
 a.rootLink.item-support.colorize.fantom-wallte-btn:hover {
     -webkit-transform: translateY(-1px);
@@ -2810,6 +2813,19 @@ ul.navRoot {
     .page-id-402 .banner-wrapper-section {
         padding-bottom: 20px;
     }
+    .copyright-wrapper.social-icon-wrapper {
+        position: relative;
+        left: 0;
+    }
+    .mc4wp-response {
+        max-width: 290px;
+        margin: unset;
+    }
+    .mc4wp-alert.mc4wp-error ,
+    .mc4wp-alert.mc4wp-notice  {
+        right: 0;
+        margin: auto;
+    }
 }
 @media screen and (max-width: 991px){
     .banner-content {
@@ -2967,11 +2983,15 @@ ul.navRoot {
     li.navSection.primary a {
         font-size: 14px;
     }
-    .customer-logo-wrapper ul {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-gap: 27px;
-        row-gap: 45px;
+    /*    .customer-logo-wrapper ul {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 27px;
+            row-gap: 45px;
+        }*/
+    .customer-logo-wrapper ul li {
+        width: 22%;
+        margin-bottom: 60px;
     }
     img.vid-logo {
         position: relative;
@@ -3907,6 +3927,13 @@ ul.navRoot {
     .postid-446 .link-break-wrapper {
         word-break: break-all;
     }
+    .customer-logo-wrapper ul li {
+        width: 33%;
+        margin-bottom: 33px;
+    }
+    body.menu-open.active {
+        overflow-y: hidden;
+    }
 }
 @media screen and (max-width: 783px){
     div.heateor_sss_mobile_footer {
@@ -4108,9 +4135,9 @@ ul.navRoot {
         object-position: left;
         padding-left: 15px;
     }
-    .customer-logo-wrapper ul {
-        grid-gap: 24px;
-    }
+    /*    .customer-logo-wrapper ul {
+            grid-gap: 24px;
+        }*/
     .pagenav-section-wrapper {
         padding: 48px 0;
     }
@@ -4164,9 +4191,9 @@ ul.navRoot {
     img.chekkit-logo {
         right: 0;
     }
-    .customer-logo-wrapper ul {
-        grid-template-columns: repeat(3,1fr);
-    }
+    /*    .customer-logo-wrapper ul {
+            grid-template-columns: repeat(3,1fr);
+        }*/
     img.seed-group-logo {
         object-position: left;
     }
@@ -4279,7 +4306,10 @@ ul.navRoot {
         width: 100%;
         right: 0;
         top: 9px;
-    }  
+    } 
+    .customer-logo-wrapper ul li {
+        width: 22%;
+    }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
     img.mobile-header-logo {
@@ -4314,6 +4344,10 @@ ul.navRoot {
     }
     .blog a.item-home.colorize:before, .single a.item-home.colorize:before, .category a.item-home.colorize:before {
         left: 100px;
+    }
+    .customer-logo-wrapper ul li {
+        width: 33%;
+        margin-bottom: 33px;
     }
 }
 @media screen and (max-width: 667px) and (orientation: landscape) {  

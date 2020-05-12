@@ -25,12 +25,13 @@ function fantomScripts() {
   wp_enqueue_script('cc-htmlmixed-js', get_template_directory_uri() . '/js/htmlmixed.js', array(), true);
   wp_enqueue_style('bootstrap-v4', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', '1.0', 'all');
   wp_enqueue_script('bootstrap-min-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20190612', true);
-  wp_enqueue_script('mainjs', get_template_directory_uri() . '/js/main.js', array(), '2019061112', true);
+
   wp_enqueue_script('header-animation-js', get_template_directory_uri() . '/js/header-animation.js', array(), '2019061112', true);
   wp_enqueue_script('rangeslider-js', get_template_directory_uri() . '/js/rangeslider.js', array(), '2019061112', true);
   wp_enqueue_script('cc-rangeslider-min-js', get_template_directory_uri() . '/js/rangeslider.min.js', array(), true);
   wp_enqueue_script('velocity-min-js', get_template_directory_uri() . '/js/velocity.min.js', array(), true);
   wp_enqueue_script('slick-js', get_template_directory_uri() . '/js/slick.min.js', array(), true);
+  wp_enqueue_script('mainjs', get_template_directory_uri() . '/js/main.js', array(), '2019061112', true);
   wp_enqueue_style('typekit', 'https://use.typekit.net/evf2xmx.css');
   wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 }
@@ -140,4 +141,15 @@ JSON;
   $data['yearlyReward'] = $percentage;
   $data['totalStaked'] = $jsonDecode['data']['estimateRewards']['totalStaked'];
   return $data;
+}
+
+add_shortcode('arppercentage', 'arpPercantage');
+
+function arpPercantage($atts) {
+  ob_start();
+  $data = getGraphqlValue();
+  echo round($data['yearlyReward']);
+  $output_string = ob_get_contents();
+  ob_end_clean();
+  return $output_string;
 }

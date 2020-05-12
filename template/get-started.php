@@ -60,14 +60,14 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_id()));
                                     <?php
                                     if (have_rows('card_content')):
                                       while (have_rows('card_content')) : the_row();
-                                        ?>                                
-                                        <div class="card-wrapper">
-                                            <a href="<?php the_sub_field('link'); ?>" class="get-card-link">
+                                        ?>   
+                                        <a href="<?php the_sub_field('link'); ?>" class="get-card-link">
+                                            <div class="card-wrapper">                                        
                                                 <img src="<?php the_sub_field('card_image'); ?>"  class="card-image" alt="Card Image"/>
                                                 <h3><?php the_sub_field('card_title'); ?></h3>
                                                 <p><?php the_sub_field('card_text'); ?></p>
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </a>                                   
                                         <?php
                                       endwhile;
                                     else :
