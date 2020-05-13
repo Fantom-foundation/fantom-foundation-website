@@ -41,9 +41,11 @@ jQuery(document).ready(function ($) {
 
     });
     var totalStaked = $('#totalStaked').val();
+    var totalSupply = $('#totalSupply').val();
     var totalStakedValue = parseInt(totalStaked, 16) / 1e18;
-    var stakedValue = Math.round(totalStakedValue) / 31750000;
-    var stakedValuePercantage = stakedValue.toFixed(2);
+    var totalSuppliedValue = parseInt(totalSupply, 16) / 1e18;
+    var stakedValue = Math.round(totalStakedValue) / parseFloat(totalSuppliedValue) * 100;
+    var stakedValuePercantage = Math.round(stakedValue);
     $('#totalStakedpercentage').text(stakedValuePercantage + "%");
     $(".staking-form #fname").keyup(function (e) {
         var number = $(this).val();

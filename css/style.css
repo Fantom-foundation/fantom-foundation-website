@@ -57,7 +57,7 @@ p {
     font-size: 16px;
     line-height: 1.75;
     font-weight: 300;
-    color: #2b3954;
+    color: #525f7f;
     margin: 0 0 20px;
     font-family: WorkSans !important;
     letter-spacing: -0.5px;
@@ -847,7 +847,7 @@ ul.fold-wrapper {
     font-style: normal;
     line-height: 1.75;
     letter-spacing: normal;
-    color: #2b3954;
+    color: #525f7f;
     margin: 0;
 }
 h4.explorers-text {
@@ -934,7 +934,7 @@ a.rootLink.item-support.colorize.fantom-wallte-btn:hover {
     background-color: #1969ff;
 }
 .sub-menu-banner-content p {
-    color: #2b3954;
+    color: #525f7f;
 }
 .page-section {
     padding-bottom: 48px;
@@ -1558,7 +1558,7 @@ h5.opera-address-wrapper {
     font-style: normal;
     line-height: 1.67;
     letter-spacing: normal;
-    color: #2b3954;
+    color: #525f7f;
     margin: 0;
 }
 .page-template-fantom-community .banner-wrapper-section {
@@ -2418,9 +2418,6 @@ a.api-reference:hover {
     width: 100%;
     height: auto;
 }
-.page-id-494 .pagenav-section a {
-    color: #2b3954;
-}
 /*FTM page style*/
 .banner-wrapper-section.ftm-token-wrapper-section {
     background-color: transparent;
@@ -2816,7 +2813,7 @@ span.number-wrapper {
     font-style: normal;
     line-height: 1.75;
     letter-spacing: -0.5px;
-    color: #2b3954;
+    color: #525f7f;
 }
 .advantages-accordion-section ul.accordion-contents {
     padding: 0;
@@ -3412,7 +3409,7 @@ article#sec4 .case-study--screenshot {
     padding: 0;
     margin: 0;
     font-size: 14px;
-    color: #2b3954;
+    color: #525f7f;
     line-height: 20px;
 }
 .mc4wp-response {
@@ -3430,4 +3427,7 @@ article#sec4 .case-study--screenshot {
     position: relative;
     top: -14px;
     text-align: center;
+}
+.non-root-user.mytegone {
+    display: block;
 }

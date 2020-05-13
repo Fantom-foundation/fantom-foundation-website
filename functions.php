@@ -115,6 +115,9 @@ query EstimatedRewards {
     yearlyReward
     monthlyReward
     totalStaked
+     lastEpoch{
+      totalSupply
+    }
   }
 }
 JSON;
@@ -137,9 +140,13 @@ JSON;
   $hexValue2 = hexdec($jsonDecode['data']['estimateRewards']['monthlyReward']);
   $percentage2 = $hexValue2 / 1000 * 100;
 
+  echo "<pre>";
+  print_r($jsonDecode['data']['estimateRewards']['totalStaked']);
+  echo "</pre>";
   $data['monthlyReward'] = $percentage2;
   $data['yearlyReward'] = $percentage;
   $data['totalStaked'] = $jsonDecode['data']['estimateRewards']['totalStaked'];
+  $data['totalSupply'] = $jsonDecode['data']['estimateRewards']['lastEpoch']['totalSupply'];
   return $data;
 }
 

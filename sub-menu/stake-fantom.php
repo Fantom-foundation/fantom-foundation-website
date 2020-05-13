@@ -55,12 +55,13 @@ $data = getGraphqlValue();
                                     FTM</span>
                                 <input type="hidden" value="<?php echo $data['yearlyReward']; ?>" id="rewardpercentageYearly"/>
                                 <input type="hidden" value="<?php echo $data['totalStaked']; ?>" id="totalStaked" />
+                                <input type="hidden" value="<?php echo $data['totalSupply']; ?>" id="totalSupply" />
                             </div>
                         </div>
                         <div class="rewards-section staking-rewards-section">
                             <div class="rewards-wrapper">
                                 <h5 class="total-staked">Total staked</h5>
-                                <span class="text-blue" id="totalStakedpercentage">45.03%</span>
+                                <span class="text-blue" id="totalStakedpercentage"></span>
                             </div>
                             <div class="rewards-wrapper">
                                 <h5 class="total-staked">Current APR</h5>
